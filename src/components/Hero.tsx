@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { BarChart3, ChevronDown } from 'lucide-react';
+import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap } from 'lucide-react';
 
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -36,49 +36,54 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-book-50 rounded-bl-full opacity-80"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-book-50 rounded-tr-full opacity-60"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-50 to-indigo-50 rounded-bl-full opacity-80"></div>
+        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-indigo-50 to-purple-50 rounded-tr-full opacity-60"></div>
+        {/* Added tech pattern */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzYjgyZjYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMC0xMnY2aDZ2LTZoLTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
       </div>
       
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="w-full lg:w-1/2 max-w-2xl">
-            <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-6" ref={decorationRef}>
-              Professional Bookkeeping Services
+            <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 font-medium mb-6 tech-glass" ref={decorationRef}>
+              <span className="flex items-center gap-2">
+                <Zap size={14} className="text-purple-600" />
+                Next-Gen Bookkeeping Services
+              </span>
             </div>
             <h1 
               className="heading-xl mb-6 text-balance"
               ref={headingRef}
             >
-              Financial Clarity for Your <span className="text-book-600">Business Growth</span>
+              <span className="gradient-text">Tech-Powered</span> Financial Clarity for Your Business
             </h1>
             <p 
               className="text-lg text-foreground/80 mb-8 max-w-lg"
               ref={paragraphRef}
             >
-              We transform complex financial data into clear insights, giving you more time to focus on what matters most — growing your business.
+              We leverage cutting-edge technology to transform complex financial data into real-time insights, giving you the competitive edge in today's fast-paced business environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
-              <button className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:bg-book-700 hover:shadow-lg">
+              <button className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-purple-500/20 tech-hover">
                 Get Started Today
               </button>
-              <button className="px-8 py-3 rounded-full border border-book-300 text-book-800 font-medium transition-fast hover:bg-book-50 hover:border-book-400">
-                Our Services
+              <button className="px-8 py-3 rounded-full border border-purple-200 text-purple-700 font-medium transition-fast hover:bg-purple-50 hover:border-purple-300 tech-hover">
+                Explore Solutions
               </button>
             </div>
 
             <div className="flex items-center gap-8 mt-12">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                <span className="text-sm text-foreground/70">99% Accuracy</span>
+                <span className="text-sm text-foreground/70">Real-time Updates</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-book-500"></div>
-                <span className="text-sm text-foreground/70">24/7 Support</span>
+                <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                <span className="text-sm text-foreground/70">AI-Powered</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-amber-500"></div>
-                <span className="text-sm text-foreground/70">Expert Advice</span>
+                <span className="text-sm text-foreground/70">Cloud-Based</span>
               </div>
             </div>
           </div>
@@ -88,31 +93,37 @@ const Hero = () => {
             ref={decorationRef}
           >
             <div className="relative">
-              <div className="w-72 h-72 md:w-96 md:h-96 bg-book-100 rounded-full flex items-center justify-center animate-pulse-soft">
-                <div className="w-[90%] h-[90%] bg-white rounded-full shadow-lg flex items-center justify-center">
-                  <BarChart3 size={120} className="text-book-600" strokeWidth={1.5} />
+              <div className="w-72 h-72 md:w-96 md:h-96 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-full flex items-center justify-center pulse-glow">
+                <div className="w-[90%] h-[90%] tech-glass rounded-full flex items-center justify-center">
+                  <Database size={120} className="text-purple-600" strokeWidth={1.5} />
                 </div>
               </div>
               
-              <div className="absolute -right-4 top-12 glass rounded-xl py-3 px-4 shadow-xl animate-float">
-                <p className="text-sm font-medium">Financial Report</p>
-                <div className="mt-1 w-full h-1 bg-book-100 rounded-full">
-                  <div className="w-3/4 h-full bg-book-500 rounded-full"></div>
+              <div className="absolute -right-4 top-12 tech-glass rounded-xl py-3 px-4 shadow-xl animate-float">
+                <div className="flex items-center gap-2">
+                  <Server size={16} className="text-purple-600" />
+                  <p className="text-sm font-medium">Data Processing</p>
+                </div>
+                <div className="mt-1 w-full h-1 bg-purple-100 rounded-full">
+                  <div className="w-3/4 h-full bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full"></div>
                 </div>
               </div>
               
-              <div className="absolute -left-8 bottom-20 glass rounded-xl py-3 px-4 shadow-xl animate-float" style={{ animationDelay: '1s' }}>
-                <p className="text-sm font-medium">Tax Savings</p>
-                <p className="text-lg font-bold text-book-600">+28%</p>
+              <div className="absolute -left-8 bottom-20 tech-glass rounded-xl py-3 px-4 shadow-xl animate-float" style={{ animationDelay: '1s' }}>
+                <div className="flex items-center gap-2">
+                  <Code size={16} className="text-purple-600" />
+                  <p className="text-sm font-medium">Automation Rate</p>
+                </div>
+                <p className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">+94%</p>
               </div>
             </div>
           </div>
         </div>
         
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <p className="text-sm text-foreground/70 mb-2">Discover More</p>
-          <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
-            <ChevronDown size={20} />
+          <p className="text-sm text-foreground/70 mb-2">Discover Our Tech Stack</p>
+          <a href="#services" className="w-8 h-8 rounded-full border border-purple-200 flex items-center justify-center animate-bounce">
+            <ChevronDown size={20} className="text-purple-600" />
           </a>
         </div>
       </div>

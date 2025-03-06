@@ -1,42 +1,42 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Calculator, FileText, PiggyBank, BarChart3, FileCheck, BookOpen, Receipt } from 'lucide-react';
+import { Calculator, Cpu, Database, BarChart3, Cloud, Zap, Server, Code, Bot, Shield, Smartphone, Workflow } from 'lucide-react';
 
 const serviceItems = [
   {
-    icon: <BookOpen className="w-6 h-6" />,
-    title: "Bookkeeping",
-    description: "Complete daily, weekly, or monthly bookkeeping with accurate record keeping and categorization.",
-    color: "bg-blue-50 text-blue-600"
-  },
-  {
-    icon: <Receipt className="w-6 h-6" />,
-    title: "Accounts Payable",
-    description: "Efficient management of your company's payment obligations and vendor relationships.",
+    icon: <Database className="w-6 h-6" />,
+    title: "Cloud Bookkeeping",
+    description: "Real-time financial data with secure cloud storage and 24/7 access from any device.",
     color: "bg-purple-50 text-purple-600"
   },
   {
+    icon: <Bot className="w-6 h-6" />,
+    title: "AI Transaction Coding",
+    description: "Machine learning algorithms that automatically categorize and code transactions with 99.5% accuracy.",
+    color: "bg-indigo-50 text-indigo-600"
+  },
+  {
     icon: <Calculator className="w-6 h-6" />,
-    title: "Tax Preparation",
-    description: "Comprehensive tax preparation services to ensure compliance and maximize deductions.",
+    title: "Predictive Tax Planning",
+    description: "Advanced algorithms forecast tax liabilities and identify optimization opportunities year-round.",
     color: "bg-amber-50 text-amber-600"
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
-    title: "Financial Reporting",
-    description: "Clear, insightful financial reports to help you make informed business decisions.",
-    color: "bg-green-50 text-green-600"
+    title: "Real-time Analytics",
+    description: "Interactive dashboards with customizable KPIs and metrics updated in real-time.",
+    color: "bg-emerald-50 text-emerald-600"
   },
   {
-    icon: <FileCheck className="w-6 h-6" />,
-    title: "Payroll Services",
-    description: "Complete payroll processing, including tax calculations and regulatory compliance.",
-    color: "bg-rose-50 text-rose-600"
+    icon: <Workflow className="w-6 h-6" />,
+    title: "Automated Workflows",
+    description: "Custom automation for accounts payable, receivable, and payroll with digital approval systems.",
+    color: "bg-blue-50 text-blue-600"
   },
   {
-    icon: <PiggyBank className="w-6 h-6" />,
-    title: "Financial Planning",
-    description: "Strategic financial planning services to help your business achieve its long-term goals.",
+    icon: <Smartphone className="w-6 h-6" />,
+    title: "Mobile Financial Suite",
+    description: "Manage your finances on-the-go with our native mobile apps and instant notifications.",
     color: "bg-cyan-50 text-cyan-600"
   }
 ];
@@ -75,16 +75,17 @@ const Services = () => {
       className="section-padding relative overflow-hidden"
       ref={sectionRef}
     >
-      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-book-50/30"></div>
+      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-purple-50/30"></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center mb-16 opacity-0" ref={(el) => (itemsRef.current[0] = el)}>
-          <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-4">
-            Our Services
+          <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 font-medium mb-4 flex items-center gap-2 justify-center">
+            <Cpu size={14} className="text-purple-600" />
+            <span>Tech-Driven Solutions</span>
           </div>
-          <h2 className="heading-lg mb-6">Comprehensive Financial Solutions</h2>
+          <h2 className="heading-lg mb-6">Next-Generation Financial Services</h2>
           <p className="text-foreground/80">
-            We offer a full range of bookkeeping and financial services tailored to meet your business needs, all designed to save you time and provide clarity.
+            Our suite of tech-forward financial solutions combines human expertise with cutting-edge technology to deliver unparalleled accuracy, speed, and insights.
           </p>
         </div>
         
@@ -92,7 +93,7 @@ const Services = () => {
           {serviceItems.map((service, index) => (
             <div 
               key={service.title}
-              className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 opacity-0"
+              className="tech-glass rounded-xl p-6 border border-white/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 opacity-0 tech-hover"
               ref={(el) => (itemsRef.current[index + 1] = el)}
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >

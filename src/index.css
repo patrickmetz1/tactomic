@@ -16,16 +16,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221 83% 53%;
+    /* Updated to a more vibrant purple/violet as primary color */
+    --primary: 265 89% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 214 32% 91%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 262 83% 96%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +34,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 53%;
+    --ring: 265 89% 60%;
 
     --radius: 0.75rem;
   }
@@ -48,7 +49,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217.2 91.2% 59.8%;
+    /* Updated to match light mode primary but adjusted for dark mode */
+    --primary: 266 100% 67%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -65,7 +67,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 266 100% 67%;
   }
 }
 
@@ -89,8 +91,19 @@
 }
 
 @layer utilities {
+  /* Updated glass effect for more modern look */
   .glass {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+    @apply bg-white/75 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  
+  /* Added modern glass effect */
+  .tech-glass {
+    @apply bg-white/30 backdrop-blur-lg border border-white/30 shadow-xl;
+  }
+  
+  /* Added gradient text effect */
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent;
   }
   
   .text-balance {
@@ -117,6 +130,7 @@
     @apply text-xl md:text-2xl font-semibold tracking-tight;
   }
   
+  /* Enhanced animations for tech-forward feel */
   .animate-in {
     @apply opacity-0;
     animation: fade-in 0.5s ease-out forwards;
@@ -145,4 +159,34 @@
   .transition-fast {
     @apply transition-all duration-300 ease-out-sine;
   }
+  
+  /* Added glow effect for tech elements */
+  .tech-glow {
+    @apply relative;
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.5);
+  }
+  
+  /* Added subtle hover effect for interactive elements */
+  .tech-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .tech-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+  }
+}
+
+/* Add keyframes for new animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.8);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
 }
