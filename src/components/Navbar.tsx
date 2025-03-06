@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-md bg-gradient-to-br from-book-500 to-book-700 flex items-center justify-center text-white font-bold text-xl pulse-glow">
+          <div className="w-10 h-10 rounded-md bg-book-600 flex items-center justify-center text-white font-bold text-xl">
             <BarChart3 size={20} />
           </div>
           <span className="font-semibold text-xl tracking-tight">FinancePro</span>
@@ -49,7 +49,7 @@ const Navbar = () => {
           ))}
         </nav>
         
-        <button className="hidden md:block px-6 py-2 rounded-full bg-gradient-to-r from-book-500 to-book-700 text-white font-medium hover:shadow-lg hover:shadow-book-500/20 transition-fast">
+        <button className="hidden md:block px-6 py-2 rounded-full bg-book-600 text-white font-medium hover:shadow-lg hover:shadow-book-500/20 transition-fast">
           Book a Consultation
         </button>
         
@@ -79,7 +79,7 @@ const Navbar = () => {
               {item}
             </a>
           ))}
-          <button className="mt-4 w-full px-6 py-3 rounded-full bg-gradient-to-r from-book-500 to-book-700 text-white font-medium">
+          <button className="mt-4 w-full px-6 py-3 rounded-full bg-book-600 text-white font-medium">
             Book a Consultation
           </button>
         </nav>
