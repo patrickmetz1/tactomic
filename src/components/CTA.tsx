@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 const CTA = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLDivElement>(null); // Changed from HTMLFormElement to HTMLDivElement
 
   useEffect(() => {
     const observer = new IntersectionObserver(
