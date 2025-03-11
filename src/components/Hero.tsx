@@ -1,26 +1,31 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap } from 'lucide-react';
-
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const decorationRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const elements = [
-      { ref: headingRef, delay: 100 },
-      { ref: paragraphRef, delay: 300 },
-      { ref: ctaRef, delay: 500 },
-      { ref: decorationRef, delay: 700 }
-    ];
-
-    elements.forEach(({ ref, delay }) => {
+    const elements = [{
+      ref: headingRef,
+      delay: 100
+    }, {
+      ref: paragraphRef,
+      delay: 300
+    }, {
+      ref: ctaRef,
+      delay: 500
+    }, {
+      ref: decorationRef,
+      delay: 700
+    }];
+    elements.forEach(({
+      ref,
+      delay
+    }) => {
       if (ref.current) {
         ref.current.style.opacity = '0';
         ref.current.style.transform = 'translateY(20px)';
-        
         setTimeout(() => {
           if (ref.current) {
             ref.current.style.opacity = '1';
@@ -31,9 +36,7 @@ const Hero = () => {
       }
     });
   }, []);
-
-  return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+  return <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-50 to-indigo-50 rounded-bl-full opacity-80"></div>
@@ -51,16 +54,10 @@ const Hero = () => {
                 Next-Gen Bookkeeping Services
               </span>
             </div>
-            <h1 
-              className="heading-xl mb-6 text-balance"
-              ref={headingRef}
-            >
-              <span className="text-book-600">Tech-Forward</span> Back Office Solutions for Your Business
+            <h1 className="heading-xl mb-6 text-balance" ref={headingRef}>
+              <span className="text-book-600">Tech-Powered</span> Financial Clarity for Your Business
             </h1>
-            <p 
-              className="text-lg text-foreground/80 mb-8 max-w-lg"
-              ref={paragraphRef}
-            >
+            <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>
               We leverage cutting-edge technology to transform complex financial data into real-time insights, giving you the competitive edge in today's fast-paced business environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
@@ -75,7 +72,7 @@ const Hero = () => {
             <div className="flex items-center gap-8 mt-12">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                <span className="text-sm text-foreground/70">Real-time Updates</span>
+                <span className="text-sm text-foreground/70">Bookkeeping+</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-book-500"></div>
@@ -88,10 +85,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div 
-            className="w-full lg:w-1/2 flex justify-center"
-            ref={decorationRef}
-          >
+          <div className="w-full lg:w-1/2 flex justify-center" ref={decorationRef}>
             <div className="relative">
               <div className="w-72 h-72 md:w-96 md:h-96 bg-book-100 rounded-full flex items-center justify-center">
                 <div className="w-[90%] h-[90%] tech-glass rounded-full flex items-center justify-center">
@@ -109,7 +103,9 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute -left-8 bottom-20 tech-glass rounded-xl py-3 px-4 shadow-xl animate-float" style={{ animationDelay: '1s' }}>
+              <div className="absolute -left-8 bottom-20 tech-glass rounded-xl py-3 px-4 shadow-xl animate-float" style={{
+              animationDelay: '1s'
+            }}>
                 <div className="flex items-center gap-2">
                   <Code size={16} className="text-book-600" />
                   <p className="text-sm font-medium">Automation Rate</p>
@@ -127,8 +123,6 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
