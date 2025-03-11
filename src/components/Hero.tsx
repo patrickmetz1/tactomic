@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap } from 'lucide-react';
 
@@ -60,7 +61,7 @@ const Hero = () => {
               <span className="text-book-600">Tech-Forward</span> Back Office Solutions for Your Business
             </h1>
             <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>
-              We leverage cutting-edge technology to transform complex financial data into real-time insights, giving you the competitive edge in today's fast-paced business environment.
+              The right partner for organizations seeking digital, modern approach to streamline operations
             </p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
               <button className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover">
