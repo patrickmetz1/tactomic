@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap } from 'lucide-react';
+
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const decorationRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const elements = [{
       ref: headingRef,
@@ -19,6 +21,7 @@ const Hero = () => {
       ref: decorationRef,
       delay: 700
     }];
+    
     elements.forEach(({
       ref,
       delay
@@ -36,12 +39,11 @@ const Hero = () => {
       }
     });
   }, []);
+
   return <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-      {/* Background decorations */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-50 to-indigo-50 rounded-bl-full opacity-80"></div>
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-indigo-50 to-purple-50 rounded-tr-full opacity-60"></div>
-        {/* Added tech pattern */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzYjgyZjYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMC0xMnY2aDZ2LTZoLTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
       </div>
       
@@ -55,7 +57,7 @@ const Hero = () => {
               </span>
             </div>
             <h1 className="heading-xl mb-6 text-balance" ref={headingRef}>
-              <span className="text-book-600">Tech-Powered</span> Financial Clarity for Your Business
+              <span className="text-book-600">Tech-Forward</span> Back Office Solutions for Your Business
             </h1>
             <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>
               We leverage cutting-edge technology to transform complex financial data into real-time insights, giving you the competitive edge in today's fast-paced business environment.
@@ -72,15 +74,15 @@ const Hero = () => {
             <div className="flex items-center gap-8 mt-12">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                <span className="text-sm text-foreground/70">Real-time Updates</span>
+                <span className="text-sm text-foreground/70">Bookkeeping+</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-book-500"></div>
-                <span className="text-sm text-foreground/70">AI-Powered</span>
+                <span className="text-sm text-foreground/70">FP&A</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-amber-500"></div>
-                <span className="text-sm text-foreground/70">Cloud-Based</span>
+                <span className="text-sm text-foreground/70">Process Engineering</span>
               </div>
             </div>
           </div>
@@ -117,7 +119,7 @@ const Hero = () => {
         </div>
         
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <p className="text-sm text-foreground/70 mb-2">Discover Our Capabilities</p>
+          <p className="text-sm text-foreground/70 mb-2">Discover Our Tech Stack</p>
           <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
             <ChevronDown size={20} className="text-book-600" />
           </a>
@@ -125,4 +127,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
