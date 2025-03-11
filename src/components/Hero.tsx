@@ -1,13 +1,10 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap } from 'lucide-react';
-
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const decorationRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const elements = [{
       ref: headingRef,
@@ -39,7 +36,6 @@ const Hero = () => {
       }
     });
   }, []);
-
   return <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 -z-10">
@@ -59,7 +55,7 @@ const Hero = () => {
               </span>
             </div>
             <h1 className="heading-xl mb-6 text-balance" ref={headingRef}>
-              <span className="text-book-600">Tech-Forward</span> Back Office Solutions for Your Business
+              <span className="text-book-600">Tech-Powered</span> Financial Clarity for Your Business
             </h1>
             <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>
               We leverage cutting-edge technology to transform complex financial data into real-time insights, giving you the competitive edge in today's fast-paced business environment.
@@ -76,15 +72,15 @@ const Hero = () => {
             <div className="flex items-center gap-8 mt-12">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                <span className="text-sm text-foreground/70">Bookkeeping+</span>
+                <span className="text-sm text-foreground/70">Real-time Updates</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-book-500"></div>
-                <span className="text-sm text-foreground/70">FP&A</span>
+                <span className="text-sm text-foreground/70">AI-Powered</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-amber-500"></div>
-                <span className="text-sm text-foreground/70">Process Engineering</span>
+                <span className="text-sm text-foreground/70">Cloud-Based</span>
               </div>
             </div>
           </div>
@@ -121,7 +117,7 @@ const Hero = () => {
         </div>
         
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <p className="text-sm text-foreground/70 mb-2">Discover Our Tech Stack</p>
+          <p className="text-sm text-foreground/70 mb-2">Discover Our Capabilities</p>
           <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
             <ChevronDown size={20} className="text-book-600" />
           </a>
@@ -129,5 +125,4 @@ const Hero = () => {
       </div>
     </section>;
 };
-
 export default Hero;
