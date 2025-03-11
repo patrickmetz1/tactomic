@@ -55,7 +55,7 @@ const Hero = () => {
               className="heading-xl mb-6 text-balance"
               ref={headingRef}
             >
-              <span className="text-book-600">Tech-Powered</span> Financial Clarity for Your Business
+              <span className="text-book-600">Tech-Forward</span> Back Office Solutions for Your Business
             </h1>
             <p 
               className="text-lg text-foreground/80 mb-8 max-w-lg"
