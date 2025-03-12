@@ -48,9 +48,9 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzYjgyZjYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMC0xMnY2aDZ2LTZoLTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
       </div>
       
-      <div className="container mx-auto px-4 z-10">
+      <div className="container mx-auto px-6 md:px-8 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="w-full lg:w-1/2 max-w-2xl">
+          <div className="w-full lg:w-1/2 max-w-2xl pl-2 md:pl-4">
             <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-6 tech-glass" ref={decorationRef}>
               <span className="flex items-center gap-2">
                 <Zap size={14} className="text-book-600" />
