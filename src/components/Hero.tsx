@@ -58,7 +58,7 @@ const Hero = () => {
               </span>
             </div>
             <h1 className="heading-xl mb-6 text-balance" ref={headingRef}>
-              <span className="text-book-600">Tech-Forward</span> Back Office Solutions for Your Business
+              <span className="text-book-600">Tech-Forward</span> Solutions to Streamline Your Back Office
             </h1>
             <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>
               The right partner for organizations seeking digital, modern approach to streamline operations
@@ -120,7 +120,7 @@ const Hero = () => {
         </div>
         
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <p className="text-sm text-foreground/70 mb-2">Discover Our Tech Stack</p>
+          <p className="text-sm text-foreground/70 mb-2">Discover our Capabilities</p>
           <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
             <ChevronDown size={20} className="text-book-600" />
           </a>
