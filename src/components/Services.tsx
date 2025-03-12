@@ -5,31 +5,31 @@ import { Calculator, Cpu, Database, BarChart3, Cloud, Zap, Server, Code, Bot, Sh
 const serviceItems = [
   {
     icon: <Database className="w-6 h-6" />,
-    title: "Cloud Bookkeeping",
+    title: "Bookkeeping",
     description: "Real-time financial data with secure cloud storage and 24/7 access from any device.",
     color: "bg-purple-50 text-purple-600"
   },
   {
     icon: <Bot className="w-6 h-6" />,
-    title: "AI Transaction Coding",
+    title: "Financial Operations",
     description: "Machine learning algorithms that automatically categorize and code transactions with 99.5% accuracy.",
     color: "bg-indigo-50 text-indigo-600"
   },
   {
     icon: <Calculator className="w-6 h-6" />,
-    title: "Predictive Tax Planning",
+    title: "Accounting",
     description: "Advanced algorithms forecast tax liabilities and identify optimization opportunities year-round.",
     color: "bg-amber-50 text-amber-600"
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
-    title: "Real-time Analytics",
+    title: "Fractional Finance",
     description: "Interactive dashboards with customizable KPIs and metrics updated in real-time.",
     color: "bg-emerald-50 text-emerald-600"
   },
   {
     icon: <Workflow className="w-6 h-6" />,
-    title: "Automated Workflows",
+    title: "Advisory",
     description: "Custom automation for accounts payable, receivable, and payroll with digital approval systems.",
     color: "bg-blue-50 text-blue-600"
   },
