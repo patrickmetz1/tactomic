@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap } from 'lucide-react';
 const Hero = () => {
@@ -49,7 +50,7 @@ const Hero = () => {
             <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-6 tech-glass" ref={decorationRef}>
               <span className="flex items-center gap-2">
                 <Zap size={14} className="text-book-600" />
-                Modern Accounting & Finance Support
+                Accounting & Finance Support
               </span>
             </div>
             <h1 className="heading-xl mb-6 text-balance" ref={headingRef}>
