@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap } from 'lucide-react';
 const Hero = () => {
@@ -56,9 +55,7 @@ const Hero = () => {
             <h1 className="heading-xl mb-6 text-balance" ref={headingRef}>
               <span className="text-book-600">Tech-Forward</span> Solutions to Streamline Your Back Office
             </h1>
-            <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>
-              The right partner for organizations seeking coherent, digital operations while maintaining a lean structure
-            </p>
+            <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>Accompanying clients throughout their digital transformation journeys. </p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
               <button className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover">
                 Get Started Today
