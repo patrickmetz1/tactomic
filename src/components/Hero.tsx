@@ -1,13 +1,10 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap } from 'lucide-react';
-
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const decorationRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const elements = [{
       ref: headingRef,
@@ -22,7 +19,6 @@ const Hero = () => {
       ref: decorationRef,
       delay: 700
     }];
-    
     elements.forEach(({
       ref,
       delay
@@ -40,7 +36,6 @@ const Hero = () => {
       }
     });
   }, []);
-
   return <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-50 to-indigo-50 rounded-bl-full opacity-80"></div>
@@ -83,7 +78,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-amber-500"></div>
-                <span className="text-sm text-foreground/70">Process Engineering</span>
+                <span className="text-sm text-foreground/70">Advisory</span>
               </div>
             </div>
           </div>
@@ -128,5 +123,4 @@ const Hero = () => {
       </div>
     </section>;
 };
-
 export default Hero;
