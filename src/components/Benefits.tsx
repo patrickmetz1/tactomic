@@ -71,7 +71,7 @@ const Benefits = () => {
               Why Choose Us
             </div>
             <h2 className="heading-lg mb-6">Focus on Your Business, Leave the Numbers to Us</h2>
-            <p className="text-foreground/80 mb-8">Whether you're just starting out or looking for a change, we offer practical and approachable solutions for organizations seeking modern, efficient office operations. We stay on the cutting edge so you don't have to. We partner with you to provide insights that drive growth and help you make confident business decisions.</p>
+            <p className="text-foreground/80 mb-8">Whether you're just starting out or looking for a change, we offer flexible, cost-effective solutions for organizations seeking modern, efficient office operations. We stay on the cutting edge so you don't have to.</p>
             
             <div className="space-y-4">
               {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0" ref={el => itemsRef.current[index] = el} style={{
