@@ -1,15 +1,12 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap, BookOpen } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
-
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const decorationRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
-
   useEffect(() => {
     const elements = [{
       ref: headingRef,
@@ -24,7 +21,6 @@ const Hero = () => {
       ref: decorationRef,
       delay: 700
     }];
-
     elements.forEach(({
       ref,
       delay
@@ -42,7 +38,6 @@ const Hero = () => {
       }
     });
   }, []);
-
   return <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-50 to-indigo-50 rounded-bl-full opacity-80"></div>
@@ -62,7 +57,7 @@ const Hero = () => {
             <h1 className="heading-xl mb-6 text-balance" ref={headingRef}>
               <span className="text-book-600">Tech-Forward</span> Solutions to Streamline Your Back Office
             </h1>
-            <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>Accompanying clients throughout their digital transformation journeys. </p>
+            <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>Accompanying clients on their digital transformation journeys</p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
               <button className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover">
                 Get Started Today
