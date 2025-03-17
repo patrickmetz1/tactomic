@@ -122,11 +122,13 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className={`absolute ${isMobile ? 'bottom-2 mt-24' : 'bottom-8'} left-1/2 -translate-x-1/2 flex flex-col items-center ${isMobile ? 'pt-20 mt-16' : 'mt-16'}`}>
-          <p className="text-sm text-foreground/70 mb-2">Discover our Capabilities</p>
-          <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
-            <ChevronDown size={20} className="text-book-600" />
-          </a>
+        <div className="w-full flex justify-center mt-20">
+          <div className={`${isMobile ? 'mb-8' : 'mb-16'} flex flex-col items-center`}>
+            <p className="text-sm text-foreground/70 mb-2">Discover our Capabilities</p>
+            <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
+              <ChevronDown size={20} className="text-book-600" />
+            </a>
+          </div>
         </div>
       </div>
     </section>;
