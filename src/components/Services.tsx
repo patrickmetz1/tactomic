@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Cpu, Database, BarChart3, Cloud, Zap, Server, Code, Bot, Shield, Smartphone, Workflow } from 'lucide-react';
 
@@ -83,5 +84,4 @@ const Services = () => {
     </section>;
 };
 
-
-
+export default Services;
