@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap, BookOpen } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -117,8 +118,8 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="w-full flex justify-center mt-20">
-          <div className={`${isMobile ? 'mb-8' : 'mb-16'} flex flex-col items-center`}>
+        <div className="w-full flex justify-center mt-8">
+          <div className={`${isMobile ? 'mb-4' : 'mb-8'} flex flex-col items-center`}>
             <p className="text-sm text-foreground/70 mb-2">Discover our Capabilities</p>
             <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
               <ChevronDown size={20} className="text-book-600" />
