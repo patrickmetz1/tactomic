@@ -31,13 +31,16 @@ const Navbar = () => {
           <span className="font-semibold text-xl tracking-tight">FinancePro</span>
         </Link>
         
-        <nav className="hidden md:flex gap-8">
-          {['Services', 'Benefits', 'Contact'].map(item => (
-            <a key={item} href={`#${item.toLowerCase()}`} className="text-foreground/90 hover:text-book-600 font-medium transition-fast relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-book-600 after:transition-all hover:after:w-full">
-              {item}
-            </a>
-          ))}
-        </nav>
+        {/* Centered navigation for desktop view */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <nav className="flex gap-8">
+            {['Services', 'Benefits', 'Contact'].map(item => (
+              <a key={item} href={`#${item.toLowerCase()}`} className="text-foreground/90 hover:text-book-600 font-medium transition-fast relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-book-600 after:transition-all hover:after:w-full">
+                {item}
+              </a>
+            ))}
+          </nav>
+        </div>
         
         <Link 
           to="/about"
