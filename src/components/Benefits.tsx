@@ -70,7 +70,7 @@ const Benefits = () => {
             <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-4">
               Why Choose Us
             </div>
-            <h2 className="heading-lg mb-6">Focus on Your Business, Leave the Numbers to Us</h2>
+            <h2 className="heading-lg mb-6">Scale your business with responsive, dependable financial support.</h2>
             <p className="text-foreground/80 mb-8">Whether you're just starting out or looking for a change, we offer flexible, cost-effective solutions for organizations seeking modern, efficient office operations. We stay on the cutting edge so you don't have to.</p>
             
             <div className="space-y-4">
