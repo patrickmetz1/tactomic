@@ -63,7 +63,7 @@ const Services = () => {
             <span>Tech-Driven Solutions</span>
           </div>
           <h2 className="heading-lg mb-6">Next-Generation Financial Services</h2>
-          <p className="text-foreground/80">Our service approach combines human expertise with cutting-edge technology to deliver flexible, cost-effective solutions tailored precisely for your organization.</p>
+          <p className="text-foreground/80">Our service approach combines hands-on experience with continual learning to deliver flexible, cost-effective solutions tailored precisely for your organization.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
