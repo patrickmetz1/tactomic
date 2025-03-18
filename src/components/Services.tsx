@@ -100,9 +100,6 @@ const Services = () => {
               </div>
             </div>
           ))}
-          
-          {/* Decorative line connecting the services */}
-          <div className="absolute left-0 right-0 top-12 bottom-12 mx-auto w-0.5 bg-gradient-to-b from-purple-200 via-indigo-300 to-purple-100 hidden md:block"></div>
         </div>
       </div>
     </section>
