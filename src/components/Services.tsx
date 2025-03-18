@@ -56,7 +56,8 @@ const Services = () => {
     return () => observer.disconnect();
   }, []);
 
-  return <section id="services" className="section-padding relative overflow-hidden" ref={sectionRef}>
+  return (
+    <section id="services" className="section-padding relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-purple-50/30"></div>
       
       <div className="container mx-auto px-4">
@@ -69,19 +70,43 @@ const Services = () => {
           <p className="text-foreground/80">Our service approach combines hands-on experience with continual learning to deliver practical, approachable solutions tailored precisely for your organization.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {serviceItems.map((service, index) => <div key={service.title} className="tech-glass rounded-xl p-6 border border-white/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 opacity-0 tech-hover" ref={el => itemsRef.current[index + 1] = el} style={{
-          animationDelay: `${(index + 1) * 100}ms`
-        }}>
-              <div className={`w-12 h-12 rounded-lg ${service.color} flex items-center justify-center mb-4`}>
-                {service.icon}
+        {/* Redesigned service items layout */}
+        <div className="relative max-w-5xl mx-auto">
+          {serviceItems.map((service, index) => (
+            <div 
+              key={service.title}
+              className={`flex items-start gap-8 mb-16 last:mb-0 opacity-0 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}
+              ref={el => itemsRef.current[index + 1] = el}
+              style={{ animationDelay: `${(index + 1) * 100}ms` }}
+            >
+              {/* Service Icon */}
+              <div className="hidden md:flex items-center justify-center flex-shrink-0">
+                <div className={`w-24 h-24 rounded-full ${service.color.split(' ')[0]} flex items-center justify-center transition-all duration-500 hover:scale-110 shadow-lg`}>
+                  <div className={`w-16 h-16 rounded-full ${service.color} flex items-center justify-center`}>
+                    {React.cloneElement(service.icon, { className: "w-8 h-8" })}
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-foreground/70">{service.description}</p>
-            </div>)}
+              
+              {/* Service Content */}
+              <div className={`flex-1 p-6 rounded-xl bg-white/80 backdrop-blur-sm border border-purple-100/30 shadow-lg ${index % 2 === 0 ? 'md:ml-6' : 'md:mr-6'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className={`md:hidden w-12 h-12 rounded-full ${service.color} flex items-center justify-center flex-shrink-0`}>
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-semibold gradient-text">{service.title}</h3>
+                </div>
+                <p className="text-foreground/80">{service.description}</p>
+              </div>
+            </div>
+          ))}
+          
+          {/* Decorative line connecting the services */}
+          <div className="absolute left-0 right-0 top-12 bottom-12 mx-auto w-0.5 bg-gradient-to-b from-purple-200 via-indigo-300 to-purple-100 hidden md:block"></div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default Services;
