@@ -1,5 +1,6 @@
+
 import React, { useRef, useEffect } from 'react';
-import { Calculator, Cpu, Database, BarChart3, Cloud, Zap, Server, Code, Bot, Shield, Smartphone, Workflow } from 'lucide-react';
+import { Calculator, Cpu, Database, BarChart3, Bot } from 'lucide-react';
 
 const serviceItems = [
   {
@@ -25,18 +26,6 @@ const serviceItems = [
     title: "Fractional Finance",
     description: "Gain a clear understanding of your business's financial position. Get specific recommendations so you can make timely, data driven decisions with confidence.",
     color: "bg-emerald-50 text-emerald-600"
-  },
-  {
-    icon: <Workflow className="w-6 h-6" />,
-    title: "Advisory",
-    description: "Custom automation for accounts payable, receivable, and payroll with digital approval systems.",
-    color: "bg-blue-50 text-blue-600"
-  },
-  {
-    icon: <Smartphone className="w-6 h-6" />,
-    title: "Mobile Financial Suite",
-    description: "Manage your finances on-the-go with our native mobile apps and instant notifications.",
-    color: "bg-cyan-50 text-cyan-600"
   }
 ];
 
@@ -80,7 +69,7 @@ const Services = () => {
           <p className="text-foreground/80">Our service approach combines hands-on experience with continual learning to deliver practical, approachable solutions tailored precisely for your organization.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {serviceItems.map((service, index) => <div key={service.title} className="tech-glass rounded-xl p-6 border border-white/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 opacity-0 tech-hover" ref={el => itemsRef.current[index + 1] = el} style={{
           animationDelay: `${(index + 1) * 100}ms`
         }}>
