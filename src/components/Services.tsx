@@ -6,13 +6,13 @@ const serviceItems = [
   {
     icon: <Database className="w-6 h-6" />,
     title: "Bookkeeping",
-    description: "Whether it's day-to-day bookkeeping or needing to catch-up, we help clients maintain orderly, current financial records they can rely on.",
+    description: "We maintain accurate financial records and generate reports timely you can rely on. We also help clients clean-up, catch-up and transition to new cloud based systems.",
     color: "bg-purple-50 text-purple-600"
   },
   {
     icon: <Wallet className="w-6 h-6" />,
     title: "Accounting Operations",
-    description: "Execute transactions like invoicing, bill pay, payroll",
+    description: "We execute transactions like sending invoices, paying bills, and running payroll.",
     color: "bg-indigo-50 text-indigo-600"
   },
   {
