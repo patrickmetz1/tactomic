@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -45,15 +46,15 @@ const Empathy = () => {
     },
     {
       icon: <AlertTriangle className="h-8 w-8 text-book-600" />,
-      title: "Compliance Concerns",
-      problem: "Worried about tax deadlines, reporting requirements, and regulatory changes.",
-      solution: "Proactive compliance monitoring and timely alerts to prevent issues before they arise."
+      title: "Innovation Overload",
+      problem: "Unsure whether your organization is missing out on beneficial technologies or wondering if AI is pure hype?",
+      solution: "Tech-minded scouts keeping your unique organization needs in mind."
     },
     {
       icon: <DollarSign className="h-8 w-8 text-book-600" />,
-      title: "Growth Limitations",
-      problem: "Unable to scale efficiently due to financial system constraints and resource limitations.",
-      solution: "Scalable financial infrastructure that grows with your business without proportional cost increases."
+      title: "Cash Management",
+      problem: "Concerned that you are flying blind in the face of inflation and tariffs and need higher quality information?",
+      solution: "Thought partner to support your business through volatile market conditions."
     }
   ];
 
