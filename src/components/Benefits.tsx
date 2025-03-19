@@ -70,8 +70,8 @@ const Benefits = () => {
             <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-4">
               Why Choose Us
             </div>
-            <h2 className="heading-lg mb-6">Scale your business with responsive, dependable financial support.</h2>
-            <p className="text-foreground/80 mb-8">Whether you're just starting out or looking for a change, we offer flexible, cost-effective solutions for organizations seeking modern, efficient office operations. We stay on the cutting edge so you don't have to. Get a partner that looks out for your needs as it constantly evaluates novel digital offerings to see whether you could benefit from something.</p>
+            <h2 className="heading-lg mb-6">Save time, increase profits and digitize your operations with a responsive financial partner.</h2>
+            <p className="text-foreground/80 mb-8">Gain access to financial specialists at a fraction of the cost by outsourcing your work to Tactomic LLC. We continually evaluate the latest digital offerings for solutions that can increase our clients' operational efficiency. Don't just get a bookkeeper, get a partner that shares your vision for a tech-enabled organization. We stay on the cutting edge so you don't have to.</p>
             
             <div className="space-y-4">
               {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0" ref={el => itemsRef.current[index] = el} style={{
