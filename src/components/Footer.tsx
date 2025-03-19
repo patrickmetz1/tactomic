@@ -133,8 +133,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-book-600 flex-shrink-0" size={18} />
-                <a href="tel:+12125551234" className="text-gray-600 hover:text-book-600 transition-fast">
-                  (212) 555-1234
+                <a href="tel:+12055658536" className="text-gray-600 hover:text-book-600 transition-fast">
+                  (205) 565-8536
                 </a>
               </li>
               <li className="flex items-center gap-3">
