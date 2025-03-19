@@ -28,7 +28,7 @@ const Navbar = () => {
           <div className="w-10 h-10 rounded-md bg-book-600 flex items-center justify-center text-white font-bold text-xl">
             <BarChart3 size={20} />
           </div>
-          <span className="font-semibold text-xl tracking-tight">FinancePro</span>
+          <span className="font-semibold text-xl tracking-tight truncate">Tactomic</span>
         </Link>
         
         {/* Centered navigation for desktop view */}
