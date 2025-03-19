@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Cpu, Database, BarChart3, Wallet } from 'lucide-react';
+
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
   title: "Bookkeeping",
-  description: "We maintain accurate financial records and generate reports timely you can rely on. We also help clients clean-up, catch-up and transition to new cloud based systems.",
+  description: "We maintain accurate financial records and generate timely reports that you can rely on. We also help clients clean-up, catch-up and transition to new cloud based systems.",
   color: "bg-purple-50 text-purple-600"
 }, {
   icon: <Wallet className="w-6 h-6" />,
@@ -21,6 +22,7 @@ const serviceItems = [{
   description: "We help clients streamline their back-office processes, synchronize and align their tech-stacks with their growth strategies, and reduce financial risks seen and unseen within their organization. From upskilling to documentation, we help increase organizational durability for years to come.",
   color: "bg-emerald-50 text-emerald-600"
 }];
+
 const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -56,12 +58,10 @@ const Services = () => {
           <p className="text-foreground/80">Get practical, approachable solutions tailored precisely for your organization.</p>
         </div>
         
-        {/* Redesigned service items layout */}
         <div className="relative max-w-5xl mx-auto">
           {serviceItems.map((service, index) => <div key={service.title} className={`flex items-start gap-8 mb-16 last:mb-0 opacity-0 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`} ref={el => itemsRef.current[index + 1] = el} style={{
           animationDelay: `${(index + 1) * 100}ms`
         }}>
-              {/* Service Icon */}
               <div className="hidden md:flex items-center justify-center flex-shrink-0">
                 <div className={`w-24 h-24 rounded-full ${service.color.split(' ')[0]} flex items-center justify-center transition-all duration-500 hover:scale-110 shadow-lg`}>
                   <div className={`w-16 h-16 rounded-full ${service.color} flex items-center justify-center`}>
@@ -72,7 +72,6 @@ const Services = () => {
                 </div>
               </div>
               
-              {/* Service Content */}
               <div className={`flex-1 p-6 rounded-xl bg-white/80 backdrop-blur-sm border border-purple-100/30 shadow-lg ${index % 2 === 0 ? 'md:ml-6' : 'md:mr-6'}`}>
                 <div className="flex items-center gap-4 mb-4">
                   <div className={`md:hidden w-12 h-12 rounded-full ${service.color} flex items-center justify-center flex-shrink-0`}>
@@ -87,4 +86,5 @@ const Services = () => {
       </div>
     </section>;
 };
+
 export default Services;
