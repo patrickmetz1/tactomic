@@ -11,20 +11,20 @@ const serviceItems = [
   },
   {
     icon: <Bot className="w-6 h-6" />,
-    title: "Financial Operations",
-    description: "Machine learning algorithms that automatically categorize and code transactions with 99.5% accuracy.",
+    title: "Accounting Operations",
+    description: "Execute transactions like invoicing, bill pay, payroll",
     color: "bg-indigo-50 text-indigo-600"
   },
   {
     icon: <Calculator className="w-6 h-6" />,
-    title: "Accounting",
-    description: "Advanced algorithms forecast tax liabilities and identify optimization opportunities year-round.",
+    title: "Fractional Finance",
+    description: "Business planning, budgeting and forecasting, enterprise performance management, monitoring and dynamic report creation.",
     color: "bg-amber-50 text-amber-600"
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
-    title: "Fractional Finance",
-    description: "Gain a clear understanding of your business's financial position. Get specific recommendations so you can make timely, data driven decisions with confidence.",
+    title: "Advisory",
+    description: "Streamline your processes, synchronize your tech stack and reduce financial risks",
     color: "bg-emerald-50 text-emerald-600"
   }
 ];
