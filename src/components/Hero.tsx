@@ -1,13 +1,14 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap, BookOpen } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const decorationRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+
   useEffect(() => {
     const elements = [{
       ref: headingRef,
@@ -39,7 +40,8 @@ const Hero = () => {
       }
     });
   }, []);
-  return <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+
+  return <section className="relative min-h-[90vh] flex items-center pt-16 pb-4 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-50 to-indigo-50 rounded-bl-full opacity-80"></div>
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-indigo-50 to-purple-50 rounded-tr-full opacity-60"></div>
@@ -118,8 +120,8 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="w-full flex justify-center mt-4">
-          <div className={`${isMobile ? 'mb-2' : 'mb-4'} flex flex-col items-center`}>
+        <div className="w-full flex justify-center mt-2">
+          <div className={`${isMobile ? 'mb-1' : 'mb-2'} flex flex-col items-center`}>
             <p className="text-sm text-foreground/70 mb-1">Discover our Capabilities</p>
             <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
               <ChevronDown size={20} className="text-book-600" />
@@ -129,4 +131,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
