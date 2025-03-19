@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -69,8 +68,7 @@ const Empathy = () => {
             Tired Of Wearing Too Many Hats?
           </h2>
           <p className="text-foreground/80 mt-4 max-w-2xl mx-auto">
-            We've worked with hundreds of businesses and have seen the same challenges emerge repeatedly.
-            Our solutions are built to address these specific pain points.
+            Accounting taking up valuable time better spent on your core business. Be free to focus on your customers, products or take a vacation.
           </p>
         </div>
 
