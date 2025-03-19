@@ -51,7 +51,7 @@ const CTA = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Complete the Contact Form</h3>
-                  <p className="text-white/80">We'll reach out to find a time that works with your schedule for an exploratory call.</p>
+                  <p className="text-white/80">We'll reach out to find time for an exploratory call.</p>
                 </div>
               </div>
               
