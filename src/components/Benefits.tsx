@@ -1,10 +1,13 @@
+
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
+
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -16,15 +19,26 @@ const Benefits = () => {
     }, {
       threshold: 0.1
     });
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
+
     return () => observer.disconnect();
   }, []);
-  const benefits = ["Save up to 20 hours of administrative work per week", "Reduce accounting errors by up to 95%", "Real-time financial insights for better decision-making", "Tailored reporting aligned with your business goals", "Proactive tax planning to maximize savings", "Unlimited expert support when you need it most"];
+
+  const benefits = [
+    "Get more time to spend on high leverage areas", 
+    "Be prepared for tax filings", 
+    "Build administrative durability", 
+    "Increase exit value of your business", 
+    "Reduce financial and personnel risk", 
+    "Unlimited support from real professionals"
+  ];
+
   return <section id="benefits" className="section-padding bg-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -71,7 +85,7 @@ const Benefits = () => {
               Why Choose Us
             </div>
             <h2 className="heading-lg mb-6">Save time, increase profits and digitize your operations with a responsive financial partner.</h2>
-            <p className="text-foreground/80 mb-8">Gain access to financial specialists at a fraction of the cost by outsourcing your work to Tactomic LLC. We continually evaluate the latest digital offerings for solutions to incorporate into our clients' operations. Don't just get a bookkeeper, get a partner that shares your vision for yout tech-enabled organization. We stay on the cutting edge so you don't have to.</p>
+            <p className="text-foreground/80 mb-8">Gain access to financial specialists at a fraction of the cost by outsourcing your work to Tactomic LLC. We continually evaluate the latest digital offerings for solutions to incorporate into our clients' operations. Don't just get a bookkeeper, get a partner that shares your vision for yout tech-enabled organization. We stay on the cutting edge so you don't have to.</p>
             
             <div className="space-y-4">
               {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0" ref={el => itemsRef.current[index] = el} style={{
@@ -90,4 +104,5 @@ const Benefits = () => {
       </div>
     </section>;
 };
+
 export default Benefits;
