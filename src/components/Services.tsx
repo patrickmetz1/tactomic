@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Calculator, Cpu, Database, BarChart3, Bot } from 'lucide-react';
+import { Calculator, Cpu, Database, BarChart3, Wallet } from 'lucide-react';
 
 const serviceItems = [
   {
@@ -10,7 +10,7 @@ const serviceItems = [
     color: "bg-purple-50 text-purple-600"
   },
   {
-    icon: <Bot className="w-6 h-6" />,
+    icon: <Wallet className="w-6 h-6" />,
     title: "Accounting Operations",
     description: "Execute transactions like invoicing, bill pay, payroll",
     color: "bg-indigo-50 text-indigo-600"
