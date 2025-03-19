@@ -1,10 +1,13 @@
 import React, { useRef, useEffect } from 'react';
-import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
 const Empathy = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -23,27 +26,34 @@ const Empathy = () => {
     });
     return () => observer.disconnect();
   }, []);
-  const painPoints = [{
-    icon: <Clock className="h-8 w-8 text-book-600" />,
-    title: "Drowning in Administrative Tasks",
-    problem: "Accounting taking up valuable time better spent on your core business.",
-    solution: "Be free to focus on your customers, products or take a vacation."
-  }, {
-    icon: <FileQuestion className="h-8 w-8 text-book-600" />,
-    title: "Team Building",
-    problem: "Highly dependent on key employees, finding good accountants is difficult and expensive.",
-    solution: "Highly trained, cost effective professionals readily available."
-  }, {
-    icon: <AlertTriangle className="h-8 w-8 text-book-600" />,
-    title: "Innovation Overload",
-    problem: "Unsure whether your organization is missing out on beneficial technologies or wondering if AI is pure hype?",
-    solution: "Tech-minded scouts keeping your unique organization needs in mind."
-  }, {
-    icon: <DollarSign className="h-8 w-8 text-book-600" />,
-    title: "Cash Management",
-    problem: "Concerned that you are flying blind in the face of inflation and tariffs and need higher quality information?",
-    solution: "Thought partner to support your business through volatile market conditions."
-  }];
+
+  const painPoints = [
+    {
+      icon: <Clock className="h-8 w-8 text-book-600" />,
+      title: "Drowning in Administrative Tasks",
+      problem: "Accounting taking up valuable time better spent on your core business.",
+      solution: "Be free to focus on your customers, products or take a vacation."
+    },
+    {
+      icon: <FileQuestion className="h-8 w-8 text-book-600" />,
+      title: "Team Building",
+      problem: "Highly dependent on key employees, finding good accountants is difficult and expensive.",
+      solution: "Highly trained, cost effective professionals readily available."
+    },
+    {
+      icon: <AlertTriangle className="h-8 w-8 text-book-600" />,
+      title: "Innovation Overload",
+      problem: "Unsure whether your organization is missing out on beneficial technologies or wondering if AI is pure hype?",
+      solution: "Tech-minded scouts keeping your unique organization needs in mind."
+    },
+    {
+      icon: <DollarSign className="h-8 w-8 text-book-600" />,
+      title: "Cash Management",
+      problem: "Concerned that you are flying blind in the face of inflation and tariffs and need higher quality information?",
+      solution: "Thought partner to support your business through volatile market conditions."
+    }
+  ];
+
   return <section className="py-16 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 opacity-0" ref={headerRef}>
@@ -82,14 +92,15 @@ const Empathy = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 group">
+          <a href="#services" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-book-100 text-book-700 font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 group">
             <span className="flex items-center gap-2">
-              Schedule a Consultation
-              <Zap className="h-4 w-4 group-hover:animate-pulse" />
+              Discover Our Services
+              <ChevronDown className="h-4 w-4 group-hover:animate-bounce" />
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </section>;
 };
+
 export default Empathy;
