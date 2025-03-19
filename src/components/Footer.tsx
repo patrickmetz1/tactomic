@@ -149,7 +149,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Balance Bookkeeping. All rights reserved.
+            © {new Date().getFullYear()} Tactomic LLC. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-500 text-sm hover:text-book-600 transition-fast">
