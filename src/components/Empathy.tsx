@@ -34,8 +34,8 @@ const Empathy = () => {
     {
       icon: <Clock className="h-8 w-8 text-book-600" />,
       title: "Drowning in Administrative Tasks",
-      problem: "Hours spent on bookkeeping and financial admin, taking away focus from your core business.",
-      solution: "Automated systems and dedicated support to free up 20+ hours weekly."
+      problem: "Accounting taking up valuable time better spent on your core business.",
+      solution: "Be free to focus on your customers, products or take a vacation."
     },
     {
       icon: <FileQuestion className="h-8 w-8 text-book-600" />,
