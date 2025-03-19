@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -124,13 +123,6 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="text-book-600 mt-1 flex-shrink-0" size={18} />
-                <span className="text-gray-600">
-                  123 Financial District<br />
-                  New York, NY 10004
-                </span>
-              </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-book-600 flex-shrink-0" size={18} />
                 <a href="tel:+12055658536" className="text-gray-600 hover:text-book-600 transition-fast">
@@ -139,8 +131,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-book-600 flex-shrink-0" size={18} />
-                <a href="mailto:info@balancebooks.com" className="text-gray-600 hover:text-book-600 transition-fast">
-                  info@balancebooks.com
+                <a href="mailto:info@tactomic.com" className="text-gray-600 hover:text-book-600 transition-fast">
+                  info@tactomic.com
                 </a>
               </li>
             </ul>
