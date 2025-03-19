@@ -52,7 +52,7 @@ const Services = () => {
             <Cpu size={14} className="text-purple-600" />
             <span>Tech-Driven Solutions</span>
           </div>
-          <h2 className="heading-lg mb-6">Our Services</h2>
+          <h2 className="heading-lg mb-6">Our Capabilities</h2>
           <p className="text-foreground/80">Get practical, approachable solutions tailored precisely for your organization.</p>
         </div>
         
