@@ -131,7 +131,7 @@ const CTA = () => {
                   type="submit"
                   className="w-full py-3 rounded-lg bg-book-600 text-white font-medium hover:bg-book-700 transition-fast flex items-center justify-center gap-2"
                 >
-                  <span>Schedule Free Consultation</span>
+                  <span>Submit</span>
                   <ArrowRight size={18} />
                 </button>
               </form>
