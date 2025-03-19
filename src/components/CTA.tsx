@@ -61,7 +61,7 @@ const CTA = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Discuss Your Needs</h3>
-                  <p className="text-white/80">We'll listen to your challenges and goals.</p>
+                  <p className="text-white/80">We'll learn about your goals and how we can help.</p>
                 </div>
               </div>
               
