@@ -71,7 +71,7 @@ const CTA = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Custom Solution</h3>
-                  <p className="text-white/80">Receive a customized plan for your business.</p>
+                  <p className="text-white/80">Receive a plan that solves your problems and fits your budget.</p>
                 </div>
               </div>
             </div>
