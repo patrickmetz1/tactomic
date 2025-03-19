@@ -66,7 +66,7 @@ const Empathy = () => {
             We Understand Your Challenges
           </div>
           <h2 className="heading-lg max-w-3xl mx-auto">
-            Tired Of Wearing Too Many Hats? <span className="text-book-600">Solve</span>
+            Tired Of Wearing Too Many Hats?
           </h2>
           <p className="text-foreground/80 mt-4 max-w-2xl mx-auto">
             We've worked with hundreds of businesses and have seen the same challenges emerge repeatedly.
