@@ -127,36 +127,6 @@ const CTA = () => {
                   />
                 </div>
                 
-                <div className="space-y-2">
-                  <label htmlFor="business" className="text-sm font-medium">
-                    Business Name
-                  </label>
-                  <input
-                    type="text"
-                    id="business"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500"
-                    placeholder="Enter your business name"
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="service" className="text-sm font-medium">
-                    Service You're Interested In
-                  </label>
-                  <select
-                    id="service"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 bg-white"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="bookkeeping">Bookkeeping</option>
-                    <option value="payroll">Payroll Services</option>
-                    <option value="tax">Tax Preparation</option>
-                    <option value="reporting">Financial Reporting</option>
-                    <option value="planning">Financial Planning</option>
-                    <option value="accounts">Accounts Payable</option>
-                  </select>
-                </div>
-                
                 <button
                   type="submit"
                   className="w-full py-3 rounded-lg bg-book-600 text-white font-medium hover:bg-book-700 transition-fast flex items-center justify-center gap-2"
