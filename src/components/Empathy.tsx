@@ -39,9 +39,9 @@ const Empathy = () => {
     },
     {
       icon: <FileQuestion className="h-8 w-8 text-book-600" />,
-      title: "Financial Uncertainty",
-      problem: "Struggling to understand your true financial position and what actions to take.",
-      solution: "Clear metrics and actionable insights tailored to your specific business goals."
+      title: "Team Building",
+      problem: "Highly dependent on key employees, finding good accountants is difficult and expensive.",
+      solution: "Highly trained, cost effective professionals readily available."
     },
     {
       icon: <AlertTriangle className="h-8 w-8 text-book-600" />,
