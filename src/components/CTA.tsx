@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 const CTA = () => {
@@ -84,7 +85,7 @@ const CTA = () => {
               <form className="space-y-5">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
-                    Full Name
+                    Name
                   </label>
                   <input type="text" id="name" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500" placeholder="Enter your name" required />
                 </div>
