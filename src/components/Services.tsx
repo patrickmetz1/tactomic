@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Cpu, Database, BarChart3, Wallet } from 'lucide-react';
-
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
   title: "Bookkeeping",
@@ -22,7 +21,6 @@ const serviceItems = [{
   description: "We help clients streamline their back-office processes, synchronize and align their tech-stacks with their growth strategies, and reduce financial risks seen and unseen within their organization. From upskilling to documentation, we help increase organizational durability for years to come.",
   color: "bg-emerald-50 text-emerald-600"
 }];
-
 const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -55,7 +53,7 @@ const Services = () => {
             <span>Tech-Driven Solutions</span>
           </div>
           <h2 className="heading-lg mb-6">Our Capabilities</h2>
-          <p className="text-foreground/80">Get practical, approachable solutions tailored precisely for your organization.</p>
+          <p className="text-foreground/80">We deliver practical solutions tailored precisely for your organization.</p>
         </div>
         
         <div className="relative max-w-5xl mx-auto">
@@ -86,5 +84,4 @@ const Services = () => {
       </div>
     </section>;
 };
-
 export default Services;
