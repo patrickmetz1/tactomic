@@ -46,8 +46,8 @@ const Empathy = () => {
   }, {
     icon: <DollarSign className="h-8 w-8 text-book-600" />,
     title: "Cash Management",
-    problem: "Concerned that you are flying blind in the face of inflation and tariffs and need higher quality information?",
-    solution: "Thought partner to support your business through volatile market conditions."
+    problem: "Operating with poor visibility in the face of inflation, tariffs, and volatile markets?",
+    solution: "You need a framework to provide higher quality information and specific recommendations."
   }];
 
   return <section className="py-16 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
