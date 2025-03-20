@@ -59,7 +59,7 @@ const Benefits = () => {
                   <p className="text-lg font-semibold">$18,242</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-sm text-gray-500">Add financial specialists to your team at a fraction of the cost through outsourcing with Tactomic LLC. We continually evaluate the latest digital offerings for tools to incorporate into our clients' operations. Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We stay on the cutting edge so you don't have to.</p>
+                  <p className="text-sm text-gray-500">Add financial specialists to your team at a fraction of the cost through outsourcing with Tactomic. We continually evaluate the latest digital offerings for tools to incorporate into our clients' operations. Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We stay on the cutting edge so you don't have to.</p>
                   <p className="text-lg font-semibold">$24,347</p>
                 </div>
               </div>
