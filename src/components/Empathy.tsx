@@ -2,10 +2,12 @@ import React, { useRef, useEffect } from 'react';
 import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+
 const Empathy = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -24,9 +26,10 @@ const Empathy = () => {
     });
     return () => observer.disconnect();
   }, []);
+
   const painPoints = [{
     icon: <Clock className="h-8 w-8 text-book-600" />,
-    title: "Drowning in Administrative Tasks",
+    title: "Swamped with Admin Tasks",
     problem: "Accounting taking up valuable time better spent on your core business.",
     solution: "Be free to focus on your customers, products or take a vacation."
   }, {
@@ -45,6 +48,7 @@ const Empathy = () => {
     problem: "Concerned that you are flying blind in the face of inflation and tariffs and need higher quality information?",
     solution: "Thought partner to support your business through volatile market conditions."
   }];
+
   return <section className="py-16 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 opacity-0" ref={headerRef}>
@@ -93,4 +97,5 @@ const Empathy = () => {
       </div>
     </section>;
 };
+
 export default Empathy;
