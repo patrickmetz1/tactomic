@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 const CTA = () => {
@@ -21,24 +22,24 @@ const CTA = () => {
     if (formRef.current) observer.observe(formRef.current);
     return () => observer.disconnect();
   }, []);
-  return <section id="contact" className="section-padding bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
+  return <section id="contact" className="py-12 md:py-16 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_#ffffff,_transparent_70%)]"></div>
       </div>
       
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="w-full lg:w-1/2 opacity-0" ref={contentRef}>
-            <h2 className="heading-lg mb-6">Ready for a change?</h2>
-            <p className="text-white/90 mb-8 max-w-lg">Ready to refresh your financial ops?</p>
+            <h2 className="heading-lg mb-4">Ready for a refresh?</h2>
+            <p className="text-white/90 mb-6 max-w-lg">Contact us today to get the support you need.</p>
             
-            <div className="flex items-center gap-8 mb-8">
+            <div className="flex items-center gap-6 mb-6">
               
               
             </div>
             
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
                   01
@@ -72,27 +73,27 @@ const CTA = () => {
           </div>
           
           <div className="w-full lg:w-1/2 opacity-0" ref={formRef}>
-            <div className="bg-white text-foreground rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-center">Get Started Today</h3>
+            <div className="bg-white text-foreground rounded-2xl p-6 shadow-lg">
+              <h3 className="text-xl font-semibold mb-4 text-center">Get Started Today</h3>
               
-              <form className="space-y-5">
-                <div className="space-y-2">
+              <form className="space-y-4">
+                <div className="space-y-1">
                   <label htmlFor="name" className="text-sm font-medium">
                     Name
                   </label>
-                  <input type="text" id="name" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500" placeholder="Enter your name" required />
+                  <input type="text" id="name" className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500" placeholder="Enter your name" required />
                 </div>
                 
-                <div className="space-y-2">
+                <div className="space-y-1">
                   <label htmlFor="email" className="text-sm font-medium">
                     Email Address
                   </label>
-                  <input type="email" id="email" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500" placeholder="Enter your email" required />
+                  <input type="email" id="email" className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500" placeholder="Enter your email" required />
                 </div>
                 
-                <button type="submit" className="w-full py-3 rounded-lg bg-book-600 text-white font-medium hover:bg-book-700 transition-fast flex items-center justify-center gap-2">
+                <button type="submit" className="w-full py-2 rounded-lg bg-book-600 text-white font-medium hover:bg-book-700 transition-fast flex items-center justify-center gap-2">
                   <span>Submit</span>
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </button>
               </form>
             </div>
