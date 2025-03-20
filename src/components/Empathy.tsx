@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -31,7 +32,7 @@ const Empathy = () => {
     {
       icon: <Clock className="h-8 w-8 text-book-600" />,
       title: "Drowning in Administrative Tasks",
-      problem: "Accounting taking up valuable time better spent on your core business.",
+      problem: "Spending too much time wrestling with spreadsheets and software?",
       solution: "Be free to focus on your customers, products or take a vacation."
     },
     {
@@ -60,7 +61,7 @@ const Empathy = () => {
           <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-4">
             We Understand Your Challenges
           </div>
-          <h2 className="heading-lg max-w-3xl mx-auto">Wearing Too Many Hats?</h2>
+          <h2 className="heading-lg max-w-3xl mx-auto">Swamped with Admin Tasks</h2>
           <p className="text-foreground/80 mt-4 max-w-2xl mx-auto">You don't have the resources of a large public corporation.....</p>
         </div>
 
