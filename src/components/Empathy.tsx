@@ -36,12 +36,12 @@ const Empathy = () => {
   }, {
     icon: <FileQuestion className="h-8 w-8 text-book-600" />,
     title: "Team Building",
-    problem: "Highly dependent on key employees, finding good accountants is difficult and expensive.",
+    problem: "Having troulbe finding good accountants at a reasonable price?",
     solution: "Highly trained, cost effective professionals readily available."
   }, {
     icon: <AlertTriangle className="h-8 w-8 text-book-600" />,
     title: "Innovation Overload",
-    problem: "Unsure whether your organization is missing out on beneficial technologies or wondering if AI is pure hype?",
+    problem: "Wonder whether your company is missing out on beneficial novel technologies?",
     solution: "Tech-minded scouts keeping your unique organization needs in mind."
   }, {
     icon: <DollarSign className="h-8 w-8 text-book-600" />,
