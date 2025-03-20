@@ -37,17 +37,17 @@ const Empathy = () => {
     icon: <FileQuestion className="h-8 w-8 text-book-600" />,
     title: "Team Building",
     problem: "Having troulbe finding good accountants at a reasonable price?",
-    solution: "Highly trained, cost effective professionals readily available."
+    solution: "Get access to well trained, cost effective professionals."
   }, {
     icon: <AlertTriangle className="h-8 w-8 text-book-600" />,
     title: "Innovation Overload",
     problem: "Wonder whether your company is missing out on beneficial novel technologies?",
-    solution: "Tech-minded scouts keeping your unique organization needs in mind."
+    solution: "Team up with tech focused scouts that keep your needs top of mind."
   }, {
     icon: <DollarSign className="h-8 w-8 text-book-600" />,
     title: "Cash Management",
     problem: "Operating with poor visibility in the face of inflation, tariffs, and volatile markets?",
-    solution: "You need a framework to provide higher quality information and specific recommendations."
+    solution: "Get a framework to provide higher quality information and specific recommendations."
   }];
 
   return <section className="py-16 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
