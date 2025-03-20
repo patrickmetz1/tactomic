@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown, Lightbulb } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -36,10 +36,10 @@ const Empathy = () => {
   }, {
     icon: <FileQuestion className="h-8 w-8 text-book-600" />,
     title: "Team Building",
-    problem: "Having troulbe finding good accountants at a reasonable price?",
+    problem: "Having trouble finding good accountants at a reasonable price?",
     solution: "Get access to well trained, cost effective professionals."
   }, {
-    icon: <AlertTriangle className="h-8 w-8 text-book-600" />,
+    icon: <Lightbulb className="h-8 w-8 text-book-600" />,
     title: "Innovation Overload",
     problem: "Wonder whether your company is missing out on beneficial novel technologies?",
     solution: "Team up with tech focused scouts that keep your needs top of mind."
