@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown, Lightbulb } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -57,7 +56,7 @@ const Empathy = () => {
             We Understand Your Challenges
           </div>
           <h2 className="heading-lg max-w-3xl mx-auto">Wearing Too Many Hats?</h2>
-          <p className="text-foreground/80 mt-4 max-w-2xl mx-auto">Wearing Too Many Hats?</p>
+          <p className="text-foreground/80 mt-4 max-w-2xl mx-auto">Pivotal support has never been more accessible.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
