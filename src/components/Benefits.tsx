@@ -71,7 +71,7 @@ const Benefits = () => {
               Why Choose Us
             </div>
             <h2 className="heading-lg mb-6">Save time, increase profits and digitize your operations with a responsive financial partner.</h2>
-            <p className="text-foreground/80 mb-8">Gain access to financial specialists at a fraction of the cost by outsourcing your work to Tactomic LLC. We continually evaluate the latest digital offerings for tools to incorporate into our clients' operations. Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We stay on the cutting edge so you don't have to.</p>
+            <p className="text-foreground/80 mb-8">Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We continually evaluate the latest digital offerings for tools to incorporate into our clients' operations. We stay on the cutting edge so you don't have to.</p>
             
             <div className="space-y-4">
               {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0" ref={el => itemsRef.current[index] = el} style={{
