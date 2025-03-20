@@ -1,14 +1,11 @@
-
 import React, { useRef, useEffect } from 'react';
-import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown, Lightbulb } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-
 const Empathy = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -27,37 +24,33 @@ const Empathy = () => {
     });
     return () => observer.disconnect();
   }, []);
-
   const painPoints = [{
     icon: <Clock className="h-8 w-8 text-book-600" />,
-    title: "Swamped with Admin Tasks",
-    problem: "Spending too much time wrestling with spreadsheets and software?",
+    title: "Drowning in Administrative Tasks",
+    problem: "Accounting taking up valuable time better spent on your core business.",
     solution: "Be free to focus on your customers, products or take a vacation."
   }, {
     icon: <FileQuestion className="h-8 w-8 text-book-600" />,
     title: "Team Building",
-    problem: "Having trouble finding good accountants at a reasonable price?",
-    solution: "Get access to well trained, cost effective professionals."
+    problem: "Highly dependent on key employees, finding good accountants is difficult and expensive.",
+    solution: "Highly trained, cost effective professionals readily available."
   }, {
-    icon: <Lightbulb className="h-8 w-8 text-book-600" />,
+    icon: <AlertTriangle className="h-8 w-8 text-book-600" />,
     title: "Innovation Overload",
-    problem: "Wonder whether your company is missing out on beneficial novel technologies?",
-    solution: "Team up with tech focused scouts that keep your needs top of mind."
+    problem: "Unsure whether your organization is missing out on beneficial technologies or wondering if AI is pure hype?",
+    solution: "Tech-minded scouts keeping your unique organization needs in mind."
   }, {
     icon: <DollarSign className="h-8 w-8 text-book-600" />,
     title: "Cash Management",
-    problem: "Operating with poor visibility in the face of inflation, tariffs, and volatile markets?",
-    solution: "Get a framework to provide higher quality information and specific recommendations."
+    problem: "Concerned that you are flying blind in the face of inflation and tariffs and need higher quality information?",
+    solution: "Thought partner to support your business through volatile market conditions."
   }];
-
   return <section className="py-16 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 opacity-0" ref={headerRef}>
-          <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-4">
-            We Understand Your Challenges
-          </div>
+          <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-4">Pivotal support has never been more accessible.</div>
           <h2 className="heading-lg max-w-3xl mx-auto">Wearing Too Many Hats?</h2>
-          <p className="text-foreground/80 mt-4 max-w-2xl mx-auto">Wearing Too Many Hats?</p>
+          <p className="text-foreground/80 mt-4 max-w-2xl mx-auto">You don't have the resources of a large public corporation.....</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -98,5 +91,4 @@ const Empathy = () => {
       </div>
     </section>;
 };
-
 export default Empathy;
