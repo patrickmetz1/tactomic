@@ -52,7 +52,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 md:px-8 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="w-full lg:w-1/2 max-w-2xl pl-2 md:pl-4">
+          <div className="w-full lg:w-1/2 max-w-2xl pl-2 md:pl-4 pt-16 md:pt-20">
             
             <h1 className="heading-xl mb-8 text-balance" ref={headingRef}>
               <span className="text-book-600">Tech-Forward</span> Solutions to Streamline Your Back Office
