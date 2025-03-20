@@ -59,9 +59,9 @@ const Hero = () => {
             </h1>
             <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>Outsourced accounting and financial services for start-ups and SMBs.</p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
-              <button className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover">
+              <a href="#contact" className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover text-center">
                 Get Started Today
-              </button>
+              </a>
               <button className="px-8 py-3 rounded-full border border-book-200 text-book-700 font-medium transition-fast hover:bg-book-50 hover:border-book-300 tech-hover">
                 Explore Solutions
               </button>
