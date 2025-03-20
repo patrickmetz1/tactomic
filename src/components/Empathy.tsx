@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { AlertTriangle, CheckCircle, Clock, DollarSign, FileQuestion, Zap, ChevronDown } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -30,7 +31,7 @@ const Empathy = () => {
   const painPoints = [{
     icon: <Clock className="h-8 w-8 text-book-600" />,
     title: "Swamped with Admin Tasks",
-    problem: "Accounting taking up valuable time better spent on your core business.",
+    problem: "Having trouble finding good accountants at a reasonable price?",
     solution: "Be free to focus on your customers, products or take a vacation."
   }, {
     icon: <FileQuestion className="h-8 w-8 text-book-600" />,
