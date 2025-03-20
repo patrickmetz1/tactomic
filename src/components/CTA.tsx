@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 const CTA = () => {
@@ -31,7 +30,7 @@ const CTA = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
           <div className="w-full lg:w-1/2 opacity-0" ref={contentRef}>
-            <h2 className="heading-lg mb-6">Ready to continue your digital journey?</h2>
+            <h2 className="heading-lg mb-6">Ready for a change?</h2>
             <p className="text-white/90 mb-8 max-w-lg">Get in touch with us to move toward a more modern and  step toward a more modern and efficient financial operations.</p>
             
             <div className="flex items-center gap-8 mb-8">
