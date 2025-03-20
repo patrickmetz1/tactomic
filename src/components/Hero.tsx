@@ -48,12 +48,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 md:px-8 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="w-full lg:w-1/2 max-w-2xl pl-2 md:pl-4">
-            <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-6 tech-glass" ref={decorationRef}>
-              <span className="flex items-center gap-2">
-                <Zap size={14} className="text-book-600" />
-                Accounting & Finance Support
-              </span>
-            </div>
+            
             <h1 className="heading-xl mb-6 text-balance" ref={headingRef}>
               <span className="text-book-600">Tech-Forward</span> Solutions to Streamline Your Back Office
             </h1>
