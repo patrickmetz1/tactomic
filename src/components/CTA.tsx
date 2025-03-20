@@ -1,6 +1,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+
 const CTA = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -22,24 +23,25 @@ const CTA = () => {
     if (formRef.current) observer.observe(formRef.current);
     return () => observer.disconnect();
   }, []);
-  return <section id="contact" className="py-12 md:py-16 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
+  
+  return <section id="contact" className="py-10 md:py-14 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_#ffffff,_transparent_70%)]"></div>
       </div>
       
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
           <div className="w-full lg:w-1/2 opacity-0" ref={contentRef}>
-            <h2 className="heading-lg mb-4">Ready for a refresh?</h2>
-            <p className="text-white/90 mb-6 max-w-lg">Contact us today to get the support you need.</p>
+            <h2 className="heading-lg mb-2">Optimize your financial ops today</h2>
+            <p className="text-white/90 mb-5 max-w-lg">Grow revenue, reduce headaches, and stay up to speed.</p>
             
-            <div className="flex items-center gap-6 mb-6">
+            <div className="flex items-center gap-6 mb-5">
               
               
             </div>
             
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
                   01
@@ -102,4 +104,5 @@ const CTA = () => {
       </div>
     </section>;
 };
+
 export default CTA;
