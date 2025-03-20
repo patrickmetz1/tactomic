@@ -34,14 +34,8 @@ const CTA = () => {
             <p className="text-white/90 mb-8 max-w-lg">Get in touch with us to move toward a more modern and  step toward a more modern and efficient financial operations.</p>
             
             <div className="flex items-center gap-8 mb-8">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-white"></div>
-                <span className="font-medium">Free Consultation</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-white"></div>
-                <span className="font-medium">No Obligation</span>
-              </div>
+              
+              
             </div>
             
             <div className="flex flex-col gap-6">
