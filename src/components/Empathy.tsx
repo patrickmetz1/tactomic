@@ -52,7 +52,7 @@ const Empathy = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 opacity-0" ref={headerRef}>
           <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-2">
-            Common Challenges
+            We understand your challenges
           </div>
           <h2 className="heading-lg">Wearing Too Many Hats?</h2>
         </div>
