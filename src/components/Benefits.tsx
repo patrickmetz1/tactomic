@@ -1,13 +1,10 @@
-
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
-
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -27,15 +24,7 @@ const Benefits = () => {
     });
     return () => observer.disconnect();
   }, []);
-
-  const benefits = [
-    "Get back time to spend on high leverage areas", 
-    "Be prepared for tax filings", 
-    "Build administrative durability", 
-    "Increase exit value of your business", 
-    "Reduce financial and personnel risk"
-  ];
-
+  const benefits = ["Get back time to spend on high leverage areas", "Be prepared for tax filings", "Build administrative durability", "Increase exit value of your business", "Reduce financial and personnel risk"];
   return <section id="benefits" className="section-padding bg-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -81,7 +70,7 @@ const Benefits = () => {
             <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-4">
               Why Choose Us
             </div>
-            <h2 className="heading-lg mb-6">Save time, increase profits and digitize your operations with a responsive financial partner.</h2>
+            <h2 className="heading-lg mb-6">Save time and money with outsourced office operations.</h2>
             <p className="text-foreground/80 mb-8">Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We continually evaluate the latest digital offerings for tools to incorporate into our clients' operations. We stay on the cutting edge so you don't have to.</p>
             
             <div className="space-y-4">
@@ -101,5 +90,4 @@ const Benefits = () => {
       </div>
     </section>;
 };
-
 export default Benefits;
