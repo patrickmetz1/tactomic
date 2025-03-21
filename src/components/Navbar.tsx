@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Menu, X, BarChart3 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,10 +25,11 @@ const Navbar = () => {
       isScrolled ? 'py-3 bg-white/90 backdrop-blur-sm shadow-sm' : 'py-5 bg-transparent')}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-md bg-book-600 flex items-center justify-center text-white font-bold text-xl">
-            <BarChart3 size={20} />
-          </div>
-          <span className="font-semibold text-xl tracking-tight truncate">Tactomic</span>
+          <img 
+            src="/lovable-uploads/988a3980-b636-4892-8f11-fc1e1411ee5b.png" 
+            alt="Tactomic Logo" 
+            className="h-8" 
+          />
         </Link>
         
         {/* Right-aligned About link */}

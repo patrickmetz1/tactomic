@@ -9,10 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-md bg-book-600 flex items-center justify-center text-white font-bold text-xl">
-                B
-              </div>
-              <span className="font-semibold text-xl tracking-tight">Tactomic</span>
+              <img 
+                src="/lovable-uploads/988a3980-b636-4892-8f11-fc1e1411ee5b.png" 
+                alt="Tactomic Logo" 
+                className="h-8" 
+              />
             </div>
             
             {/* Contact information */}
