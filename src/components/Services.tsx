@@ -56,8 +56,8 @@ const Services = () => {
       
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center mb-16 opacity-0" ref={el => itemsRef.current[0] = el}>
-          <p className="text-foreground/80 mb-4">We deliver practical solutions tailored precisely for your organization.</p>
           <h2 className="heading-lg mb-6">Our Capabilities</h2>
+          <p className="text-foreground/80">We deliver practical solutions tailored precisely for your organization.</p>
           <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 font-medium mt-4 flex items-center gap-2 justify-center">
             <Cpu size={14} className="text-purple-600" />
             <span>Tech-Driven Solutions</span>
