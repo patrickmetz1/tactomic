@@ -80,22 +80,18 @@ const Empathy = () => {
             ))}
           </ul>
           
-          {/* Bubble Graphic */}
+          {/* Simplified Bubble Graphic */}
           <div 
-            className="opacity-0 mt-12 mb-2 mx-auto max-w-lg text-center" 
+            className="opacity-0 mt-10 mb-2 mx-auto max-w-lg text-center" 
             ref={bubbleRef}
             style={{ animationDelay: '600ms' }}
           >
             <div className="relative inline-block">
-              <div className="bg-primary/95 text-white px-6 py-4 rounded-2xl shadow-lg tech-glass pulse-glow">
-                <div className="flex items-center justify-center gap-2">
-                  <Sparkles className="h-5 w-5 text-yellow-200" />
-                  <p className="font-medium text-lg">Pivotal support has never been more accessible</p>
-                  <Sparkles className="h-5 w-5 text-yellow-200" />
-                </div>
+              <div className="bg-primary text-white px-6 py-4 rounded-xl shadow-md">
+                <p className="font-semibold text-xl">Pivotal support has never been more accessible</p>
               </div>
-              {/* Bubble pointer/tail */}
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary/95 rotate-45"></div>
+              {/* Simple bubble pointer/tail */}
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rotate-45"></div>
             </div>
           </div>
         </div>
