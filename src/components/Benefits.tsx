@@ -56,11 +56,11 @@ const Benefits = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-500">Smaller organizations are more likely to succeed in their digital initiatives than larger companies.</p>
-                  <p className="text-lg font-semibold">$18,242</p>
+                  <p className="text-lg font-semibold">2.7x</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-500">Digital organizations outperform their counterparts and increase overall business value.</p>
-                  <p className="text-lg font-semibold">$24,347</p>
+                  <p className="text-lg font-semibold">3x</p>
                 </div>
               </div>
             </div>
