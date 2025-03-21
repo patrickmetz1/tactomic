@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, DollarSign, Code, Zap, BookOpen } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -98,10 +97,6 @@ const Hero = () => {
                 <div className="flex items-center gap-2">
                   <DollarSign size={16} className="text-book-600" />
                   <p className="text-sm font-medium">Flexible financial boost</p>
-                </div>
-                <div className="flex items-center gap-1 mt-1 text-xs text-foreground/60">
-                  <BookOpen size={12} className="text-book-600" />
-                  <span>McKinsey Digital Quotient® Assessment</span>
                 </div>
               </div>
             </div>
