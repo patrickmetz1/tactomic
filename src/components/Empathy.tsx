@@ -45,7 +45,7 @@ const Empathy = () => {
     },
     {
       icon: <Lightbulb className="h-6 w-6 text-book-600" />,
-      title: "Wondering which digital innovation you should incorporate into your operations?"
+      title: "Wondering which digital tool to incorporate into your operations?"
     }
   ];
 
