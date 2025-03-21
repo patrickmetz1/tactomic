@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Cpu, Database, BarChart3, Wallet } from 'lucide-react';
 
@@ -6,7 +5,7 @@ const serviceItems = [
   {
     icon: <Database className="w-6 h-6" />,
     title: "Bookkeeping",
-    description: "Get reliable financial record keeping and timely reporting that you can rely on. Stay up to day or shift to a well-fitted accounting system with the help of experienced guides.",
+    description: "Get reliable financial record keeping and timely reporting that you can rely on. Keep your books current or shift to a well-fitted accounting system with the help of experienced guides.",
     color: "bg-purple-50 text-purple-600"
   },
   {
