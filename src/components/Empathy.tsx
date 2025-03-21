@@ -33,7 +33,7 @@ const Empathy = () => {
   const painPoints = [
     {
       icon: <Clock className="h-6 w-6 text-book-600" />,
-      title: "Wrestling with accounting software and admin tasks?"
+      title: "Wrestling with administrative tasks and bookkeeping software?"
     },
     {
       icon: <FileQuestion className="h-6 w-6 text-book-600" />,
