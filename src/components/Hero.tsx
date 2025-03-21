@@ -96,7 +96,7 @@ const Hero = () => {
             }}>
                 <div className="flex items-center gap-2">
                   <DollarSign size={16} className="text-book-600" />
-                  <p className="text-sm font-medium">Flexible financial boost</p>
+                  <p className="text-sm font-medium">Get a competitive advantage</p>
                 </div>
               </div>
             </div>
