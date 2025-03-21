@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Clock, FileQuestion, Lightbulb, DollarSign, CheckCircle } from 'lucide-react';
+import { Clock, FileQuestion, Lightbulb, DollarSign } from 'lucide-react';
 
 const Empathy = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -31,23 +31,19 @@ const Empathy = () => {
   const painPoints = [
     {
       icon: <Clock className="h-6 w-6 text-book-600" />,
-      title: "Swamped with Admin Tasks",
-      solution: "Focus on customers, not spreadsheets"
+      title: "Spending time on administrative and bookkeeping tasks?"
     },
     {
       icon: <FileQuestion className="h-6 w-6 text-book-600" />,
-      title: "Team Building Challenges",
-      solution: "Access trained professionals at reasonable costs"
+      title: "Trouble finding quality accounting support?"
     },
     {
       icon: <Lightbulb className="h-6 w-6 text-book-600" />,
-      title: "Innovation Overload",
-      solution: "Stay current with relevant technologies"
+      title: "Concerned that your operations are missing out on technological opportunities?"
     },
     {
       icon: <DollarSign className="h-6 w-6 text-book-600" />,
-      title: "Cash Management Struggles",
-      solution: "Get clarity in volatile markets"
+      title: "Struggling to manage and predict cash needs?"
     }
   ];
 
@@ -76,10 +72,6 @@ const Empathy = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-foreground">{point.title}</h3>
-                  </div>
-                  <div className="flex items-center text-sm text-green-600">
-                    <CheckCircle className="h-4 w-4 mr-1" />
-                    <span>{point.solution}</span>
                   </div>
                 </div>
               </li>
