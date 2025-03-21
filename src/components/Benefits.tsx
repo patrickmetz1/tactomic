@@ -1,10 +1,13 @@
+
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
+
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -16,15 +19,19 @@ const Benefits = () => {
     }, {
       threshold: 0.1
     });
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
+
     return () => observer.disconnect();
   }, []);
-  const benefits = ["Get back time to spend on high leverage areas", "Be prepared for tax filings", "Build administrative durability", "Increase exit value of your business", "Reduce financial and personnel risk"];
+
+  const benefits = ["Reclaim time better spent in high leverage areas", "Be prepared for tax filings", "Build administrative durability", "Increase exit value of your business", "Reduce financial and personnel risk"];
+
   return <section id="benefits" className="section-padding bg-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -90,4 +97,5 @@ const Benefits = () => {
       </div>
     </section>;
 };
+
 export default Benefits;
