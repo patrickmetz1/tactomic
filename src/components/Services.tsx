@@ -18,13 +18,13 @@ const serviceItems = [
   {
     icon: <Calculator className="w-6 h-6" />,
     title: "Fractional Finance",
-    description: "We help clients perform annual business planning, establish performance management frameworks that include budgeting, forecasting, KPIs, and dynamic reporting. We ensure our clients understand their financial position and can make informed managerial decisions.",
+    description: "Be guided through annual business planning, establishment of KPIs, monitoring and reporting processes. Ensure you understand your financial position before making strategic decisions.",
     color: "bg-amber-50 text-amber-600"
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
     title: "Advisory",
-    description: "We help clients streamline their back-office processes, synchronize and align their tech-stacks with their growth strategies, and reduce financial risks seen and unseen within their organization. From upskilling to documentation, we help increase organizational durability for years to come.",
+    description: "Synchronize your tech-stack and align it with your growth strategies. Reduce financial risks and increase organizational durability through process engineering.",
     color: "bg-emerald-50 text-emerald-600"
   }
 ];
