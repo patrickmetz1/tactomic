@@ -33,19 +33,19 @@ const Empathy = () => {
   const painPoints = [
     {
       icon: <Clock className="h-6 w-6 text-book-600" />,
-      title: "Spending time on administrative and bookkeeping tasks?"
+      title: "Wrestling with accounting software and admin tasks?"
     },
     {
       icon: <FileQuestion className="h-6 w-6 text-book-600" />,
-      title: "Trouble finding quality accounting support?"
-    },
-    {
-      icon: <Lightbulb className="h-6 w-6 text-book-600" />,
-      title: "Concerned that your operations are missing out on technological opportunities?"
+      title: "Hard to find quality accounting support?"
     },
     {
       icon: <DollarSign className="h-6 w-6 text-book-600" />,
-      title: "Struggling to predict and manage cash demands?"
+      title: "Struggling to understand and predict cash demands?"
+    },
+    {
+      icon: <Lightbulb className="h-6 w-6 text-book-600" />,
+      title: "Trouble deciding which software tools to buy?"
     }
   ];
 
