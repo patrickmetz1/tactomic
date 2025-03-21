@@ -85,7 +85,7 @@ const Hero = () => {
               <div className="absolute -right-4 top-12 tech-glass rounded-xl py-3 px-4 shadow-xl animate-float">
                 <div className="flex items-center gap-2">
                   <Server size={16} className="text-book-600" />
-                  <p className="text-sm font-medium">Data Processing</p>
+                  <p className="text-sm font-medium">Digitize your business</p>
                 </div>
                 <div className="mt-1 w-full h-1 bg-book-100 rounded-full">
                   <div className="w-3/4 h-full bg-book-600 rounded-full"></div>
@@ -97,7 +97,7 @@ const Hero = () => {
             }}>
                 <div className="flex items-center gap-2">
                   <DollarSign size={16} className="text-book-600" />
-                  <p className="text-sm font-medium">Digitized businesses outperform their competitors</p>
+                  <p className="text-sm font-medium">Flexible financial boost</p>
                 </div>
                 <div className="flex items-center gap-1 mt-1 text-xs text-foreground/60">
                   <BookOpen size={12} className="text-book-600" />
