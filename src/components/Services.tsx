@@ -57,11 +57,11 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="section-padding relative overflow-hidden" ref={sectionRef}>
+    <section id="services" className="section-padding pb-8 md:pb-16 relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-purple-50/30"></div>
       
       <div className="container mx-auto px-4">
-        <div className="max-w-xl mx-auto text-center mb-16 opacity-0" ref={el => itemsRef.current[0] = el}>
+        <div className="max-w-xl mx-auto text-center mb-8 md:mb-16 opacity-0" ref={el => itemsRef.current[0] = el}>
           <h2 className="heading-lg mb-6">Our Capabilities</h2>
           
           <div className="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 font-medium mt-4 flex items-center gap-2 justify-center tech-hover shadow-sm max-w-md mx-auto">
@@ -74,7 +74,7 @@ const Services = () => {
           {serviceItems.map((service, index) => (
             <div 
               key={service.title} 
-              className={`flex items-start gap-8 mb-16 last:mb-0 opacity-0 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`} 
+              className={`flex items-start gap-8 mb-8 md:mb-16 last:mb-0 opacity-0 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`} 
               ref={el => itemsRef.current[index + 1] = el} 
               style={{
                 animationDelay: `${(index + 1) * 100}ms`
