@@ -5,7 +5,7 @@ import { Clock, FileQuestion, Lightbulb, DollarSign, CheckCircle } from 'lucide-
 const Empathy = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
-  const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
