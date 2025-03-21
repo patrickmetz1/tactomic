@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Mail, Phone, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -31,21 +30,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            
-            <div className="flex gap-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-book-100 text-book-600 flex items-center justify-center hover:bg-book-200 transition-fast" aria-label="Facebook">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-book-100 text-book-600 flex items-center justify-center hover:bg-book-200 transition-fast" aria-label="Twitter">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-book-100 text-book-600 flex items-center justify-center hover:bg-book-200 transition-fast" aria-label="LinkedIn">
-                <Linkedin size={18} />
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-book-100 text-book-600 flex items-center justify-center hover:bg-book-200 transition-fast" aria-label="Instagram">
-                <Instagram size={18} />
-              </a>
-            </div>
           </div>
           
           <div>
@@ -65,7 +49,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-10 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Tactomic LLC. All rights reserved.
           </p>
