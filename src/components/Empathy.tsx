@@ -54,8 +54,9 @@ const Empathy = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 opacity-0" ref={headerRef}>
           <h2 className="heading-lg">Wearing Too Many Hats?</h2>
-          <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mt-2">
-            We get it
+          <div className="inline-block mt-2 relative">
+            <span className="text-book-600 italic font-medium tracking-wide border-b border-dashed border-book-300">we get it</span>
+            <div className="absolute -left-2 -right-2 -bottom-0.5 h-0.5 bg-gradient-to-r from-transparent via-book-200 to-transparent"></div>
           </div>
         </div>
 
