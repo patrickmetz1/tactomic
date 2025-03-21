@@ -1,30 +1,24 @@
+
 import React, { useEffect, useRef } from 'react';
-import { BarChart3, ChevronDown, Cpu, Server, Database, Code, Zap, BookOpen } from 'lucide-react';
+import { BarChart3, ChevronDown, Cpu, Server, DollarSign, Code, Zap, BookOpen } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paragraphRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const decorationRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+
   useEffect(() => {
-    const elements = [{
-      ref: headingRef,
-      delay: 100
-    }, {
-      ref: paragraphRef,
-      delay: 300
-    }, {
-      ref: ctaRef,
-      delay: 500
-    }, {
-      ref: decorationRef,
-      delay: 700
-    }];
-    elements.forEach(({
-      ref,
-      delay
-    }) => {
+    const elements = [
+      { ref: headingRef, delay: 100 },
+      { ref: paragraphRef, delay: 300 },
+      { ref: ctaRef, delay: 500 },
+      { ref: decorationRef, delay: 700 }
+    ];
+
+    elements.forEach(({ ref, delay }) => {
       if (ref.current) {
         ref.current.style.opacity = '0';
         ref.current.style.transform = 'translateY(20px)';
@@ -38,7 +32,9 @@ const Hero = () => {
       }
     });
   }, []);
-  return <section className="relative min-h-[90vh] flex items-center pt-16 pb-4 overflow-hidden">
+
+  return (
+    <section className="relative min-h-[90vh] flex items-center pt-16 pb-4 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-50 to-indigo-50 rounded-bl-full opacity-80"></div>
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-indigo-50 to-purple-50 rounded-tr-full opacity-60"></div>
@@ -82,7 +78,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-72 h-72 md:w-96 md:h-96 bg-book-100 rounded-full flex items-center justify-center">
                 <div className="w-[90%] h-[90%] tech-glass rounded-full flex items-center justify-center">
-                  <Database size={120} className="text-book-600" strokeWidth={1.5} />
+                  <BarChart3 size={120} className="text-book-600" strokeWidth={1.5} />
                 </div>
               </div>
               
@@ -100,7 +96,7 @@ const Hero = () => {
               animationDelay: '1s'
             }}>
                 <div className="flex items-center gap-2">
-                  <Code size={16} className="text-book-600" />
+                  <DollarSign size={16} className="text-book-600" />
                   <p className="text-sm font-medium">Digitized businesses outperform their competitors</p>
                 </div>
                 <div className="flex items-center gap-1 mt-1 text-xs text-foreground/60">
@@ -121,6 +117,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
