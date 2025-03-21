@@ -60,7 +60,7 @@ const Services = () => {
           <p className="text-foreground/80">We deliver practical solutions tailored precisely for your organization.</p>
           <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 font-medium mt-4 flex items-center gap-2 justify-center">
             <Cpu size={14} className="text-purple-600" />
-            <span>Tech-Driven Solutions</span>
+            <span>Tech-driven, practical solutions designed precisely for your organization</span>
           </div>
         </div>
         
