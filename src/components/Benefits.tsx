@@ -33,11 +33,8 @@ const Benefits = () => {
             <div className="bg-white shadow-xl rounded-xl p-8 max-w-lg mx-auto">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <h3 className="font-medium text-gray-500">Monthly Revenue</h3>
-                  <p className="text-2xl font-bold">$42,589.00</p>
-                </div>
-                <div className="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
-                  +12.5%
+                  <h3 className="font-medium text-gray-500">90% of SMB owners want to consolidate their digital tools</h3>
+                  <p className="text-2xl font-bold text-book-600">90%</p>
                 </div>
               </div>
               
@@ -56,11 +53,11 @@ const Benefits = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-500">Smaller organizations are more likely to succeed in their digital initiatives than larger companies.</p>
-                  <p className="text-lg font-semibold">2.7x</p>
+                  <p className="text-lg font-semibold text-book-600">2.7x</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-500">Digital organizations outperform their counterparts and increase overall business value.</p>
-                  <p className="text-lg font-semibold">3x</p>
+                  <p className="text-lg font-semibold text-book-600">3x</p>
                 </div>
               </div>
             </div>
