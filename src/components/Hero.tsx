@@ -52,9 +52,9 @@ const Hero = () => {
               <a href="#contact" className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover text-center">
                 Get Started Today
               </a>
-              <button className="px-8 py-3 rounded-full border border-book-200 text-book-700 font-medium transition-fast hover:bg-book-50 hover:border-book-300 tech-hover">
+              <a href="#services" className="px-8 py-3 rounded-full border border-book-200 text-book-700 font-medium transition-fast hover:bg-book-50 hover:border-book-300 tech-hover">
                 Explore Solutions
-              </button>
+              </a>
             </div>
 
             <div className="flex items-center gap-8 mt-12">
@@ -106,7 +106,7 @@ const Hero = () => {
         <div className="w-full flex justify-center mt-2">
           <div className={`${isMobile ? 'mb-1' : 'mb-2'} flex flex-col items-center`}>
             <p className="text-sm text-foreground/70 mb-1 py-[2px]">Learn More</p>
-            <a href="#services" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
+            <a href="#empathy" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
               <ChevronDown size={20} className="text-book-600" />
             </a>
           </div>

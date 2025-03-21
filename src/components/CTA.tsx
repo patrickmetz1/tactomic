@@ -1,9 +1,20 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+
 const CTA = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const formRef = useRef<HTMLDivElement>(null); // Changed from HTMLFormElement to HTMLDivElement
+  const formRef = useRef<HTMLDivElement>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: ''
+  });
+  const [errors, setErrors] = useState({
+    name: '',
+    email: ''
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -21,6 +32,67 @@ const CTA = () => {
     if (formRef.current) observer.observe(formRef.current);
     return () => observer.disconnect();
   }, []);
+
+  const validateField = (name: string, value: string) => {
+    if (!value.trim()) {
+      return `${name} is required`;
+    }
+    if (name === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      return 'Please enter a valid email address';
+    }
+    return '';
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setErrors(prev => ({ ...prev, [name]: validateField(name, value) }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    // Validate all fields
+    const newErrors = {
+      name: validateField('name', formData.name),
+      email: validateField('email', formData.email)
+    };
+    setErrors(newErrors);
+
+    // Check if there are any errors
+    if (Object.values(newErrors).some(error => error)) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const formDataToSubmit = new FormData(e.currentTarget);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formDataToSubmit as any).toString(),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '' });
+        setErrors({ name: '', email: '' });
+        e.currentTarget.reset();
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const isFormValid = formData.name.trim() !== '' && 
+                     formData.email.trim() !== '' && 
+                     !Object.values(errors).some(error => error);
+
   return <section id="contact" className="py-10 md:py-14 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
@@ -34,8 +106,6 @@ const CTA = () => {
             <p className="text-white/90 mb-5 max-w-lg">Grow revenue, reduce headaches, and stay up to speed.</p>
             
             <div className="flex items-center gap-6 mb-5">
-              
-              
             </div>
             
             <div className="flex flex-col gap-3">
@@ -55,7 +125,7 @@ const CTA = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Discuss Your Needs</h3>
-                  <p className="text-white/80">We'll learn about your goals and how we can help.</p>
+                  <p className="text-white/80">Tell us about your goals and how we can help.</p>
                 </div>
               </div>
               
@@ -75,30 +145,90 @@ const CTA = () => {
             <div className="bg-white text-foreground rounded-2xl p-6 shadow-lg">
               <h3 className="text-xl font-semibold mb-4 text-center">Get Started Today</h3>
               
-              <form className="space-y-4">
-                <div className="space-y-1">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name
-                  </label>
-                  <input type="text" id="name" className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500" placeholder="Enter your name" required />
+              {isSubmitted ? (
+                <div className="text-center py-8">
+                  <div className="text-green-600 mb-2">✓</div>
+                  <h4 className="text-lg font-semibold mb-2">Thanks! We will be in touch with you soon.</h4>
+                  <button 
+                    onClick={() => setIsSubmitted(false)}
+                    className="text-book-600 hover:text-book-700 font-medium"
+                  >
+                    Submit another response
+                  </button>
                 </div>
-                
-                <div className="space-y-1">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email Address
-                  </label>
-                  <input type="email" id="email" className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500" placeholder="Enter your email" required />
-                </div>
-                
-                <button type="submit" className="w-full py-2 rounded-lg bg-book-600 text-white font-medium hover:bg-book-700 transition-fast flex items-center justify-center gap-2">
-                  <span>Submit</span>
-                  <ArrowRight size={16} />
-                </button>
-              </form>
+              ) : (
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true" 
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
+                  
+                  <div className="space-y-1">
+                    <label htmlFor="name" className="text-sm font-medium">
+                      Name <span className="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 ${
+                        errors.name ? 'border-red-300' : 'border-gray-200'
+                      }`}
+                      placeholder="Enter your name" 
+                      required 
+                    />
+                    {errors.name && (
+                      <p className="text-sm text-red-500 mt-1">{errors.name}</p>
+                    )}
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <label htmlFor="email" className="text-sm font-medium">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 ${
+                        errors.email ? 'border-red-300' : 'border-gray-200'
+                      }`}
+                      placeholder="Enter your email" 
+                      required 
+                    />
+                    {errors.email && (
+                      <p className="text-sm text-red-500 mt-1">{errors.email}</p>
+                    )}
+                  </div>
+                  
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting || !isFormValid}
+                    className="w-full py-2 rounded-lg bg-book-600 text-white font-medium hover:bg-book-700 transition-fast flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <span>{isSubmitting ? 'Submitting...' : 'Submit'}</span>
+                    {!isSubmitting && <ArrowRight size={16} />}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>
       </div>
     </section>;
 };
+
 export default CTA;

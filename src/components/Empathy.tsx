@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Clock, FileQuestion, Lightbulb, DollarSign } from 'lucide-react';
 
@@ -37,7 +36,7 @@ const Empathy = () => {
     },
     {
       icon: <FileQuestion className="h-6 w-6 text-book-600" />,
-      title: "Trouble finding quality accounting support?"
+      title: "Trouble finding quality accounting resources?"
     },
     {
       icon: <DollarSign className="h-6 w-6 text-book-600" />,

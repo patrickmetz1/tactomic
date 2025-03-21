@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ChevronDown } from 'lucide-react';
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -81,11 +81,14 @@ const Benefits = () => {
                   <p>{benefit}</p>
                 </div>)}
             </div>
-            
-            <button className="mt-10 px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:bg-book-700 hover:shadow-lg">
-              Learn More
-            </button>
           </div>
+        </div>
+        
+        <div className="flex justify-center mt-10">
+          <button className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:bg-book-700 hover:shadow-lg flex items-center gap-2">
+            Get Started Now
+            <ChevronDown className="w-4 h-4 animate-bounce" />
+          </button>
         </div>
       </div>
     </section>;
