@@ -1,6 +1,6 @@
 
 import React, { useRef, useEffect } from 'react';
-import { Clock, FileQuestion, Lightbulb, DollarSign, Sparkles } from 'lucide-react';
+import { Clock, FileQuestion, Lightbulb, DollarSign } from 'lucide-react';
 
 const Empathy = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -53,10 +53,10 @@ const Empathy = () => {
     <section className="py-10 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 opacity-0" ref={headerRef}>
-          <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-2">
+          <h2 className="heading-lg">Wearing Too Many Hats?</h2>
+          <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mt-2">
             We understand your challenges
           </div>
-          <h2 className="heading-lg">Wearing Too Many Hats?</h2>
         </div>
 
         <div className="max-w-3xl mx-auto">
