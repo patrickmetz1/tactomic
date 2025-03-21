@@ -1,7 +1,5 @@
-
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
-
 const CTA = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -23,7 +21,6 @@ const CTA = () => {
     if (formRef.current) observer.observe(formRef.current);
     return () => observer.disconnect();
   }, []);
-  
   return <section id="contact" className="py-10 md:py-14 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
@@ -33,7 +30,7 @@ const CTA = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
           <div className="w-full lg:w-1/2 opacity-0" ref={contentRef}>
-            <h2 className="heading-lg mb-2">Optimize your financial ops today</h2>
+            <h2 className="heading-lg mb-2">Add financial specialists to your organization today</h2>
             <p className="text-white/90 mb-5 max-w-lg">Grow revenue, reduce headaches, and stay up to speed.</p>
             
             <div className="flex items-center gap-6 mb-5">
@@ -104,5 +101,4 @@ const CTA = () => {
       </div>
     </section>;
 };
-
 export default CTA;
