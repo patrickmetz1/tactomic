@@ -1,13 +1,10 @@
-
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
-
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -19,25 +16,15 @@ const Benefits = () => {
     }, {
       threshold: 0.1
     });
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
-
     return () => observer.disconnect();
   }, []);
-
-  const benefits = [
-    "Reclaim time better spent in high leverage areas", 
-    "Be prepared for tax filings", 
-    "Increase exit value of your business", 
-    "Reduce financial and personnel risk",
-    "Build administrative durability"
-  ];
-
+  const benefits = ["Reclaim time better spent in high leverage areas", "Be prepared for tax filings", "Increase exit value of your business", "Reduce financial and personnel risk", "Build administrative durability"];
   return <section id="benefits" className="section-padding bg-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -84,7 +71,7 @@ const Benefits = () => {
               Why Choose Us
             </div>
             <h2 className="heading-lg mb-6">Save time and money with outsourced office operations.</h2>
-            <p className="text-foreground/80 mb-8">Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We continually evaluate the latest digital offerings for tools to incorporate into our clients' operations. We stay on the cutting edge so you don't have to.</p>
+            <p className="text-foreground/80 mb-8">Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We are continually evaluating the latest innovations for beneficial tools we can incorporate into clients' operations. We stay on the cutting edge of office operations so you don't have to.</p>
             
             <div className="space-y-4">
               {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0" ref={el => itemsRef.current[index] = el} style={{
@@ -103,5 +90,4 @@ const Benefits = () => {
       </div>
     </section>;
 };
-
 export default Benefits;
