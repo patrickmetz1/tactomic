@@ -6,7 +6,7 @@ const serviceItems = [
   {
     icon: <Database className="w-6 h-6" />,
     title: "Bookkeeping",
-    description: "We maintain accurate financial records and generate timely reports that you can rely on. We also help clients clean-up, catch-up and transition to new cloud based systems.",
+    description: "Get reliable financial record keeping and timely reporting that you can rely on. Stay up to date or transition to new cloud based systems with experienced guides.",
     color: "bg-purple-50 text-purple-600"
   },
   {
