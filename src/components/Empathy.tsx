@@ -43,7 +43,7 @@ const Empathy = () => {
     },
     {
       icon: <DollarSign className="h-6 w-6 text-book-600" />,
-      title: "Struggling to manage and predict cash needs?"
+      title: "Struggling to predict and manage cash demands?"
     }
   ];
 
