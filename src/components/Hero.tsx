@@ -52,7 +52,7 @@ const Hero = () => {
             <h1 className="heading-xl mb-8 text-balance" ref={headingRef}>
               <span className="text-book-600">Tech-Forward</span> Solutions to Streamline Your Back Office
             </h1>
-            <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>Outsourced accounting and financial services for start-ups and SMBs. Add financial specialists to your team for a fraction of the cost of a FTE.</p>
+            <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>Outsourced accounting and financial services for start-ups and SMBs.</p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
               <a href="#contact" className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover text-center">
                 Get Started Today
