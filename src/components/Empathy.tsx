@@ -37,7 +37,7 @@ const Empathy = () => {
     },
     {
       icon: <FileQuestion className="h-6 w-6 text-book-600" />,
-      title: "Hard to find quality accounting support?"
+      title: "Trouble finding quality accounting support?"
     },
     {
       icon: <DollarSign className="h-6 w-6 text-book-600" />,
@@ -45,7 +45,7 @@ const Empathy = () => {
     },
     {
       icon: <Lightbulb className="h-6 w-6 text-book-600" />,
-      title: "Trouble deciding which software tools to buy?"
+      title: "Wondering whether you should be incorporating new digital tools?"
     }
   ];
 
