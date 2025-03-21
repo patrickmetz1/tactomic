@@ -12,7 +12,7 @@ const serviceItems = [
   {
     icon: <Wallet className="w-6 h-6" />,
     title: "Accounting Operations",
-    description: "We execute transactions like sending invoices, paying bills, and running payroll.",
+    description: "Offload transactional busy work like invoicing customers, paying bills, and running payroll to dependable operational experts.",
     color: "bg-indigo-50 text-indigo-600"
   },
   {
