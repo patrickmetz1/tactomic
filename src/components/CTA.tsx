@@ -68,6 +68,8 @@ const CTA = () => {
 
     try {
       const formDataToSubmit = new FormData(e.currentTarget);
+      console.log('Submitting form data:', Object.fromEntries(formDataToSubmit));
+      
       const response = await fetch('/', {
         method: 'POST',
         headers: {
@@ -76,11 +78,24 @@ const CTA = () => {
         body: new URLSearchParams(formDataToSubmit as any).toString(),
       });
 
+      console.log('Form submission response:', {
+        status: response.status,
+        statusText: response.statusText,
+        ok: response.ok
+      });
+
       if (response.ok) {
         setIsSubmitted(true);
         setFormData({ name: '', email: '' });
         setErrors({ name: '', email: '' });
         e.currentTarget.reset();
+      } else {
+        const errorText = await response.text();
+        console.error('Form submission failed:', {
+          status: response.status,
+          statusText: response.statusText,
+          error: errorText
+        });
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -160,6 +175,7 @@ const CTA = () => {
                 <form 
                   name="contact" 
                   method="POST" 
+                  action="/"
                   data-netlify="true" 
                   data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
