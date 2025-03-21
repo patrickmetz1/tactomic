@@ -67,7 +67,12 @@ const CTA = () => {
     setIsSubmitting(true);
 
     try {
-      const formDataToSubmit = new FormData(e.currentTarget);
+      // Create the form data in the format Netlify expects
+      const formDataToSubmit = new URLSearchParams();
+      formDataToSubmit.append('form-name', 'contact');
+      formDataToSubmit.append('name', formData.name);
+      formDataToSubmit.append('email', formData.email);
+      
       console.log('Submitting form data:', Object.fromEntries(formDataToSubmit));
       
       const response = await fetch('/', {
@@ -75,7 +80,7 @@ const CTA = () => {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: new URLSearchParams(formDataToSubmit as any).toString(),
+        body: formDataToSubmit.toString(),
       });
 
       console.log('Form submission response:', {
@@ -188,11 +193,7 @@ const CTA = () => {
                   className="space-y-4"
                 >
                   <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
-                    </label>
-                  </p>
+                  <input type="hidden" name="bot-field" value="" />
                   
                   <div className="space-y-1">
                     <label htmlFor="name" className="text-sm font-medium">
