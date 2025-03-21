@@ -11,9 +11,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="heading-lg text-center mb-12">Our Promise</h2>
-            <p className="text-lg leading-relaxed text-foreground/80 text-balance">Tactomic operates from a simple belief: back offices should create a framework to propel companies toward their growth goals. We free-up organizations to deploy their resources in a more productive and effective manner and reduce overhead burdens. Our approach combines best practices learned from companies of various sizes with a cutting-edge knowledge of the latest innovations. Efficiency, resourcefulness and a commitment to continuous improvement guide every aspect of our work. 
-
-          </p>
+            <p className="text-lg leading-relaxed text-foreground/80 text-balance">Tactomic operates from a simple belief: back offices should create a framework to propel companies toward their growth goals. We free-up organizations to deploy their resources in a more productive and effective manner resulting reduced overhead burdens. Our approach combines best practices learned from companies of various sizes with a working knowledge of the latest innovations. Efficiency, resourcefulness and a commitment to continuous improvement guide every aspect of our work.</p>
           </div>
         </div>
       </section>
