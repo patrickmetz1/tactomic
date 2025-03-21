@@ -30,7 +30,13 @@ const Benefits = () => {
     return () => observer.disconnect();
   }, []);
 
-  const benefits = ["Reclaim time better spent in high leverage areas", "Be prepared for tax filings", "Build administrative durability", "Increase exit value of your business", "Reduce financial and personnel risk"];
+  const benefits = [
+    "Reclaim time better spent in high leverage areas", 
+    "Be prepared for tax filings", 
+    "Increase exit value of your business", 
+    "Reduce financial and personnel risk",
+    "Build administrative durability"
+  ];
 
   return <section id="benefits" className="section-padding bg-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
