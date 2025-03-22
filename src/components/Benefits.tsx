@@ -24,7 +24,13 @@ const Benefits = () => {
     });
     return () => observer.disconnect();
   }, []);
-  const benefits = ["Reclaim time better spent in high leverage areas", "Be prepared for tax filings", "Increase exit value of your business", "Reduce financial and personnel risk", "Build administrative durability"];
+  const benefits = [
+    "Reclaim your time",
+    "Increase exit value",
+    "Build administrative durability",
+    "Reduce financial and personnel risk",
+    "Be prepared for tax filings"
+  ];
   return <section id="benefits" className="section-padding bg-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -33,8 +39,11 @@ const Benefits = () => {
             <div className="bg-white shadow-xl rounded-xl p-8 max-w-lg mx-auto">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <h3 className="font-medium text-gray-500">90% of SMB owners want to consolidate their digital tools</h3>
-                  <p className="text-2xl font-bold text-book-600">90%</p>
+                  <div className="text-center mb-8">
+                    <h3 className="text-base font-medium text-muted-foreground">
+                      <span className="text-book-600 font-bold">90%</span> of SMB owners want to consolidate their digital tools
+                    </h3>
+                  </div>
                 </div>
               </div>
               
@@ -52,12 +61,10 @@ const Benefits = () => {
               
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-sm text-gray-500">Smaller organizations are more likely to succeed in their digital initiatives than larger companies.</p>
-                  <p className="text-lg font-semibold text-book-600">2.7x</p>
+                  <p className="text-sm text-gray-500">Smaller organizations are <span className="text-book-600 font-semibold">2.7x</span> more likely to succeed in their digital initiatives than larger companies.</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-sm text-gray-500">Digital organizations outperform their counterparts and increase overall business value.</p>
-                  <p className="text-lg font-semibold text-book-600">3x</p>
+                  <p className="text-sm text-gray-500">Digital organizations are <span className="text-book-600 font-semibold">3x</span> more likely to outperform their counterparts</p>
                 </div>
               </div>
             </div>
@@ -68,7 +75,7 @@ const Benefits = () => {
               Why Choose Us
             </div>
             <h2 className="heading-lg mb-6">Save time and money with outsourced office operations.</h2>
-            <p className="text-foreground/80 mb-8">Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We actively seek digital innovations that can deliver meaningful value to our clients. We stay on the cutting edge of office operations so you don't have to.</p>
+            <p className="text-foreground/80 mb-8">Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We actively seek digital innovations that can deliver meaningful value to our clients. We stay on the cutting edge so you don't have to.</p>
             
             <div className="space-y-4">
               {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0" ref={el => itemsRef.current[index] = el} style={{
@@ -82,10 +89,10 @@ const Benefits = () => {
         </div>
         
         <div className="flex justify-center mt-10">
-          <button className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:bg-book-700 hover:shadow-lg flex items-center gap-2">
-            Get Started Now
+          <div className="text-book-600 font-medium flex items-center gap-2">
+            Find Your Solution
             <ChevronDown className="w-4 h-4 animate-bounce" />
-          </button>
+          </div>
         </div>
       </div>
     </section>;
