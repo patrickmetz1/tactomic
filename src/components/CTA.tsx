@@ -120,13 +120,6 @@ const CTA = () => {
                      !Object.values(errors).some(error => error);
 
   return <section id="contact" className="py-10 md:py-14 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
-      {/* Hidden form for Netlify detection */}
-      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="hidden" name="bot-field" />
-      </form>
-
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_#ffffff,_transparent_70%)]"></div>
