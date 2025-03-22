@@ -52,11 +52,8 @@ const Empathy = () => {
     <section className="py-10 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 opacity-0" ref={headerRef}>
-          <h2 className="heading-lg">Wearing Too Many Hats?</h2>
-          <div className="inline-block mt-2 relative">
-            <span className="text-book-600 italic font-medium tracking-wide border-b border-dashed border-book-300">we get it</span>
-            <div className="absolute -left-2 -right-2 -bottom-0.5 h-0.5 bg-gradient-to-r from-transparent via-book-200 to-transparent"></div>
-          </div>
+          <h2 className="heading-lg mb-4">Wearing too many hats?</h2>
+          <p className="text-xl text-muted-foreground mb-8">Refocus on high leverage activities</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
