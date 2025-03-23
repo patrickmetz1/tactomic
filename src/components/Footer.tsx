@@ -1,11 +1,27 @@
-import React from 'react';
+
+import React, { useEffect, useRef } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const credlyBadgeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load Credly embed script
+    const script = document.createElement('script');
+    script.src = "//cdn.credly.com/assets/utilities/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return <footer className="bg-gray-50 py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-6">
               <img 
@@ -30,6 +46,18 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+          </div>
+          
+          {/* Credly Badge */}
+          <div className="flex flex-col items-center justify-center">
+            <h3 className="text-lg font-semibold mb-4">Certified Expertise</h3>
+            <div 
+              ref={credlyBadgeRef}
+              data-iframe-width="150" 
+              data-iframe-height="270" 
+              data-share-badge-id="c8d8af97-62e8-4826-9e32-8f53ad74fd46" 
+              data-share-badge-host="https://www.credly.com"
+            ></div>
           </div>
           
           <div>

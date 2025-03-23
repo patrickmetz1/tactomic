@@ -1,9 +1,7 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Empathy from '@/components/Empathy';
-import Credentials from '@/components/Credentials';
 import Services from '@/components/Services';
 import Benefits from '@/components/Benefits';
 import CTA from '@/components/CTA';
@@ -34,7 +32,6 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Empathy />
-      <Credentials />
       <Services />
       <Benefits />
       <CTA />
