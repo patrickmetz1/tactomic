@@ -41,8 +41,8 @@ const Credentials = () => {
   return (
     <section ref={sectionRef} className="py-8 md:py-12 bg-gradient-to-b from-book-50/30 to-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="text-left opacity-0 mb-6 md:mb-0" ref={headerRef}>
+        <div className="flex flex-col md:flex-row items-center justify-center md:gap-12">
+          <div className="text-center md:text-left opacity-0 mb-6 md:mb-0" ref={headerRef}>
             <h2 className="heading-lg">Certified Expertise</h2>
           </div>
 
