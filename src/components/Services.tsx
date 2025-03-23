@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Cpu, Database, BarChart3, Wallet } from 'lucide-react';
 
@@ -56,7 +57,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="section-padding pb-8 md:pb-16 relative overflow-hidden" ref={sectionRef}>
+    <section id="services" className="section-padding pt-4 md:pt-8 pb-8 md:pb-16 relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-purple-50/30"></div>
       
       <div className="container mx-auto px-4">

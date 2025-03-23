@@ -39,7 +39,7 @@ const Credentials = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-8 md:py-12 bg-gradient-to-b from-book-50/30 to-white">
+    <section ref={sectionRef} className="py-4 md:py-6 bg-gradient-to-b from-book-50/30 to-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-center md:gap-12">
           <div className="text-center md:text-left opacity-0 mb-6 md:mb-0" ref={headerRef}>
