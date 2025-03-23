@@ -41,18 +41,20 @@ const Credentials = () => {
   return (
     <section ref={sectionRef} className="py-8 md:py-12 bg-gradient-to-b from-book-50/30 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-6 opacity-0" ref={headerRef}>
-          <h2 className="heading-lg">Certified Expertise</h2>
-        </div>
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="text-left opacity-0 mb-6 md:mb-0" ref={headerRef}>
+            <h2 className="heading-lg">Certified Expertise</h2>
+          </div>
 
-        <div className="flex justify-center">
-          <div 
-            ref={credlyBadgeRef}
-            data-iframe-width="150" 
-            data-iframe-height="270" 
-            data-share-badge-id="c8d8af97-62e8-4826-9e32-8f53ad74fd46" 
-            data-share-badge-host="https://www.credly.com"
-          ></div>
+          <div>
+            <div 
+              ref={credlyBadgeRef}
+              data-iframe-width="150" 
+              data-iframe-height="270" 
+              data-share-badge-id="c8d8af97-62e8-4826-9e32-8f53ad74fd46" 
+              data-share-badge-host="https://www.credly.com"
+            ></div>
+          </div>
         </div>
       </div>
     </section>
