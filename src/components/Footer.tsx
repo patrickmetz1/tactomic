@@ -48,12 +48,12 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Credly Badge - Removed heading and made badge smaller */}
+          {/* Credly Badge - Adjusted dimensions to ensure badge is fully visible */}
           <div className="flex flex-col items-center justify-center">
             <div 
               ref={credlyBadgeRef}
-              data-iframe-width="120" 
-              data-iframe-height="220" 
+              data-iframe-width="150" 
+              data-iframe-height="270" 
               data-share-badge-id="c8d8af97-62e8-4826-9e32-8f53ad74fd46" 
               data-share-badge-host="https://www.credly.com"
             ></div>
