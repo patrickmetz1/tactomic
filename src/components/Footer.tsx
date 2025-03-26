@@ -35,28 +35,28 @@ const Footer = () => {
           
           {/* Certification Badges */}
           <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-row items-center justify-center space-x-8">
+            <div className="flex flex-row items-center justify-center space-x-12">
               {/* Intuit Badge (replacing Credly Badge) */}
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center flex-shrink-0">
                 <img 
                   src="/lovable-uploads/3b8aaad8-13b8-436a-92f8-43eac6a40c9b.png" 
                   alt="Intuit Trained Bookkeeper Badge" 
-                  className="h-28 w-auto" 
+                  className="w-auto h-auto max-h-28" 
                 />
               </div>
               
               {/* Xero Partner Badge */}
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center flex-shrink-0">
                 <img 
                   src="https://brandfolder.xero.com/8HSCTPAX/at/cs5rpstbszfv43t7cwfk4qqx/xero-partner-badge-RGB.png?auto=webp&format=png" 
                   alt="Xero Partner Badge" 
-                  className="h-28 w-auto" 
+                  className="w-auto h-auto max-h-28" 
                 />
               </div>
             </div>
           </div>
           
-          <div>
+          <div className="md:pl-8 xl:pl-16">
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
