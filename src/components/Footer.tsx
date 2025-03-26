@@ -50,8 +50,7 @@ const Footer = () => {
           
           {/* Certification Badges */}
           <div className="flex flex-col items-center justify-center">
-            {/* Badges Row */}
-            <div className="flex flex-row items-center justify-center gap-6">
+            <div className="flex flex-row items-center justify-center space-x-8">
               {/* Credly Badge */}
               <div 
                 ref={credlyBadgeRef}
@@ -59,14 +58,15 @@ const Footer = () => {
                 data-iframe-height="270" 
                 data-share-badge-id="c8d8af97-62e8-4826-9e32-8f53ad74fd46" 
                 data-share-badge-host="https://www.credly.com"
+                className="min-w-[150px]"
               ></div>
               
               {/* Xero Partner Badge */}
-              <div>
+              <div className="flex items-center justify-center">
                 <img 
                   src="https://brandfolder.xero.com/8HSCTPAX/at/cs5rpstbszfv43t7cwfk4qqx/xero-partner-badge-RGB.png?auto=webp&format=png" 
                   alt="Xero Partner Badge" 
-                  className="h-20 w-auto" 
+                  className="h-28 w-auto" 
                 />
               </div>
             </div>
