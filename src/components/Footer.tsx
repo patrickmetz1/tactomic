@@ -1,11 +1,10 @@
-
 import React, { useRef } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return <footer className="bg-gray-50 py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-6">

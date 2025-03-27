@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -14,7 +13,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="heading-lg md:heading-xl bg-gradient-to-r from-book-600 to-book-800 bg-clip-text text-transparent animate-fade-in">Our Promise</h1>
+              <h1 className="heading-lg md:heading-xl bg-gradient-to-r from-book-600 to-book-800 bg-clip-text text-transparent animate-fade-in">Our Mission</h1>
               <div className="w-24 h-1 bg-gradient-to-r from-book-400 to-book-600 mx-auto mt-4 rounded-full"></div>
             </div>
             
@@ -23,7 +22,7 @@ const About = () => {
               <CardContent className="p-8 md:p-10">
                 <div className="prose prose-lg max-w-none">
                   <p className="text-xl md:text-2xl leading-relaxed text-foreground/80 text-balance mb-6">
-                    Tactomic operates from a simple belief: back offices should create a framework to propel companies toward their growth goals.
+                    Tactomic operates from a simple belief: back offices should create frameworks that propel companies toward their growth goals.
                   </p>
                   
                   <p className="text-lg md:text-xl leading-relaxed text-foreground/80 text-balance mb-6">
@@ -31,7 +30,7 @@ const About = () => {
                   </p>
                   
                   <p className="text-lg md:text-xl leading-relaxed text-foreground/80 text-balance">
-                    Our approach combines best practices learned from companies of various sizes with a working knowledge of the latest innovations. Efficiency, resourcefulness and a commitment to continuous improvement guide every aspect of our work.
+                    Our approach combines best practices learned from companies of various sizes with a working knowledge of the latest innovations. Excellence, resourcefulness and a commitment to continuous improvement guide every aspect of our work.
                   </p>
                 </div>
                 
@@ -52,8 +51,8 @@ const About = () => {
                     <span className="text-book-600 text-xl font-bold">E</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Efficiency</h3>
-                <p className="text-foreground/70">We streamline processes to maximize productivity and minimize waste.</p>
+                <h3 className="text-xl font-semibold mb-2">Excellence</h3>
+                <p className="text-foreground/70">Delivering the highest quality service without exception.</p>
               </div>
               
               <div className="bg-white p-8 rounded-xl shadow-md border border-book-100 text-center hover:shadow-lg transition-all">
@@ -63,7 +62,7 @@ const About = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Resourcefulness</h3>
-                <p className="text-foreground/70">We find creative solutions to complex challenges using available resources.</p>
+                <p className="text-foreground/70">Creating effective solutions through understanding, creativity and connections.</p>
               </div>
               
               <div className="bg-white p-8 rounded-xl shadow-md border border-book-100 text-center hover:shadow-lg transition-all">
@@ -73,7 +72,7 @@ const About = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Innovation</h3>
-                <p className="text-foreground/70">We continuously improve our methods by embracing new technologies and ideas.</p>
+                <p className="text-foreground/70">Constantly challenging the status quo in financial operations in pursuit of continuous advancement.</p>
               </div>
             </div>
           </div>
