@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/988a3980-b636-4892-8f11-fc1e1411ee5b.png" 
+            src="/lovable-uploads/235e3dad-db6a-42d7-ba17-a1e79396f81f.png" 
             alt="Tactomic Logo" 
             className="h-8" 
           />

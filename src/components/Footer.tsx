@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -10,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <img 
-                src="/lovable-uploads/988a3980-b636-4892-8f11-fc1e1411ee5b.png" 
+                src="/lovable-uploads/235e3dad-db6a-42d7-ba17-a1e79396f81f.png" 
                 alt="Tactomic Logo" 
                 className="h-8" 
               />
