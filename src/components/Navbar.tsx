@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -23,7 +22,7 @@ const Navbar = () => {
   return (
     <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', 
       isScrolled ? 'py-3 bg-white/90 backdrop-blur-sm shadow-sm' : 'py-5 bg-transparent')}>
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-6 sm:px-8 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <img 
             src="/lovable-uploads/bd6aba3d-2db4-444a-a071-05d34e2cc695.png" 
