@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, DollarSign, Code, Zap, BookOpen } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -52,7 +53,7 @@ const Hero = () => {
               <a href="#contact" className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover text-center">
                 Get Started Today
               </a>
-              <a href="#services" className="px-8 py-3 rounded-full border border-book-200 text-book-700 font-medium transition-fast hover:bg-book-50 hover:border-book-300 tech-hover">
+              <a href="#services" className="px-8 py-3 rounded-full border border-book-200 text-book-700 font-medium transition-fast hover:bg-book-50 hover:border-book-300 tech-hover text-center">
                 Explore Solutions
               </a>
             </div>
@@ -117,3 +118,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
