@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Logo from '@/assets/Asset 5.svg';
+import Logo from '@/assets/Asset5.svg';
 
 const Footer = () => {
   return <footer className="bg-gray-50 py-16">
