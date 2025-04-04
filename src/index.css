@@ -16,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Updated to match the Tactomic blue */
-    --primary: 196 75% 52%;
+    /* Updated to a more vibrant purple/violet as primary color */
+    --primary: 265 89% 60%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 214 32% 91%;
@@ -26,7 +26,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 196 75% 92%;
+    --accent: 262 83% 96%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +34,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 196 75% 52%;
+    --ring: 265 89% 60%;
 
     --radius: 0.75rem;
   }
@@ -49,8 +49,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    /* Updated to match the Tactomic blue */
-    --primary: 196 75% 52%;
+    /* Updated to match light mode primary but adjusted for dark mode */
+    --primary: 266 100% 67%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -67,7 +67,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 196 75% 52%;
+    --ring: 266 100% 67%;
   }
 }
 
@@ -180,10 +180,10 @@
 /* Add keyframes for new animations */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(41, 171, 226, 0.5);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
   }
   50% {
-    box-shadow: 0 0 25px rgba(41, 171, 226, 0.8);
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.8);
   }
 }
 
