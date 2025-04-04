@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <Link 
             to="/about"
-            className="hidden md:block px-6 py-2 rounded-full bg-[#140F4B] text-white font-medium hover:shadow-lg hover:shadow-[#140F4B]/20 transition-fast"
+            className="hidden md:block px-6 py-2 rounded-full bg-tactomic-navy text-white font-medium hover:shadow-lg hover:shadow-tactomic-navy/20 transition-fast"
           >
             About
           </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
         <nav className="flex flex-col gap-6 items-center">
           <Link
             to="/about"
-            className="mt-4 w-full px-6 py-3 rounded-full bg-[#140F4B] text-white font-medium text-center"
+            className="mt-4 w-full px-6 py-3 rounded-full bg-tactomic-navy text-white font-medium text-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
@@ -69,4 +69,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
