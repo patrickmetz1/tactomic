@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -19,14 +20,14 @@ const Footer = () => {
             {/* Contact information */}
             <ul className="space-y-4 mb-6">
               <li className="flex items-center gap-3">
-                <Phone className="text-book-600 flex-shrink-0" size={18} />
-                <a href="tel:+12055658536" className="text-gray-600 hover:text-book-600 transition-fast">
+                <Phone className="text-book-500 flex-shrink-0" size={18} />
+                <a href="tel:+12055658536" className="text-gray-600 hover:text-book-500 transition-fast">
                   (205) 565-8536
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="text-book-600 flex-shrink-0" size={18} />
-                <a href="mailto:info@tactomic.com" className="text-gray-600 hover:text-book-600 transition-fast">
+                <Mail className="text-book-500 flex-shrink-0" size={18} />
+                <a href="mailto:info@tactomic.com" className="text-gray-600 hover:text-book-500 transition-fast">
                   info@tactomic.com
                 </a>
               </li>
@@ -60,7 +61,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-book-600 transition-fast">
+                <Link to="/about" className="text-gray-600 hover:text-book-500 transition-fast">
                   About
                 </Link>
               </li>
@@ -73,13 +74,13 @@ const Footer = () => {
             © {new Date().getFullYear()} Tactomic LLC. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-500 text-sm hover:text-book-600 transition-fast">
+            <a href="#" className="text-gray-500 text-sm hover:text-book-500 transition-fast">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-500 text-sm hover:text-book-600 transition-fast">
+            <a href="#" className="text-gray-500 text-sm hover:text-book-500 transition-fast">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-500 text-sm hover:text-book-600 transition-fast">
+            <a href="#" className="text-gray-500 text-sm hover:text-book-500 transition-fast">
               Cookie Policy
             </a>
           </div>
