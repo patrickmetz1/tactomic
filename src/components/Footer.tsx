@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <img 
-                src="/lovable-uploads/bd6aba3d-2db4-444a-a071-05d34e2cc695.png" 
+                src="/Logo.svg" 
                 alt="Tactomic Logo" 
                 className="h-8" 
               />
