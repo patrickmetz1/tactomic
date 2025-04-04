@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
+import Logo from '@/assets/Logo.svg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 sm:px-8 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="/Logo.svg" 
+            src={Logo} 
             alt="Tactomic Logo" 
             className="h-8" 
           />
