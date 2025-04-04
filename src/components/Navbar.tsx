@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
-import Logo from '@/assets/Asset5.svg';
+import Logo from '@/assets/Asset7.svg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
