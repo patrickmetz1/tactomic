@@ -102,7 +102,7 @@
   
   /* Added gradient text effect */
   .gradient-text {
-    @apply bg-gradient-to-r from-tactomic-navy to-tactomic-navy/80 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-book-600 to-book-600/80 bg-clip-text text-transparent;
   }
   
   .text-balance {
