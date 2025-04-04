@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart3, ChevronDown, Cpu, Server, DollarSign, Code, Zap, BookOpen } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -46,7 +45,7 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 max-w-2xl pl-2 md:pl-4 pt-16 md:pt-20">
             
             <h1 className="heading-xl mb-8 text-balance" ref={headingRef}>
-              <span className="text-tactomic-navy">Tech-Forward</span> Solutions to Streamline Your Back Office
+              <span className="text-tactomic-blue">Tech-Forward</span> Solutions to Streamline Your Back Office
             </h1>
             <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>Outsourced accounting and financial services for start-ups and SMBs.</p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
