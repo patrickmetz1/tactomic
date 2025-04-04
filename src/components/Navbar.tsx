@@ -28,7 +28,7 @@ const Navbar = () => {
           <img 
             src={Logo} 
             alt="Tactomic Logo" 
-            className="h-8" 
+            className="h-16 w-auto" 
           />
         </Link>
         
