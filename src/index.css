@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -15,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Updated primary color to match the dark blue */
-    --primary: 247 69% 18%;
+    /* Updated to a more vibrant purple/violet as primary color */
+    --primary: 265 89% 60%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 214 32% 91%;
@@ -25,7 +26,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 247 69% 94%;
+    --accent: 262 83% 96%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +34,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 247 69% 18%;
+    --ring: 265 89% 60%;
 
     --radius: 0.75rem;
   }
@@ -49,7 +50,7 @@
     --popover-foreground: 210 40% 98%;
 
     /* Updated to match light mode primary but adjusted for dark mode */
-    --primary: 247 69% 25%;
+    --primary: 266 100% 67%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -66,7 +67,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 247 69% 25%;
+    --ring: 266 100% 67%;
   }
 }
 
@@ -102,7 +103,7 @@
   
   /* Added gradient text effect */
   .gradient-text {
-    @apply bg-gradient-to-r from-tactomic-navy to-tactomic-navy/80 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent;
   }
   
   .text-balance {
@@ -162,7 +163,7 @@
   /* Added glow effect for tech elements */
   .tech-glow {
     @apply relative;
-    box-shadow: 0 0 25px rgba(20, 15, 75, 0.5);
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.5);
   }
   
   /* Added subtle hover effect for interactive elements */
@@ -172,17 +173,17 @@
   
   .tech-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(20, 15, 75, 0.15);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
   }
 }
 
 /* Add keyframes for new animations */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(20, 15, 75, 0.5);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
   }
   50% {
-    box-shadow: 0 0 25px rgba(20, 15, 75, 0.8);
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.8);
   }
 }
 

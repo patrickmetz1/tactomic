@@ -46,14 +46,14 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 max-w-2xl pl-2 md:pl-4 pt-16 md:pt-20">
             
             <h1 className="heading-xl mb-8 text-balance" ref={headingRef}>
-              <span className="text-tactomic-navy">Tech-Forward</span> Solutions to Streamline Your Back Office
+              <span className="text-book-600">Tech-Forward</span> Solutions to Streamline Your Back Office
             </h1>
             <p className="text-lg text-foreground/80 mb-8 max-w-lg" ref={paragraphRef}>Outsourced accounting and financial services for start-ups and SMBs.</p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
-              <a href="#contact" className="px-8 py-3 rounded-full bg-tactomic-navy text-white font-medium transition-fast hover:shadow-lg hover:shadow-tactomic-navy/20 tech-hover text-center">
+              <a href="#contact" className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover text-center">
                 Get Started Today
               </a>
-              <a href="#services" className="px-8 py-3 rounded-full border border-tactomic-navy/20 text-tactomic-navy font-medium transition-fast hover:bg-tactomic-navy/5 hover:border-tactomic-navy/30 tech-hover text-center">
+              <a href="#services" className="px-8 py-3 rounded-full border border-book-200 text-book-700 font-medium transition-fast hover:bg-book-50 hover:border-book-300 tech-hover text-center">
                 Explore Solutions
               </a>
             </div>
@@ -64,7 +64,7 @@ const Hero = () => {
                 <span className="text-sm text-foreground/70">Bookkeeping+</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-tactomic-navy"></div>
+                <div className="w-2 h-2 rounded-full bg-book-500"></div>
                 <span className="text-sm text-foreground/70">FP&A</span>
               </div>
               <div className="flex items-center gap-2">
@@ -76,19 +76,19 @@ const Hero = () => {
           
           <div className="w-full lg:w-1/2 flex justify-center" ref={decorationRef}>
             <div className="relative">
-              <div className="w-72 h-72 md:w-96 md:h-96 bg-tactomic-navy/10 rounded-full flex items-center justify-center">
+              <div className="w-72 h-72 md:w-96 md:h-96 bg-book-100 rounded-full flex items-center justify-center">
                 <div className="w-[90%] h-[90%] tech-glass rounded-full flex items-center justify-center">
-                  <BarChart3 size={120} className="text-tactomic-navy" strokeWidth={1.5} />
+                  <BarChart3 size={120} className="text-book-600" strokeWidth={1.5} />
                 </div>
               </div>
               
               <div className="absolute -right-4 top-12 tech-glass rounded-xl py-3 px-4 shadow-xl animate-float">
                 <div className="flex items-center gap-2">
-                  <Server size={16} className="text-tactomic-navy" />
+                  <Server size={16} className="text-book-600" />
                   <p className="text-sm font-medium">Digitize your business</p>
                 </div>
-                <div className="mt-1 w-full h-1 bg-tactomic-navy/10 rounded-full">
-                  <div className="w-3/4 h-full bg-tactomic-navy rounded-full"></div>
+                <div className="mt-1 w-full h-1 bg-book-100 rounded-full">
+                  <div className="w-3/4 h-full bg-book-600 rounded-full"></div>
                 </div>
               </div>
               
@@ -96,7 +96,7 @@ const Hero = () => {
               animationDelay: '1s'
             }}>
                 <div className="flex items-center gap-2">
-                  <DollarSign size={16} className="text-tactomic-navy" />
+                  <DollarSign size={16} className="text-book-600" />
                   <p className="text-sm font-medium">Get a competitive advantage</p>
                 </div>
               </div>
@@ -107,8 +107,8 @@ const Hero = () => {
         <div className="w-full flex justify-center mt-2">
           <div className={`${isMobile ? 'mb-1' : 'mb-2'} flex flex-col items-center`}>
             <p className="text-sm text-foreground/70 mb-1 py-[2px]">Learn More</p>
-            <a href="#empathy" className="w-8 h-8 rounded-full border border-tactomic-navy/20 flex items-center justify-center animate-bounce">
-              <ChevronDown size={20} className="text-tactomic-navy" />
+            <a href="#empathy" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
+              <ChevronDown size={20} className="text-book-600" />
             </a>
           </div>
         </div>
@@ -118,3 +118,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
