@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Logo from '@/assets/Logo.svg';
+import Logo from '@/assets/Asset 5.svg';
 
 const Footer = () => {
   return <footer className="bg-gray-50 py-16">
@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src={Logo} 
                 alt="Tactomic Logo" 
-                className="h-8" 
+                className="h-16 w-48 object-contain" 
               />
             </div>
             
