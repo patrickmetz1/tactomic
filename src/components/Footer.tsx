@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src={Logo} 
                 alt="Tactomic Logo" 
-                className="h-16 w-48 object-contain" 
+                className="h-6 w-auto" 
               />
             </div>
             
