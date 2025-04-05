@@ -9,7 +9,7 @@ const About = () => {
       <Navbar />
       
       {/* Enhanced Mission Section - Added more top padding */}
-      <section className="section-padding pt-48 pb-32">
+      <section className="section-padding pt-52 pb-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
