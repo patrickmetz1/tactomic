@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, Phone, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -17,7 +16,6 @@ const Footer = () => {
               />
             </div>
             
-            {/* Contact information */}
             <ul className="space-y-4 mb-6">
               <li className="flex items-center gap-3">
                 <Phone className="text-book-600 flex-shrink-0" size={18} />
@@ -33,16 +31,12 @@ const Footer = () => {
               </li>
             </ul>
             
-            {/* Social links */}
             <div className="flex items-center mt-4">
-              {/* Removed LinkedIn icon from this section */}
             </div>
           </div>
           
-          {/* Certification Badges */}
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-row items-center justify-center space-x-12">
-              {/* Intuit Badge (replacing Credly Badge) */}
               <div className="flex items-center justify-center flex-shrink-0">
                 <img 
                   src="/lovable-uploads/3b8aaad8-13b8-436a-92f8-43eac6a40c9b.png" 
@@ -51,7 +45,6 @@ const Footer = () => {
                 />
               </div>
               
-              {/* Xero Partner Badge */}
               <div className="flex items-center justify-center flex-shrink-0">
                 <img 
                   src="https://brandfolder.xero.com/8HSCTPAX/at/cs5rpstbszfv43t7cwfk4qqx/xero-partner-badge-RGB.png?auto=webp&format=png" 
@@ -70,14 +63,13 @@ const Footer = () => {
                   About
                 </Link>
               </li>
-              {/* Add LinkedIn icon here */}
               <li className="mt-4">
                 <a href="https://www.linkedin.com/company/tactomic/" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   className="text-book-600 hover:text-book-700 transition-fast flex items-center gap-2"
+                   className="text-gray-600 hover:text-book-700 transition-fast flex items-center gap-2"
                    aria-label="Tactomic LinkedIn Profile">
-                  <Linkedin size={20} /> Follow us on LinkedIn
+                  <Linkedin size={20} />
                 </a>
               </li>
             </ul>
