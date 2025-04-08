@@ -1,5 +1,4 @@
-
-import React, { useRef } from 'react';
+import React from 'react';
 import { Mail, Phone, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '@/assets/Asset5.svg';
@@ -38,7 +37,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/tactomic/" 
                  target="_blank" 
                  rel="noopener noreferrer"
-                 className="text-gray-600 hover:text-book-600 transition-fast"
+                 className="text-book-600 hover:text-book-700 transition-fast"
                  aria-label="Tactomic LinkedIn Profile">
                 <Linkedin size={20} />
               </a>
