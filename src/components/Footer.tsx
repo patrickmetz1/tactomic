@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Mail, Phone, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -34,13 +35,7 @@ const Footer = () => {
             
             {/* Social links */}
             <div className="flex items-center mt-4">
-              <a href="https://www.linkedin.com/company/tactomic/" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="text-book-600 hover:text-book-700 transition-fast"
-                 aria-label="Tactomic LinkedIn Profile">
-                <Linkedin size={20} />
-              </a>
+              {/* Removed LinkedIn icon from this section */}
             </div>
           </div>
           
@@ -74,6 +69,16 @@ const Footer = () => {
                 <Link to="/about" className="text-gray-600 hover:text-book-600 transition-fast">
                   About
                 </Link>
+              </li>
+              {/* Add LinkedIn icon here */}
+              <li className="mt-4">
+                <a href="https://www.linkedin.com/company/tactomic/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="text-book-600 hover:text-book-700 transition-fast flex items-center gap-2"
+                   aria-label="Tactomic LinkedIn Profile">
+                  <Linkedin size={20} /> Follow us on LinkedIn
+                </a>
               </li>
             </ul>
           </div>
