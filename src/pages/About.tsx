@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
-import { BriefcaseIcon, GraduationCapIcon, HeartIcon } from 'lucide-react';
 
 const About = () => {
   return <div className="min-h-screen bg-background">
@@ -76,55 +75,6 @@ const About = () => {
                 <p className="text-foreground/70">Constantly challenging the status quo in financial operations in pursuit of continuous advancement.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* People Section */}
-      <section className="section-padding">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="heading-lg md:heading-xl bg-gradient-to-r from-book-600 to-book-800 bg-clip-text text-transparent animate-fade-in">Our People</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-book-400 to-book-600 mx-auto mt-4 rounded-full"></div>
-            </div>
-            
-            <Card className="p-2 bg-gradient-to-br from-white to-slate-50 shadow-xl border-book-100 overflow-hidden animate-fade-in animate-delay-200">
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-book-400 to-book-600"></div>
-              <CardContent className="p-8 md:p-10">
-                <div className="grid gap-8">
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1">
-                      <BriefcaseIcon className="h-6 w-6 text-book-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">Professional Experience</h3>
-                      <p className="text-foreground/80">Over 25 years of experience in finance, accounting, and business operations across various industries. Expertise in streamlining back-office operations and implementing efficient financial systems.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1">
-                      <GraduationCapIcon className="h-6 w-6 text-book-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">Education & Credentials</h3>
-                      <p className="text-foreground/80">MBA in Finance and Operations Management. Certified Public Accountant (CPA) with additional certifications in advanced financial modeling and analysis.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1">
-                      <HeartIcon className="h-6 w-6 text-book-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">Our Passion</h3>
-                      <p className="text-foreground/80">Dedicated to helping businesses thrive by providing innovative financial solutions and strategic guidance. We believe in building lasting partnerships with our clients through trust and excellence in service.</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
