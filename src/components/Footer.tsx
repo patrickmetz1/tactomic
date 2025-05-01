@@ -37,8 +37,8 @@ const Footer = () => {
               {/* Intuit Badge */}
               <div className="flex items-center justify-center flex-shrink-0">
                 <img 
-                  src="/lovable-uploads/3b8aaad8-13b8-436a-92f8-43eac6a40c9b.png" 
-                  alt="Intuit Trained Bookkeeper Badge" 
+                  src="/assets/PuzzleDarkModePNG.png" 
+                  alt="Puzzle Logo" 
                   className="w-auto h-auto max-h-28" 
                 />
               </div>
