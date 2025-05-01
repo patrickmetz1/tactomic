@@ -38,7 +38,7 @@ const Footer = () => {
               {/* Puzzle Logo Dark */}
               <div className="flex items-center justify-center flex-shrink-0">
                 <img
-                  src="PuzzleDarkModePNG" 
+                  src={PuzzleDarkModePNG} 
                   alt="Puzzle Logo" 
                   className="w-auto h-auto max-h-28" 
                 />
