@@ -16,7 +16,6 @@ const Footer = () => {
               />
             </div>
             
-            {/* Contact information */}
             <ul className="space-y-4 mb-6">
               <li className="flex items-center gap-3">
                 <Phone className="text-book-600 flex-shrink-0" size={18} />
@@ -33,7 +32,6 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Certification Badges */}
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-row items-center justify-center">
               {/* Intuit Badge */}

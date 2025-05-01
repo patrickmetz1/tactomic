@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
-import Logo from '@/assets/Asset5.svg';
+import Logo from '@/assets/Asset7.svg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
           <img 
             src={Logo} 
             alt="Tactomic Logo" 
-            className="h-16 w-48 object-contain" 
+            className="h-6 w-auto" 
           />
         </Link>
         
