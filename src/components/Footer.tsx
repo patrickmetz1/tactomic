@@ -36,8 +36,8 @@ const Footer = () => {
             <div className="flex flex-row items-center justify-center">
               {/* Intuit Badge */}
               <div className="flex items-center justify-center flex-shrink-0">
-                <img 
-                  src="/assets/PuzzleDarkModePNG.png" 
+                <img
+                  src="@/assets/PuzzleDarkModePNG.png" 
                   alt="Puzzle Logo" 
                   className="w-auto h-auto max-h-28" 
                 />
