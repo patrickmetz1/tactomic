@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '@/assets/Asset5.svg';
+import PuzzleDarkModePNG from '@/assets/PuzzleDarkModePNG.png';
 
 const Footer = () => {
   return <footer className="bg-gray-50 py-16">
@@ -34,10 +35,10 @@ const Footer = () => {
           
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-row items-center justify-center">
-              {/* Intuit Badge */}
+              {/* Puzzle Logo Dark */}
               <div className="flex items-center justify-center flex-shrink-0">
                 <img
-                  src="@/assets/PuzzleDarkModePNG.png" 
+                  src="PuzzleDarkModePNG" 
                   alt="Puzzle Logo" 
                   className="w-auto h-auto max-h-28" 
                 />
