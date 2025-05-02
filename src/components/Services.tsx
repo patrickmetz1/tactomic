@@ -64,7 +64,9 @@ const Services = () => {
               alt="Puzzle Logo" 
               className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0"
             />
-            <span className="text-sm md:text-base">Tactomic utilizes Puzzle, the AI-native ledger, to provide our clients with affordable, practical, tech-driven services.</span>
+            <span className="text-sm md:text-base">
+              Tactomic utilizes <span className="text-[#50FAAB]">Puzzle</span>, the AI-native ledger, to provide our clients with affordable, practical, tech-driven services.
+            </span>
           </div>
         </div>
         
