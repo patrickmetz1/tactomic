@@ -2,7 +2,7 @@ import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '@/assets/Asset5.svg';
-import PoweredByPuzzle from '@/assets/PoweredByPuzzle.png';
+import PoweredByPuzzleGrey from '@/assets/PoweredByPuzzleGrey.png';
 
 const Footer = () => {
   return <footer className="bg-gray-50 py-16">
@@ -38,8 +38,8 @@ const Footer = () => {
               {/* Puzzle Logo Dark */}
               <div className="flex items-center justify-center flex-shrink-0">
                 <img
-                  src={PoweredByPuzzle} 
-                  alt="Powered by Puzzle Logo" 
+                  src={PoweredByPuzzleGrey} 
+                  alt="Powered by Puzzle Grey Logo" 
                   className="w-auto h-auto max-h-28" 
                 />
               </div>
