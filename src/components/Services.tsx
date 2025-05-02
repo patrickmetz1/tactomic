@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Cpu, Database, BarChart3, Wallet } from 'lucide-react';
-
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
   title: "Bookkeeping",
@@ -22,7 +21,6 @@ const serviceItems = [{
   description: "Synchronize your tech-stack and align it with your growth strategies. Reduce financial risks and increase organizational durability through process engineering.",
   color: "bg-emerald-50 text-emerald-600"
 }];
-
 const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -54,7 +52,7 @@ const Services = () => {
           
           <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 font-medium mt-3 flex items-center gap-2 justify-center tech-hover shadow-sm max-w-md mx-auto">
             <Cpu size={16} className="text-purple-600 flex-shrink-0" />
-            <span className="text-sm md:text-base">Tactomic utilizes Puzzle, the best-in-class AI-native ledger, to provide our clients with affordable, practical, tech-driven Tech-driven services.</span>
+            <span className="text-sm md:text-base">Tactomic utilizes Puzzle, the AI-native ledger, to provide our clients with affordable, practical, tech-driven services.</span>
           </div>
         </div>
         
