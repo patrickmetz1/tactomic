@@ -58,7 +58,7 @@ const Services = () => {
         <div className="max-w-xl mx-auto text-center mb-6 md:mb-12 opacity-0" ref={el => itemsRef.current[0] = el}>
           <h2 className="heading-lg mb-4 md:mb-6">Our Capabilities</h2>
           
-          <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 font-medium mt-3 flex items-center gap-2 justify-center tech-hover shadow-sm max-w-md mx-auto">
+          <div className="inline-block px-5 py-2 rounded-full bg-[#171629] text-white font-medium mt-3 flex items-center gap-2 justify-center tech-hover shadow-sm max-w-xl mx-auto">
             <img 
               src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" 
               alt="Puzzle Logo" 
