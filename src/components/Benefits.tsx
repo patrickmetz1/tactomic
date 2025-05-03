@@ -38,18 +38,18 @@ const Benefits = () => {
           <div className="w-full lg:w-1/2 relative opacity-0" ref={imageRef}>
             <div className="absolute -z-10 w-72 h-72 bg-book-100 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             
-            {/* Puzzle bubble added here */}
+            {/* Puzzle bubble added here - updated width, height, and text size */}
             <div 
-              className="bg-[#171629] text-white font-medium p-5 rounded-xl shadow-lg flex flex-col justify-center mx-auto max-w-sm h-48 opacity-0 tech-hover" 
+              className="bg-[#171629] text-white font-medium p-6 rounded-xl shadow-lg flex flex-col justify-center mx-auto max-w-md h-52 opacity-0 tech-hover" 
               ref={puzzleBubbleRef}
             >
-              <div className="flex items-center gap-2 mb-2">
+              <div className="flex items-center gap-3 mb-3">
                 <img 
                   src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" 
                   alt="Puzzle Logo" 
-                  className="w-5 h-5 flex-shrink-0"
+                  className="w-6 h-6 flex-shrink-0"
                 />
-                <span className="text-base">
+                <span className="text-lg">
                   Tactomic partners with <span className="text-[#50FAAB]">Puzzle</span>, the AI-native ledger, to provide clients with tech-driven accounting services. Harmonize your tech-stack through <span className="text-[#50FAAB]">Puzzle's</span> seamless integrations.
                 </span>
               </div>
