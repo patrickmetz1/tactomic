@@ -57,17 +57,6 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center mb-6 md:mb-12 opacity-0" ref={el => itemsRef.current[0] = el}>
           <h2 className="heading-lg mb-4 md:mb-6">Our Capabilities</h2>
-          
-          <div className="inline-block px-5 py-2 rounded-full bg-[#171629] text-white font-medium mt-3 flex items-center gap-2 justify-center tech-hover shadow-sm max-w-xl mx-auto">
-            <img 
-              src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" 
-              alt="Puzzle Logo" 
-              className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0"
-            />
-            <span className="text-sm md:text-base">
-              Tactomic utilizes <span className="text-[#50FAAB]">Puzzle</span>, the AI-native ledger, to provide our clients with affordable, practical, tech-driven services.
-            </span>
-          </div>
         </div>
         
         <div className="relative max-w-5xl mx-auto">
@@ -94,6 +83,18 @@ const Services = () => {
                 <p className="text-foreground/80 text-sm md:text-base">{service.description}</p>
               </div>
             </div>)}
+            
+          {/* Moved Puzzle banner to bottom of services section */}
+          <div className="inline-block px-5 py-2 rounded-full bg-[#171629] text-white font-medium mt-6 md:mt-10 flex items-center gap-2 justify-center tech-hover shadow-sm max-w-xl mx-auto">
+            <img 
+              src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" 
+              alt="Puzzle Logo" 
+              className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0"
+            />
+            <span className="text-sm md:text-base">
+              Tactomic partners with <span className="text-[#50FAAB]">Puzzle</span>, the AI-native ledger, to provide clients with tech-driven accounting services.
+            </span>
+          </div>
         </div>
       </div>
     </section>;
