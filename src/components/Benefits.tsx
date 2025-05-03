@@ -26,7 +26,7 @@ const Benefits = () => {
     });
     return () => observer.disconnect();
   }, []);
-  const benefits = ["Reclaim your time", "Increase exit value", "Build administrative durability", "Reduce financial and personnel risk", "Be prepared for tax filings"];
+  const benefits = ["Reclaim your time", "Increase exit value", "Build administrative durability", "Reduce financial and personnel risk", "Stay tax ready"];
   return <section id="benefits" className="section-padding relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-book-50/20 via-book-50/40 to-book-50/60"></div>
       <div className="container mx-auto px-4">
