@@ -1,10 +1,14 @@
+
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, ChevronDown } from 'lucide-react';
+
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const puzzleBubbleRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -19,18 +23,37 @@ const Benefits = () => {
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
+    if (puzzleBubbleRef.current) observer.observe(puzzleBubbleRef.current);
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
     return () => observer.disconnect();
   }, []);
+
   const benefits = ["Reclaim your time", "Increase exit value", "Build administrative durability", "Reduce financial and personnel risk", "Be prepared for tax filings"];
+
   return <section id="benefits" className="section-padding bg-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="w-full lg:w-1/2 relative opacity-0" ref={imageRef}>
             <div className="absolute -z-10 w-72 h-72 bg-book-100 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             
+            {/* Puzzle bubble added here */}
+            <div 
+              className="bg-[#171629] text-white font-medium p-5 rounded-xl shadow-lg flex flex-col justify-center mx-auto max-w-sm h-48 opacity-0 tech-hover" 
+              ref={puzzleBubbleRef}
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <img 
+                  src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" 
+                  alt="Puzzle Logo" 
+                  className="w-5 h-5 flex-shrink-0"
+                />
+                <span className="text-base">
+                  Tactomic partners with <span className="text-[#50FAAB]">Puzzle</span>, the AI-native ledger, to provide clients with tech-driven accounting services. Harmonize your tech-stack through <span className="text-[#50FAAB]">Puzzle's</span> seamless integrations.
+                </span>
+              </div>
+            </div>
           </div>
           
           <div className="w-full lg:w-1/2 opacity-0" ref={contentRef}>
