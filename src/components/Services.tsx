@@ -1,7 +1,5 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Database, BarChart3, Wallet } from 'lucide-react';
-
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
   title: "Bookkeeping",
@@ -23,11 +21,9 @@ const serviceItems = [{
   description: "Synchronize your tech-stack and align it with your growth strategies. Reduce financial risks and increase organizational durability through process engineering.",
   color: "bg-emerald-50 text-emerald-600"
 }];
-
 const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -39,18 +35,14 @@ const Services = () => {
     }, {
       threshold: 0.1
     });
-
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
-
     return () => observer.disconnect();
   }, []);
-
   return <section id="services" className="section-padding pt-4 md:pt-8 pb-8 md:pb-16 relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-purple-50/30"></div>
       
@@ -86,18 +78,13 @@ const Services = () => {
             
           {/* Puzzle banner at bottom of services section */}
           <div className="inline-block px-5 py-2 rounded-full bg-[#171629] text-white font-medium mt-6 md:mt-10 flex items-center gap-2 justify-center tech-hover shadow-sm max-w-xl mx-auto">
-            <img 
-              src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" 
-              alt="Puzzle Logo" 
-              className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0"
-            />
+            <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
             <span className="text-sm md:text-base">
-              Tactomic partners with <span className="text-[#50FAAB]">Puzzle</span>, the AI-native ledger, to provide clients with tech-driven accounting services. Harmonize your tech-stack through <span className="text-[#50FAAB]">Puzzle's</span> seamless integrations.
+              Tactomic partners with <span className="text-sm md:text-base">Puzzle</span>, the AI-native ledger, to provide clients with tech-driven accounting services. Harmonize your tech-stack through <span className="text-[#50FAAB]">Puzzle's</span> seamless integrations.
             </span>
           </div>
         </div>
       </div>
     </section>;
 };
-
 export default Services;
