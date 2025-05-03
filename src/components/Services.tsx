@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Database, BarChart3, Wallet } from 'lucide-react';
 
@@ -52,7 +51,7 @@ const Services = () => {
   }, []);
 
   return <section id="services" className="section-padding pt-4 md:pt-8 pb-8 md:pb-16 relative overflow-hidden" ref={sectionRef}>
-      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-purple-50/30"></div>
+      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white via-white to-book-50/20"></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center mb-6 md:mb-12 opacity-0" ref={el => itemsRef.current[0] = el}>
@@ -73,7 +72,7 @@ const Services = () => {
                 </div>
               </div>
               
-              <div className={`flex-1 p-4 md:p-6 rounded-xl bg-white/80 backdrop-blur-sm border border-purple-100/30 shadow-lg ${index % 2 === 0 ? 'md:ml-6' : 'md:mr-6'}`}>
+              <div className={`flex-1 p-4 md:p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-100 shadow-lg ${index % 2 === 0 ? 'md:ml-6' : 'md:mr-6'}`}>
                 <div className="flex items-center gap-3 mb-3 md:mb-4">
                   <div className={`md:hidden w-10 h-10 rounded-full ${service.color} flex items-center justify-center flex-shrink-0`}>
                     {service.icon}

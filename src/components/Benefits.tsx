@@ -27,7 +27,8 @@ const Benefits = () => {
     return () => observer.disconnect();
   }, []);
   const benefits = ["Reclaim your time", "Increase exit value", "Build administrative durability", "Reduce financial and personnel risk", "Be prepared for tax filings"];
-  return <section id="benefits" className="section-padding bg-book-50/30" ref={sectionRef}>
+  return <section id="benefits" className="section-padding relative overflow-hidden" ref={sectionRef}>
+      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-book-50/20 via-book-50/40 to-book-50/60"></div>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="w-full lg:w-1/2 relative opacity-0" ref={imageRef}>
@@ -52,11 +53,11 @@ const Benefits = () => {
             <p className="text-foreground/80 mb-8">Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We actively seek digital innovations that can deliver meaningful value to our clients. We stay on the cutting edge so you don't have to.</p>
             
             <div className="space-y-4">
-              {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0" ref={el => itemsRef.current[index] = el} style={{
+              {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0 bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm" ref={el => itemsRef.current[index] = el} style={{
               animationDelay: `${(index + 1) * 100}ms`
             }}>
                   <CheckCircle className="text-book-600 mt-0.5 flex-shrink-0" />
-                  <p>{benefit}</p>
+                  <p className="text-foreground/90">{benefit}</p>
                 </div>)}
             </div>
           </div>
