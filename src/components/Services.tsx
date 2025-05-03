@@ -5,7 +5,7 @@ import { Calculator, Database, BarChart3, Wallet } from 'lucide-react';
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
   title: "Bookkeeping",
-  description: "Get reliable record keeping and real-time financial reporting that you can rely on. Experience frictionless accounting with best-in-class accounting platform, Puzzle.",
+  description: "Get reliable record keeping and real-time financial reporting that you can rely on. Experience frictionless accounting with best-in-class accounting platforms.",
   color: "bg-purple-50 text-purple-600"
 }, {
   icon: <Wallet className="w-6 h-6" />,
