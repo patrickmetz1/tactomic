@@ -34,7 +34,7 @@ const Benefits = () => {
             <div className="absolute -z-10 w-72 h-72 bg-book-100 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             
             {/* Puzzle bubble added here - updated width, height, and text size */}
-            <div className="bg-[#171629] text-white font-medium p-6 rounded-xl shadow-lg flex flex-col justify-center mx-auto max-w-md h-52 opacity-0 tech-hover" ref={puzzleBubbleRef}>
+            <div ref={puzzleBubbleRef} className="bg-[#171629] text-white font-medium p-6 shadow-lg flex flex-col justify-center mx-auto max-w-lg h-50 opacity-0 tech-hover px-[14px] py-[20px] rounded-3xl">
               <div className="flex items-center gap-3 mb-3">
                 <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-12 h-12 flex-shrink-0" />
                 <span className="text-lg">
