@@ -45,12 +45,12 @@ const Footer = () => {
             <img
               src={IntuitBookkeeper}
               alt="Intuit Trained Bookkeeper"
-              className="h-16 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
             <img
               src={XeroCertified}
               alt="Xero Certified"
-              className="h-16 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </div>
         </div>
