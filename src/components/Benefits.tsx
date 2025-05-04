@@ -39,7 +39,7 @@ const Benefits = () => {
               <div className="flex items-center gap-3 mb-3">
                 <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-12 h-12 flex-shrink-0" />
                 <span className="text-lg">
-                  Tactomic partners with <span className="text-[#50FAAB]">Puzzle</span>, the AI-native ledger, to provide clients with tech-driven accounting services. Harmonize your tech-stack through <span className="text-[#50FAAB]">Puzzle's</span> seamless integrations.
+                  Tactomic partners with <span className="text-[#50FAAB]">Puzzle</span>, the AI-native ledger, to provide clients with tech-driven accounting services. Harmonize your tech-stack through Puzzle's seamless integrations with expense management, invoicing, payroll and FP&A software.
                 </span>
               </div>
             </div>
@@ -50,7 +50,7 @@ const Benefits = () => {
               Why Choose Us
             </div>
             <h2 className="heading-lg mb-6">Save time and money with outsourced office operations.</h2>
-            <p className="text-foreground/80 mb-8">Don't just get a bookkeeper, get a partner that shares your vision for your tech-enabled organization. We actively seek digital innovations that can deliver meaningful value to our clients. We stay on the cutting edge so you don't have to.</p>
+            <p className="text-foreground/80 mb-8">Partner with someone that shares your vision for your tech-enabled organization. We actively seek digital innovations that can deliver meaningful value to our clients.</p>
             
             <div className="space-y-4">
               {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0 bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm" ref={el => itemsRef.current[index] = el} style={{
