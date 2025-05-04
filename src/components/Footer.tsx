@@ -50,7 +50,7 @@ const Footer = () => {
             <img
               src={XeroCertified}
               alt="Xero Certified"
-              className="h-22 w-auto object-contain"
+              className="h-18 w-auto object-contain"
             />
           </div>
         </div>
