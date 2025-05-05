@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -56,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="md:text-right">
+        <div className="md:text-left max-w-[10rem]">
           <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
           <ul className="space-y-3">
             <li>
