@@ -1,8 +1,6 @@
-
 import React, { useRef, useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Textarea } from './ui/textarea';
-
 const CTA = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -19,7 +17,6 @@ const CTA = () => {
     email: '',
     message: ''
   });
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -36,7 +33,6 @@ const CTA = () => {
     if (formRef.current) observer.observe(formRef.current);
     return () => observer.disconnect();
   }, []);
-
   const validateField = (name: string, value: string) => {
     if (name === 'message') {
       // Message is not required
@@ -50,16 +46,23 @@ const CTA = () => {
     }
     return '';
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: validateField(name, value) }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    setErrors(prev => ({
+      ...prev,
+      [name]: validateField(name, value)
+    }));
   };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     // Validate all fields
     const newErrors = {
       name: validateField('name', formData.name),
@@ -72,9 +75,7 @@ const CTA = () => {
     if (Object.values(newErrors).some(error => error)) {
       return;
     }
-
     setIsSubmitting(true);
-
     try {
       // Create the form data in the format Netlify expects
       const formDataToSubmit = new URLSearchParams();
@@ -82,17 +83,14 @@ const CTA = () => {
       formDataToSubmit.append('name', formData.name);
       formDataToSubmit.append('email', formData.email);
       formDataToSubmit.append('message', formData.message);
-      
       console.log('Submitting form data:', Object.fromEntries(formDataToSubmit));
-      
       const response = await fetch('/', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: formDataToSubmit.toString(),
+        body: formDataToSubmit.toString()
       });
-
       console.log('Form submission response:', {
         status: response.status,
         statusText: response.statusText,
@@ -101,10 +99,17 @@ const CTA = () => {
 
       // Set submitted state regardless of response for now
       setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-      setErrors({ name: '', email: '', message: '' });
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+      setErrors({
+        name: '',
+        email: '',
+        message: ''
+      });
       e.currentTarget.reset();
-
       if (!response.ok) {
         const errorText = await response.text();
         console.error('Form submission failed:', {
@@ -117,18 +122,22 @@ const CTA = () => {
       console.error('Error submitting form:', error);
       // Still show success state even if there's an error
       setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-      setErrors({ name: '', email: '', message: '' });
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+      setErrors({
+        name: '',
+        email: '',
+        message: ''
+      });
       e.currentTarget.reset();
     } finally {
       setIsSubmitting(false);
     }
   };
-
-  const isFormValid = formData.name.trim() !== '' && 
-                     formData.email.trim() !== '' && 
-                     !Object.values(errors).some(error => error);
-
+  const isFormValid = formData.name.trim() !== '' && formData.email.trim() !== '' && !Object.values(errors).some(error => error);
   return <section id="contact" className="py-10 md:py-14 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
@@ -179,29 +188,15 @@ const CTA = () => {
           
           <div className="w-full lg:w-1/2 opacity-0" ref={formRef}>
             <div className="bg-white text-foreground rounded-2xl p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-center mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-center mb-6">Contact Us</h3>
               
-              {isSubmitted ? (
-                <div className="text-center py-8">
+              {isSubmitted ? <div className="text-center py-8">
                   <div className="text-green-600 mb-2">✓</div>
                   <h4 className="text-lg font-semibold mb-2">Thanks! We will be in touch with you soon.</h4>
-                  <button 
-                    onClick={() => setIsSubmitted(false)}
-                    className="text-book-600 hover:text-book-700 font-medium"
-                  >
+                  <button onClick={() => setIsSubmitted(false)} className="text-book-600 hover:text-book-700 font-medium">
                     Submit another response
                   </button>
-                </div>
-              ) : (
-                <form 
-                  name="contact" 
-                  method="POST" 
-                  action="/"
-                  data-netlify="true" 
-                  data-netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
-                  className="space-y-4"
-                >
+                </div> : <form name="contact" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-4">
                   <input type="hidden" name="form-name" value="contact" />
                   <input type="hidden" name="bot-field" value="" />
                   
@@ -209,79 +204,35 @@ const CTA = () => {
                     <label htmlFor="name" className="text-sm font-medium">
                       Name <span className="text-red-500">*</span>
                     </label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 ${
-                        errors.name ? 'border-red-300' : 'border-gray-200'
-                      }`}
-                      placeholder="Enter your name" 
-                      required 
-                    />
-                    {errors.name && (
-                      <p className="text-sm text-red-500 mt-1">{errors.name}</p>
-                    )}
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 ${errors.name ? 'border-red-300' : 'border-gray-200'}`} placeholder="Enter your name" required />
+                    {errors.name && <p className="text-sm text-red-500 mt-1">{errors.name}</p>}
                   </div>
                   
                   <div className="space-y-1">
                     <label htmlFor="email" className="text-sm font-medium">
                       Email Address <span className="text-red-500">*</span>
                     </label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 ${
-                        errors.email ? 'border-red-300' : 'border-gray-200'
-                      }`}
-                      placeholder="Enter your email" 
-                      required 
-                    />
-                    {errors.email && (
-                      <p className="text-sm text-red-500 mt-1">{errors.email}</p>
-                    )}
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 ${errors.email ? 'border-red-300' : 'border-gray-200'}`} placeholder="Enter your email" required />
+                    {errors.email && <p className="text-sm text-red-500 mt-1">{errors.email}</p>}
                   </div>
                   
                   <div className="space-y-1">
                     <label htmlFor="message" className="text-sm font-medium">
                       How can we help?
                     </label>
-                    <Textarea 
-                      id="message" 
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 min-h-[80px] ${
-                        errors.message ? 'border-red-300' : 'border-gray-200'
-                      }`}
-                      placeholder="Tell us about your needs" 
-                      rows={2}
-                    />
-                    {errors.message && (
-                      <p className="text-sm text-red-500 mt-1">{errors.message}</p>
-                    )}
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 min-h-[80px] ${errors.message ? 'border-red-300' : 'border-gray-200'}`} placeholder="Tell us about your needs" rows={2} />
+                    {errors.message && <p className="text-sm text-red-500 mt-1">{errors.message}</p>}
                   </div>
                   
-                  <button 
-                    type="submit" 
-                    disabled={isSubmitting || !isFormValid}
-                    className="w-full py-2 rounded-lg bg-book-600 text-white font-medium hover:bg-book-700 transition-fast flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
+                  <button type="submit" disabled={isSubmitting || !isFormValid} className="w-full py-2 rounded-lg bg-book-600 text-white font-medium hover:bg-book-700 transition-fast flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
                     <span>{isSubmitting ? 'Submitting...' : 'Submit'}</span>
                     {!isSubmitting && <ArrowRight size={16} />}
                   </button>
-                </form>
-              )}
+                </form>}
             </div>
           </div>
         </div>
       </div>
     </section>;
 };
-
 export default CTA;
