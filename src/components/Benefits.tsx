@@ -58,7 +58,7 @@ const Benefits = () => {
 
         {/* === Puzzle Graphic === */}
         <div className="w-full flex justify-center mb-6 opacity-0" ref={imageRef}>
-          <div ref={puzzleBubbleRef} className="bg-[#171629] text-white text-sm font-medium shadow-lg mx-auto py-6 px-8 rounded-xl tech-hover max-w-5xl w-full">
+          <div ref={puzzleBubbleRef} className="bg-[#171629] text-white text-sm font-medium shadow-lg py-6 px-8 rounded-xl tech-hover max-w-5xl w-full mx-[10px]">
             <div className="flex items-center gap-4">
               <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-12 h-12 flex-shrink-0" />
               <p className="text-base sm:text-lg break-words">
