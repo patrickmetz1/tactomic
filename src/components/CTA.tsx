@@ -148,7 +148,7 @@ const CTA = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
           <div className="w-full lg:w-1/2 opacity-0" ref={contentRef}>
             <h2 className="heading-lg mb-2">Add financial specialists to your organization today</h2>
-            <p className="text-white/90 mb-5 max-w-lg">Grow revenue, reduce headaches, and stay up to speed.</p>
+            
             
             <div className="flex items-center gap-6 mb-5">
             </div>
