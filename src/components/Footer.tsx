@@ -5,18 +5,13 @@ import Logo from '@/assets/Asset5.svg';
 import PuzzleCertified from '@/assets/PuzzleCertifiedAdvisorGrey.png';
 import IntuitBookkeeper from '@/assets/IntuitTrainedBookkeeper.png';
 import XeroCertified from '@/assets/XeroCertified.svg';
-
 const Footer = () => {
   return <footer className="bg-gray-50 py-16">
     <div className="container mx-auto px-6 sm:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-2 mb-6">
-            <img 
-              src={Logo} 
-              alt="Tactomic Logo" 
-              className="h-16 w-48 object-contain" 
-            />
+            <img src={Logo} alt="Tactomic Logo" className="h-16 w-48 object-contain" />
           </div>
           
           <ul className="space-y-4 mb-6">
@@ -37,25 +32,13 @@ const Footer = () => {
         
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-row items-center justify-center gap-4 flex-wrap">
-            <img
-              src={PuzzleCertified}
-              alt="Puzzle Certified Advisor"
-              className="h-16 object-contain"
-            />
-            <img
-              src={IntuitBookkeeper}
-              alt="Intuit Trained Bookkeeper"
-              className="h-20 w-auto object-contain"
-            />
-            <img
-              src={XeroCertified}
-              alt="Xero Certified"
-              className="h-28 w-auto object-contain"
-            />
+            <img src={PuzzleCertified} alt="Puzzle Certified Advisor" className="h-16 object-contain" />
+            <img src={IntuitBookkeeper} alt="Intuit Trained Bookkeeper" className="h-20 w-auto object-contain" />
+            <img src={XeroCertified} alt="Xero Certified" className="h-28 w-auto object-contain" />
           </div>
         </div>
         
-        <div className="md:text-left max-w-[10rem] justify-self-end">
+        <div className="md:text-left max-w-[10rem] justify-self-end mx-[5px]">
           <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
           <ul className="space-y-3">
             <li>
@@ -91,5 +74,4 @@ const Footer = () => {
     </div>
   </footer>;
 };
-
 export default Footer;
