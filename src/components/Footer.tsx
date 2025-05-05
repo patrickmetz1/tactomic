@@ -22,12 +22,12 @@ const Footer = () => {
               <img
                 src={IntuitBookkeeper}
                 alt="Intuit Trained Bookkeeper"
-                className="h-20 w-auto object-contain"
+                className="h-28 w-auto object-contain"
               />
               <img
                 src={XeroCertified}
                 alt="Xero Certified"
-                className="h-28 w-auto object-contain"
+                className="h-32 w-auto object-contain"
               />
             </div>
           </div>
