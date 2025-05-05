@@ -1,11 +1,14 @@
+
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, ChevronDown } from 'lucide-react';
+
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const puzzleBubbleRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -17,16 +20,21 @@ const Benefits = () => {
     }, {
       threshold: 0.1
     });
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     if (puzzleBubbleRef.current) observer.observe(puzzleBubbleRef.current);
+    
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
+
     return () => observer.disconnect();
   }, []);
+
   const benefits = ['Increase exit value', 'Build administrative durability', 'Reduce financial and personnel risk', 'Stay tax ready'];
+
   return <section id="benefits" className="section-padding relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-book-50/20 via-book-50/40 to-book-50/60" />
 
@@ -38,7 +46,7 @@ const Benefits = () => {
               Why Choose Us
             </div>
             <h2 className="heading-lg mb-6">
-              Save time and money with outsourced office operations.
+              Partner with technology-driven experts
             </h2>
             <p className="text-foreground/80 mb-8">
               Partner with someone that shares your vision for your tech-enabled
@@ -84,4 +92,5 @@ const Benefits = () => {
       </div>
     </section>;
 };
+
 export default Benefits;

@@ -1,5 +1,7 @@
+
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Database, BarChart3, Wallet } from 'lucide-react';
+import { Card, CardContent } from './ui/card';
 
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
@@ -54,34 +56,32 @@ const Services = () => {
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white via-white to-book-50/20"></div>
       
       <div className="container mx-auto px-4">
-        <div className="max-w-xl mx-auto text-center mb-6 md:mb-12 opacity-0" ref={el => itemsRef.current[0] = el}>
-          <h2 className="heading-lg mb-4 md:mb-6">Our Capabilities</h2>
+        <div className="max-w-3xl mx-auto text-center mb-6 md:mb-8 opacity-0" ref={el => itemsRef.current[0] = el}>
+          <h2 className="heading-lg mb-2 md:mb-3">Our Capabilities</h2>
+          <p className="text-lg text-foreground/80 font-medium">Save time and money with outsourced office operations.</p>
         </div>
         
-        <div className="relative max-w-5xl mx-auto">
-          {serviceItems.map((service, index) => <div key={service.title} className={`flex items-start gap-4 md:gap-8 mb-6 md:mb-12 last:mb-0 opacity-0 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`} ref={el => itemsRef.current[index + 1] = el} style={{
-          animationDelay: `${(index + 1) * 100}ms`
-        }}>
-              <div className="hidden md:flex items-center justify-center flex-shrink-0">
-                <div className={`w-20 h-20 md:w-24 md:h-24 rounded-full ${service.color.split(' ')[0]} flex items-center justify-center transition-all duration-500 hover:scale-110 shadow-lg`}>
-                  <div className={`w-14 h-14 md:w-16 md:h-16 rounded-full ${service.color} flex items-center justify-center`}>
-                    {React.cloneElement(service.icon, {
-                  className: "w-7 h-7 md:w-8 md:h-8"
-                })}
-                  </div>
-                </div>
-              </div>
-              
-              <div className={`flex-1 p-4 md:p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-100 shadow-lg ${index % 2 === 0 ? 'md:ml-6' : 'md:mr-6'}`}>
-                <div className="flex items-center gap-3 mb-3 md:mb-4">
-                  <div className={`md:hidden w-10 h-10 rounded-full ${service.color} flex items-center justify-center flex-shrink-0`}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+          {serviceItems.map((service, index) => (
+            <Card 
+              key={service.title} 
+              className="opacity-0 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              ref={el => itemsRef.current[index + 1] = el}
+              style={{
+                animationDelay: `${(index + 1) * 100}ms`
+              }}
+            >
+              <CardContent className="p-4 md:p-5">
+                <div className="flex flex-col items-start gap-3 h-full">
+                  <div className={`w-12 h-12 rounded-full ${service.color} flex items-center justify-center mb-1`}>
                     {service.icon}
                   </div>
-                  <h3 className="text-lg md:text-2xl font-semibold gradient-text">{service.title}</h3>
+                  <h3 className="text-base md:text-lg font-semibold gradient-text">{service.title}</h3>
+                  <p className="text-foreground/80 text-sm">{service.description}</p>
                 </div>
-                <p className="text-foreground/80 text-sm md:text-base">{service.description}</p>
-              </div>
-            </div>)}
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>;
