@@ -16,7 +16,7 @@ const serviceItems = [{
 }, {
   icon: <Calculator className="w-6 h-6" />,
   title: "Fractional Finance",
-  description: "Receive guidance through annual business planning process, establishing KPIs and monitoring processes. Always have a clear understanding of your financial position before making strategic decisions.",
+  description: "Receive guidance through annual business planning process, establishing KPIs and monitoring processes. Clearly understand your financial position to make better decisions.",
   color: "bg-amber-50 text-amber-600"
 }, {
   icon: <BarChart3 className="w-6 h-6" />,
