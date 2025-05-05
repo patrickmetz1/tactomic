@@ -1,14 +1,11 @@
-
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, ChevronDown } from 'lucide-react';
-
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const puzzleBubbleRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -20,21 +17,16 @@ const Benefits = () => {
     }, {
       threshold: 0.1
     });
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     if (puzzleBubbleRef.current) observer.observe(puzzleBubbleRef.current);
-    
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
-
     return () => observer.disconnect();
   }, []);
-
   const benefits = ['Increase exit value', 'Build administrative durability', 'Reduce financial and personnel risk', 'Stay tax ready'];
-
   return <section id="benefits" className="section-padding relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-book-50/20 via-book-50/40 to-book-50/60" />
 
@@ -42,17 +34,9 @@ const Benefits = () => {
         <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
           {/* === Left Column: Content === */}
           <div className="w-full lg:w-1/2 order-1 lg:order-1 opacity-0" ref={contentRef}>
-            <div className="inline-block px-3 py-1 rounded-full bg-book-100 text-book-800 font-medium mb-4">
-              Why Choose Us
-            </div>
-            <h2 className="heading-lg mb-6">
-              Partner with technology-driven experts
-            </h2>
-            <p className="text-foreground/80 mb-8">
-              Partner with someone that shares your vision for your tech-enabled
-              organization. We actively seek digital innovations that can
-              deliver meaningful value to our clients.
-            </p>
+            
+            <h2 className="heading-lg mb-6">Why Choose Tactomic? </h2>
+            <p className="text-lg-foreground/80 mb-8">Select a service provider that shares your vision for a tech-enabled organization. We actively seek digital innovations that can deliver meaningful value to our clients.</p>
 
             <div className="space-y-4">
               {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3 opacity-0 bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-sm" ref={el => itemsRef.current[index] = el} style={{
@@ -92,5 +76,4 @@ const Benefits = () => {
       </div>
     </section>;
 };
-
 export default Benefits;
