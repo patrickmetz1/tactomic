@@ -188,7 +188,7 @@ const CTA = () => {
           
           <div className="w-full lg:w-1/2 opacity-0" ref={formRef}>
             <div className="bg-white text-foreground rounded-2xl p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-center mb-6">Contact Us</h3>
+              <h3 className="text-2xl font-bold text-center mb-6">Get in Touch</h3>
               
               {isSubmitted ? <div className="text-center py-8">
                   <div className="text-green-600 mb-2">✓</div>
