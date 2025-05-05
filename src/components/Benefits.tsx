@@ -59,7 +59,7 @@ const Benefits = () => {
           <div ref={puzzleBubbleRef} className="bg-[#171629] text-white text-xs font-medium shadow-lg py-6 px-8 rounded-xl tech-hover max-w-5xl w-full mx-[10px]">
             <div className="flex items-center gap-4">
               <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-12 h-12 flex-shrink-0" />
-              <p className="text-base sm:text-lg break-words">
+              <p className="text-base sm:text-md break-words">
                 Tactomic partners with{' '}
                 <span className="text-[#50FAAB] font-semibold">Puzzle</span>,
                 the AI-native ledger, to provide clients with tech-driven
