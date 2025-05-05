@@ -52,12 +52,13 @@ const Services = () => {
     return () => observer.disconnect();
   }, []);
 
-  return <section id="services" className="section-padding pt-4 md:pt-8 pb-8 md:pb-16 relative overflow-hidden" ref={sectionRef}>
-      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white via-white to-book-50/20"></div>
+  return (
+    <section id="services" className="section-padding pt-4 md:pt-8 pb-16 md:pb-24 relative overflow-hidden" ref={sectionRef}>
+      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-book-50/20"></div>
       
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-6 md:mb-8 opacity-0" ref={el => itemsRef.current[0] = el}>
-          <h2 className="heading-lg mb-2 md:mb-3">Our Capabilities</h2>
+        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-10 opacity-0" ref={el => itemsRef.current[0] = el}>
+          <h2 className="heading-lg mb-3">Our Capabilities</h2>
           <p className="text-lg text-foreground/80 font-medium">Save time and money with outsourced office operations.</p>
         </div>
         
@@ -84,7 +85,16 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </section>;
+      
+      {/* Decorative bottom wave pattern to create visual interest */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16 rotate-180">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                className="fill-book-50"></path>
+        </svg>
+      </div>
+    </section>
+  );
 };
 
 export default Services;
