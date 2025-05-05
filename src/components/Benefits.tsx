@@ -39,9 +39,7 @@ const Benefits = () => {
         {/* === Header === */}
         <div className="text-center mb-6">
           <h2 className="heading-lg mb-2">Why Choose Tactomic?</h2>
-          <p className="text-lg text-foreground/80 font-medium max-w-3xl mx-auto mb-6">
-            Select a service provider that shares your vision for a continuously improving, tech-enabled organization. We actively seek digital innovations that can deliver meaningful value to our clients.
-          </p>
+          <p className="text-foreground/80 font-medium max-w-3xl mx-auto mb-6 text-base">We actively seek digital innovations that can deliver meaningful value to our clients. Select a service provider that shares your vision for a continuously improving, tech-enabled organization. </p>
         </div>
 
         {/* === Benefits Items === */}
