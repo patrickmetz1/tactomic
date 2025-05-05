@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="md:text-left max-w-[10rem]">
+        <div className="md:text-left max-w-[10rem] justify-self-end">
           <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
           <ul className="space-y-3">
             <li>
