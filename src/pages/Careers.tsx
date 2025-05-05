@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
-
 const Careers = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -55,10 +53,8 @@ const Careers = () => {
             </div>
             
             <div className="mb-12">
-              <h2 className="text-2xl font-semibold mb-4">Interested in Joining Our Team?</h2>
-              <p className="text-gray-700 mb-4">
-                We're always looking for talented individuals to join our team. Fill out the contact form below to express your interest, and we'll get back to you with any current opportunities.
-              </p>
+              
+              
             </div>
           </div>
         </div>
