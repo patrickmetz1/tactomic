@@ -147,8 +147,8 @@ const CTA = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
           <div className="w-full lg:w-1/2 opacity-0" ref={contentRef}>
-            <h2 className="heading-lg mb-2">Interested in joining our Team?</h2>
-            <p className="text-white/90 mb-5 max-w-lg">Complete the form below and tell us why you might be a good fit</p>
+            <h2 className="heading-lg mb-2">Add financial specialists to your organization today</h2>
+            <p className="text-white/90 mb-5 max-w-lg">Grow revenue, reduce headaches, and stay up to speed.</p>
             
             <div className="flex items-center gap-6 mb-5">
             </div>
@@ -188,7 +188,7 @@ const CTA = () => {
           
           <div className="w-full lg:w-1/2 opacity-0" ref={formRef}>
             <div className="bg-white text-foreground rounded-2xl p-6 shadow-lg">
-              
+              <h3 className="text-2xl font-bold text-center mb-6">Contact Us</h3>
               
               {isSubmitted ? <div className="text-center py-8">
                   <div className="text-green-600 mb-2">✓</div>
