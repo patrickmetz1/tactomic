@@ -1,13 +1,16 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CTA from '@/components/CTA';
+
 const Careers = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
       
       <main className="flex-grow pt-24 pb-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl font-bold mb-8">Careers at Tactomic</h1>
             
             <p className="text-lg text-gray-700 mb-8">
@@ -52,23 +55,16 @@ const Careers = () => {
             </div>
             
             <div className="mb-12">
-              
-              
-              <div className="space-y-6">
-                
-                
-                
-              </div>
-            </div>
-            
-            <div>
-              
-              
+              <h2 className="text-2xl font-semibold mb-4">Interested in Joining Our Team?</h2>
+              <p className="text-gray-700 mb-4">
+                We're always looking for talented individuals to join our team. Fill out the contact form below to express your interest, and we'll get back to you with any current opportunities.
+              </p>
             </div>
           </div>
         </div>
       </main>
       
+      <CTA />
       <Footer />
     </div>;
 };

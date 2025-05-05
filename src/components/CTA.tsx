@@ -1,5 +1,7 @@
+
 import React, { useRef, useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Textarea } from './ui/textarea';
 
 const CTA = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -9,11 +11,13 @@ const CTA = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    email: ''
+    email: '',
+    message: ''
   });
   const [errors, setErrors] = useState({
     name: '',
-    email: ''
+    email: '',
+    message: ''
   });
 
   useEffect(() => {
@@ -34,6 +38,10 @@ const CTA = () => {
   }, []);
 
   const validateField = (name: string, value: string) => {
+    if (name === 'message') {
+      // Message is not required
+      return '';
+    }
     if (!value.trim()) {
       return `${name} is required`;
     }
@@ -43,7 +51,7 @@ const CTA = () => {
     return '';
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setErrors(prev => ({ ...prev, [name]: validateField(name, value) }));
@@ -55,7 +63,8 @@ const CTA = () => {
     // Validate all fields
     const newErrors = {
       name: validateField('name', formData.name),
-      email: validateField('email', formData.email)
+      email: validateField('email', formData.email),
+      message: validateField('message', formData.message)
     };
     setErrors(newErrors);
 
@@ -72,6 +81,7 @@ const CTA = () => {
       formDataToSubmit.append('form-name', 'contact');
       formDataToSubmit.append('name', formData.name);
       formDataToSubmit.append('email', formData.email);
+      formDataToSubmit.append('message', formData.message);
       
       console.log('Submitting form data:', Object.fromEntries(formDataToSubmit));
       
@@ -91,8 +101,8 @@ const CTA = () => {
 
       // Set submitted state regardless of response for now
       setIsSubmitted(true);
-      setFormData({ name: '', email: '' });
-      setErrors({ name: '', email: '' });
+      setFormData({ name: '', email: '', message: '' });
+      setErrors({ name: '', email: '', message: '' });
       e.currentTarget.reset();
 
       if (!response.ok) {
@@ -107,8 +117,8 @@ const CTA = () => {
       console.error('Error submitting form:', error);
       // Still show success state even if there's an error
       setIsSubmitted(true);
-      setFormData({ name: '', email: '' });
-      setErrors({ name: '', email: '' });
+      setFormData({ name: '', email: '', message: '' });
+      setErrors({ name: '', email: '', message: '' });
       e.currentTarget.reset();
     } finally {
       setIsSubmitting(false);
@@ -234,6 +244,26 @@ const CTA = () => {
                     />
                     {errors.email && (
                       <p className="text-sm text-red-500 mt-1">{errors.email}</p>
+                    )}
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <label htmlFor="message" className="text-sm font-medium">
+                      How can we help?
+                    </label>
+                    <Textarea 
+                      id="message" 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-book-500 min-h-[80px] ${
+                        errors.message ? 'border-red-300' : 'border-gray-200'
+                      }`}
+                      placeholder="Tell us about your needs" 
+                      rows={2}
+                    />
+                    {errors.message && (
+                      <p className="text-sm text-red-500 mt-1">{errors.message}</p>
                     )}
                   </div>
                   
