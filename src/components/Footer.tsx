@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Badge section - comes first on mobile, centered */}
           <div className="order-1 md:order-2 flex justify-center">
-            <div className="flex flex-row items-center justify-center gap-4 flex-wrap md:min-w-[320px] lg:min-w-[380px]">
+            <div className="flex flex-row items-center justify-center gap-4 flex-wrap md:min-w-[400px] lg:min-w-[480px]">
               <img
                 src={PuzzleCertified}
                 alt="Puzzle Certified Advisor"
