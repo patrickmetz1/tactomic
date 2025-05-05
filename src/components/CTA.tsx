@@ -153,37 +153,7 @@ const CTA = () => {
             <div className="flex items-center gap-6 mb-5">
             </div>
             
-            <div className="flex flex-col gap-3">
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                  01
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Complete the Contact Form</h3>
-                  <p className="text-white/80">We'll reach out to find time for an exploratory call.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                  02
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Discuss Your Needs</h3>
-                  <p className="text-white/80">Tell us about your goals and how we can help.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                  03
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Custom Solution</h3>
-                  <p className="text-white/80">Receive a plan that solves your problems and fits your budget.</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
           
           <div className="w-full lg:w-1/2 opacity-0" ref={formRef}>
