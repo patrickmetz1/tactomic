@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="order-3 md:order-3 text-left max-w-[10rem]">
+          <div className="order-3 md:order-3 text-left max-w-[10rem] ml-auto">
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
