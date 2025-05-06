@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Textarea } from './ui/textarea';
-
 interface CTAProps {
   title?: string;
   description?: string;
@@ -12,27 +11,22 @@ interface CTAProps {
   }>;
   formTitle?: string;
 }
-
-const CTA: React.FC<CTAProps> = ({ 
+const CTA: React.FC<CTAProps> = ({
   title = "Add financial specialists to your organization today",
   description = "",
-  steps = [
-    {
-      number: "01",
-      title: "Complete the Contact Form",
-      description: "We'll reach out to find time for an exploratory call."
-    },
-    {
-      number: "02",
-      title: "Discuss Your Needs",
-      description: "Tell us about your goals and how we can help."
-    },
-    {
-      number: "03",
-      title: "Custom Solution",
-      description: "Receive a plan that solves your problems and fits your budget."
-    }
-  ],
+  steps = [{
+    number: "01",
+    title: "Complete the Contact Form",
+    description: "We'll reach out to find time for an exploratory call."
+  }, {
+    number: "02",
+    title: "Discuss Your Needs",
+    description: "Tell us about your goals and how we can help."
+  }, {
+    number: "03",
+    title: "Custom Solution",
+    description: "Receive a plan that solves your problems and fits your budget."
+  }],
   formTitle = "Get in Touch"
 }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -50,7 +44,6 @@ const CTA: React.FC<CTAProps> = ({
     email: '',
     message: ''
   });
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -67,7 +60,6 @@ const CTA: React.FC<CTAProps> = ({
     if (formRef.current) observer.observe(formRef.current);
     return () => observer.disconnect();
   }, []);
-
   const validateField = (name: string, value: string) => {
     if (name === 'message') {
       // Message is not required
@@ -81,7 +73,6 @@ const CTA: React.FC<CTAProps> = ({
     }
     return '';
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -96,7 +87,6 @@ const CTA: React.FC<CTAProps> = ({
       [name]: validateField(name, value)
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -174,9 +164,7 @@ const CTA: React.FC<CTAProps> = ({
       setIsSubmitting(false);
     }
   };
-
   const isFormValid = formData.name.trim() !== '' && formData.email.trim() !== '' && !Object.values(errors).some(error => error);
-
   return <section id="contact" className="py-10 md:py-14 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
@@ -194,17 +182,7 @@ const CTA: React.FC<CTAProps> = ({
             </div>
             
             <div className="flex flex-col gap-3">
-              {steps.map((step, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                    {step.number}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-1">{step.title}</h3>
-                    <p className="text-white/80">{step.description}</p>
-                  </div>
-                </div>
-              ))}
+              {steps.map((step, index) => {})}
             </div>
           </div>
           
@@ -257,5 +235,4 @@ const CTA: React.FC<CTAProps> = ({
       </div>
     </section>;
 };
-
 export default CTA;
