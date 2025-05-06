@@ -36,7 +36,7 @@ const Careers = () => {
                   </div>
                   <div>
                     <h3 className="font-medium">Work-Life Balance</h3>
-                    <p className="text-gray-600">Flexible scheduling and remote work opportunities</p>
+                    <p className="text-gray-600">With efficiency at the core of our offerings, we offer flexible and remote work opportunities.</p>
                   </div>
                 </li>
                 
