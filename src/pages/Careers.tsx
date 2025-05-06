@@ -11,10 +11,7 @@ const Careers = () => {
           <div className="max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl font-bold mb-8">Careers at Tactomic</h1>
             
-            <p className="text-lg text-gray-700 mb-8">
-              Join our team of passionate professionals dedicated to helping businesses achieve financial success. 
-              At Tactomic, we believe in fostering a collaborative environment where innovation and excellence thrive.
-            </p>
+            <p className="text-lg text-gray-700 mb-8">If you are passionate about technology, service, and financially minded we would love to hear from you. Please fill out the form below letting us know why you might be a good fit in our dynamic organization.</p>
             
             <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 mb-10">
               <h2 className="text-2xl font-semibold mb-4">Why Work With Us</h2>
