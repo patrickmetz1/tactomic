@@ -115,14 +115,12 @@ const Pricing = () => {
                     <PlusCircle className="h-5 w-5 text-book-500" />
                   </div>
                 </div>
-                <CardDescription className="text-foreground/80">
-                  Customize your service with additional support based on your needs.
-                </CardDescription>
+                <CardDescription className="text-foreground/80">$/based on complexity</CardDescription>
               </CardHeader>
               <CardContent className="pb-4 px-6">
                 <div className="text-sm text-foreground/70 mb-4 flex items-center gap-2">
                   <InfoIcon className="h-4 w-4" />
-                  <span>Custom pricing based on complexity and volume</span>
+                  <span>Add additional recurring or non-recurring serivces to fit your needs.</span>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 mt-4">
