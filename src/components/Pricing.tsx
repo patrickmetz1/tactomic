@@ -1,24 +1,31 @@
-
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, DollarSign, PlusCircle, InfoIcon } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
-
 const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const foundationRef = useRef<HTMLDivElement>(null);
   const addonsRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
-
-  const addons = [
-    { name: 'Bill Pay', icon: <CheckCircle className="w-4 h-4" /> },
-    { name: 'Customer Invoicing', icon: <CheckCircle className="w-4 h-4" /> },
-    { name: 'Payroll Processing', icon: <CheckCircle className="w-4 h-4" /> },
-    { name: 'Planning & Budgeting', icon: <CheckCircle className="w-4 h-4" /> },
-    { name: 'Ad Hoc Financial Analysis', icon: <CheckCircle className="w-4 h-4" /> },
-    { name: 'Process Engineering', icon: <CheckCircle className="w-4 h-4" /> }
-  ];
-
+  const addons = [{
+    name: 'Bill Pay',
+    icon: <CheckCircle className="w-4 h-4" />
+  }, {
+    name: 'Customer Invoicing',
+    icon: <CheckCircle className="w-4 h-4" />
+  }, {
+    name: 'Payroll Processing',
+    icon: <CheckCircle className="w-4 h-4" />
+  }, {
+    name: 'Planning & Budgeting',
+    icon: <CheckCircle className="w-4 h-4" />
+  }, {
+    name: 'Ad Hoc Financial Analysis',
+    icon: <CheckCircle className="w-4 h-4" />
+  }, {
+    name: 'Process Engineering',
+    icon: <CheckCircle className="w-4 h-4" />
+  }];
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -30,17 +37,13 @@ const Pricing = () => {
     }, {
       threshold: 0.1
     });
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (foundationRef.current) observer.observe(foundationRef.current);
     if (addonsRef.current) observer.observe(addonsRef.current);
     if (titleRef.current) observer.observe(titleRef.current);
-
     return () => observer.disconnect();
   }, []);
-
-  return (
-    <section id="pricing" className="section-padding py-20 bg-gradient-to-b from-book-50/20 to-white relative" ref={sectionRef}>
+  return <section id="pricing" className="section-padding py-20 bg-gradient-to-b from-book-50/20 to-white relative" ref={sectionRef}>
       {/* Top wave pattern */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -85,7 +88,7 @@ const Pricing = () => {
                 <div className="space-y-3 mt-6">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span>Monthly reconciliation of all accounts</span>
+                    <span>Cash and bank reconciliations</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
@@ -134,12 +137,10 @@ const Pricing = () => {
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 mt-4">
-                  {addons.map((addon, index) => (
-                    <div key={index} className="flex items-center gap-2 py-2 px-3 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
+                  {addons.map((addon, index) => <div key={index} className="flex items-center gap-2 py-2 px-3 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
                       {addon.icon}
                       <span className="text-sm font-medium">{addon.name}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </CardContent>
               <CardFooter className="px-6 pb-6">
@@ -162,8 +163,6 @@ const Pricing = () => {
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-white"></path>
         </svg>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
