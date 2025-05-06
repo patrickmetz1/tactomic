@@ -1,12 +1,15 @@
+
 import React, { useRef, useEffect } from 'react';
-import { CheckCircle, DollarSign, PlusCircle, InfoIcon } from 'lucide-react';
+import { CheckCircle, PlusCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
+
 const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const foundationRef = useRef<HTMLDivElement>(null);
   const addonsRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
+
   const addons = [{
     name: 'Bill Pay',
     icon: <CheckCircle className="w-4 h-4" />
@@ -26,6 +29,7 @@ const Pricing = () => {
     name: 'Process Engineering',
     icon: <CheckCircle className="w-4 h-4" />
   }];
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -37,12 +41,15 @@ const Pricing = () => {
     }, {
       threshold: 0.1
     });
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (foundationRef.current) observer.observe(foundationRef.current);
     if (addonsRef.current) observer.observe(addonsRef.current);
     if (titleRef.current) observer.observe(titleRef.current);
+
     return () => observer.disconnect();
   }, []);
+
   return <section id="pricing" className="section-padding py-20 bg-gradient-to-b from-book-50/20 to-white relative" ref={sectionRef}>
       {/* Top wave pattern */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden">
@@ -57,48 +64,46 @@ const Pricing = () => {
           <p className="text-foreground/80 font-medium">Flat monthly service fee with no long term commitment</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Foundation plan - Takes up more space */}
-          <div className="lg:col-span-2 opacity-0" ref={foundationRef}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Foundation plan - Reduced size */}
+          <div className="opacity-0" ref={foundationRef}>
             <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all">
-              <CardHeader className="pb-4 pt-6 px-6">
-                <div className="flex justify-between items-center mb-2">
-                  <CardTitle className="text-2xl font-bold">
+              <CardHeader className="pb-2 pt-5 px-5">
+                <div className="flex justify-between items-center mb-1">
+                  <CardTitle className="text-xl font-bold">
                     <span className="gradient-text">Core Bookkeeping</span>
                   </CardTitle>
-                  
                 </div>
-                <CardDescription className="text-foreground/80">Foundational bookkeeping services - does not include software subscription costs</CardDescription>
+                <CardDescription className="text-foreground/80 text-sm">Foundational bookkeeping services - does not include software subscription costs</CardDescription>
               </CardHeader>
-              <CardContent className="pb-4 px-6">
-                <div className="mb-4">
-                  <span className="text-3xl font-bold">$300</span>
-                  <span className="text-foreground/70 ml-1">/month for Puzzle users</span>
-                  <div className="text-foreground/60 text-sm mt-1">$325/month for QBO, other ledger systems</div>
+              <CardContent className="pb-2 px-5 space-y-3">
+                <div>
+                  <span className="text-2xl font-bold">$300</span>
+                  <span className="text-foreground/70 ml-1 text-sm">/month for Puzzle users</span>
+                  <div className="text-foreground/60 text-xs mt-0.5">$325/month for QBO, other ledger systems</div>
                 </div>
                 
-                <div className="space-y-3 mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-3">
                   <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span>Cash and bank reconciliations</span>
+                    <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Cash and bank reconciliations</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span>Transaction categorization</span>
+                    <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Transaction categorization</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span>Financial reporting (P&L, Balance Sheet)</span>
+                    <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Financial reporting</span>
                   </div>
                   <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span>Unlimited asynchronous support</span>
+                    <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Unlimited async support</span>
                   </div>
-                  
                 </div>
               </CardContent>
-              <CardFooter className="px-6 pb-6">
-                
+              <CardFooter className="px-5 pb-5">
+                {/* Footer content can be added here if needed */}
               </CardFooter>
             </Card>
           </div>
@@ -106,27 +111,27 @@ const Pricing = () => {
           {/* Add-ons card */}
           <div className="opacity-0" ref={addonsRef}>
             <Card className="h-full border border-book-100 shadow-sm hover:shadow-md transition-all">
-              <CardHeader className="pb-4 pt-6 px-6">
-                <div className="flex justify-between items-center mb-2">
-                  <CardTitle className="text-xl font-bold">Add Other Accounting & Financial Services</CardTitle>
+              <CardHeader className="pb-2 pt-5 px-5">
+                <div className="flex justify-between items-center mb-1">
+                  <CardTitle className="text-lg font-bold">Add Other Accounting & Financial Services</CardTitle>
                   <div className="bg-book-50/50 p-2 rounded-full">
-                    <PlusCircle className="h-5 w-5 text-book-500" />
+                    <PlusCircle className="h-4 w-4 text-book-500" />
                   </div>
                 </div>
-                <CardDescription className="text-foreground/80">$/based on complexity, volume, and recurrence</CardDescription>
+                <CardDescription className="text-foreground/80 text-sm">$/based on complexity, volume, and recurrence</CardDescription>
               </CardHeader>
-              <CardContent className="pb-4 px-6">
-                
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 mt-4">
-                  {addons.map((addon, index) => <div key={index} className="flex items-center gap-2 py-2 px-3 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
+              <CardContent className="pb-2 px-5">
+                <div className="grid grid-cols-2 gap-x-3 gap-y-2 mt-3">
+                  {addons.map((addon, index) => (
+                    <div key={index} className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
                       {addon.icon}
-                      <span className="text-sm font-medium">{addon.name}</span>
-                    </div>)}
+                      <span className="text-xs font-medium">{addon.name}</span>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
-              <CardFooter className="px-6 pb-6">
-                <Button variant="outline" size="lg" className="w-full border-book-200 hover:bg-book-50">
+              <CardFooter className="px-5 pb-5">
+                <Button variant="outline" size="sm" className="w-full border-book-200 hover:bg-book-50 text-sm">
                   Contact for Details
                 </Button>
               </CardFooter>
@@ -134,9 +139,6 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="text-center mt-10 text-foreground/70">
-          
-        </div>
       </div>
 
       {/* Bottom wave pattern for transition to next section */}
@@ -147,4 +149,5 @@ const Pricing = () => {
       </div>
     </section>;
 };
+
 export default Pricing;
