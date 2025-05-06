@@ -92,7 +92,7 @@ const Pricing = () => {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span>Transaction categorization and cleanup</span>
+                    <span>Transaction categorization</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
