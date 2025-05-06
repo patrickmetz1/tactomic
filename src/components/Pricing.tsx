@@ -66,9 +66,7 @@ const Pricing = () => {
                   <CardTitle className="text-2xl font-bold">
                     <span className="gradient-text">Foundations</span>
                   </CardTitle>
-                  <div className="bg-book-50 p-2 rounded-full">
-                    <DollarSign className="h-5 w-5 text-book-600" />
-                  </div>
+                  
                 </div>
                 <CardDescription className="text-foreground/80">
                   Our core bookkeeping service provides the essential financial foundation your business needs.
@@ -104,9 +102,7 @@ const Pricing = () => {
                 </div>
               </CardContent>
               <CardFooter className="px-6 pb-6">
-                <Button size="lg" className="w-full bg-book-600 hover:bg-book-700">
-                  Get Started
-                </Button>
+                
               </CardFooter>
             </Card>
           </div>

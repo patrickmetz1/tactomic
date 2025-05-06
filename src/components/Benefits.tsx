@@ -81,7 +81,7 @@ const Benefits = () => {
       </div>
       
       {/* Bottom gradient for transition to next section */}
-      <div className="absolute bottom-0 left-0 -z-10 w-full h-24 bg-gradient-to-b from-white to-book-50/20" />
+      <div className="absolute bottom-0 left-0 -z-10 w-full h-8 bg-gradient-to-b from-white to-book-50/20" />
     </section>;
 };
 export default Benefits;
