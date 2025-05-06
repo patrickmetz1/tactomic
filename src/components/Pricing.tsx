@@ -102,10 +102,7 @@ const Pricing = () => {
                     <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
                     <span>Dedicated accounting professional</span>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span>Integration with best-in-class accounting platforms</span>
-                  </div>
+                  
                 </div>
               </CardContent>
               <CardFooter className="px-6 pb-6">
