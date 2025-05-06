@@ -64,13 +64,11 @@ const Pricing = () => {
               <CardHeader className="pb-4 pt-6 px-6">
                 <div className="flex justify-between items-center mb-2">
                   <CardTitle className="text-2xl font-bold">
-                    <span className="gradient-text">Foundations</span>
+                    <span className="gradient-text">Core Bookkeeping</span>
                   </CardTitle>
                   
                 </div>
-                <CardDescription className="text-foreground/80">
-                  Our core bookkeeping service provides the essential financial foundation your business needs.
-                </CardDescription>
+                <CardDescription className="text-foreground/80">Foundational bookkeeping services - does not include software subscription costs</CardDescription>
               </CardHeader>
               <CardContent className="pb-4 px-6">
                 <div className="mb-4">
@@ -96,7 +94,7 @@ const Pricing = () => {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span>Dedicated accounting professional</span>
+                    <span>Unlimited asynchronous support</span>
                   </div>
                   
                 </div>
