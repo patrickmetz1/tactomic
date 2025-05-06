@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
-
 const Careers = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -28,7 +26,7 @@ const Careers = () => {
                   </div>
                   <div>
                     <h3 className="font-medium">Professional Growth</h3>
-                    <p className="text-gray-600">Continuous learning opportunities and career advancement paths</p>
+                    <p className="text-gray-600">Develop skills necessary to thrive in the modern accounting and finance landscape</p>
                   </div>
                 </li>
                 
@@ -57,30 +55,20 @@ const Careers = () => {
         </div>
       </main>
       
-      <CTA 
-        title="Join Our Team"
-        description="We're always looking for talented individuals who share our passion for excellence in financial services."
-        steps={[
-          {
-            number: "01",
-            title: "Submit Your Information",
-            description: "Fill out the form with your contact details and experience."
-          },
-          {
-            number: "02",
-            title: "Initial Screening",
-            description: "We'll review your application and schedule an initial call if there's a good fit."
-          },
-          {
-            number: "03",
-            title: "Interview Process",
-            description: "Meet our team and explore how your skills align with our needs."
-          }
-        ]}
-        formTitle="Apply Now"
-      />
+      <CTA title="Join Our Team" description="We're always looking for talented individuals who share our passion for excellence in financial services." steps={[{
+      number: "01",
+      title: "Submit Your Information",
+      description: "Fill out the form with your contact details and experience."
+    }, {
+      number: "02",
+      title: "Initial Screening",
+      description: "We'll review your application and schedule an initial call if there's a good fit."
+    }, {
+      number: "03",
+      title: "Interview Process",
+      description: "Meet our team and explore how your skills align with our needs."
+    }]} formTitle="Apply Now" />
       <Footer />
     </div>;
 };
-
 export default Careers;
