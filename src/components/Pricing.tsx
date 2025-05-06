@@ -53,10 +53,8 @@ const Pricing = () => {
 
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12 opacity-0" ref={titleRef}>
-          <h2 className="heading-lg mb-3">Simple, Transparent Pricing</h2>
-          <p className="text-foreground/80 font-medium">
-            Choose from our core service and add custom solutions based on your business needs.
-          </p>
+          <h2 className="heading-lg mb-3">Pricing</h2>
+          <p className="text-foreground/80 font-medium">Flat monthly service fee with no long term commitment</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
