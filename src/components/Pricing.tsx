@@ -73,10 +73,8 @@ const Pricing = () => {
               <CardContent className="pb-4 px-6">
                 <div className="mb-4">
                   <span className="text-3xl font-bold">$300</span>
-                  <span className="text-foreground/70 ml-1">/month</span>
-                  <div className="text-foreground/60 text-sm mt-1">
-                    $325/month on QuickBooks Online
-                  </div>
+                  <span className="text-foreground/70 ml-1">/month for Puzzle users</span>
+                  <div className="text-foreground/60 text-sm mt-1">$325/month for QBO, other ledger systems</div>
                 </div>
                 
                 <div className="space-y-3 mt-6">
@@ -110,18 +108,15 @@ const Pricing = () => {
             <Card className="h-full border border-book-100 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="pb-4 pt-6 px-6">
                 <div className="flex justify-between items-center mb-2">
-                  <CardTitle className="text-xl font-bold">Add-On Services</CardTitle>
+                  <CardTitle className="text-xl font-bold">Add Other Accounting & Financial Services</CardTitle>
                   <div className="bg-book-50/50 p-2 rounded-full">
                     <PlusCircle className="h-5 w-5 text-book-500" />
                   </div>
                 </div>
-                <CardDescription className="text-foreground/80">$/based on complexity</CardDescription>
+                <CardDescription className="text-foreground/80">$/based on complexity, volume, and recurrence</CardDescription>
               </CardHeader>
               <CardContent className="pb-4 px-6">
-                <div className="text-sm text-foreground/70 mb-4 flex items-center gap-2">
-                  <InfoIcon className="h-4 w-4" />
-                  <span>Add additional recurring or non-recurring serivces to fit your needs.</span>
-                </div>
+                
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 mt-4">
                   {addons.map((addon, index) => <div key={index} className="flex items-center gap-2 py-2 px-3 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
@@ -140,7 +135,7 @@ const Pricing = () => {
         </div>
 
         <div className="text-center mt-10 text-foreground/70">
-          <p className="text-sm">All services can be customized to fit your specific business requirements.</p>
+          
         </div>
       </div>
 
