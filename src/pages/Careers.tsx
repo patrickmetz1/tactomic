@@ -53,19 +53,34 @@ const Careers = () => {
                 </li>
               </ul>
             </div>
-            
-            <div className="mb-12">
-              <h2 className="text-2xl font-semibold mb-4">Interested in Joining Our Team?</h2>
-              <p className="text-gray-700 mb-4">
-                We're always looking for talented individuals to join our team. Fill out the contact form below to express your interest, and we'll get back to you with any current opportunities.
-              </p>
-            </div>
           </div>
         </div>
       </main>
       
-      <CTA />
+      <CTA 
+        title="Join Our Team"
+        description="We're always looking for talented individuals who share our passion for excellence in financial services."
+        steps={[
+          {
+            number: "01",
+            title: "Submit Your Information",
+            description: "Fill out the form with your contact details and experience."
+          },
+          {
+            number: "02",
+            title: "Initial Screening",
+            description: "We'll review your application and schedule an initial call if there's a good fit."
+          },
+          {
+            number: "03",
+            title: "Interview Process",
+            description: "Meet our team and explore how your skills align with our needs."
+          }
+        ]}
+        formTitle="Apply Now"
+      />
       <Footer />
     </div>;
 };
+
 export default Careers;

@@ -1,7 +1,40 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Textarea } from './ui/textarea';
-const CTA = () => {
+
+interface CTAProps {
+  title?: string;
+  description?: string;
+  steps?: Array<{
+    number: string;
+    title: string;
+    description: string;
+  }>;
+  formTitle?: string;
+}
+
+const CTA: React.FC<CTAProps> = ({ 
+  title = "Add financial specialists to your organization today",
+  description = "",
+  steps = [
+    {
+      number: "01",
+      title: "Complete the Contact Form",
+      description: "We'll reach out to find time for an exploratory call."
+    },
+    {
+      number: "02",
+      title: "Discuss Your Needs",
+      description: "Tell us about your goals and how we can help."
+    },
+    {
+      number: "03",
+      title: "Custom Solution",
+      description: "Receive a plan that solves your problems and fits your budget."
+    }
+  ],
+  formTitle = "Get in Touch"
+}) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
@@ -17,6 +50,7 @@ const CTA = () => {
     email: '',
     message: ''
   });
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -33,6 +67,7 @@ const CTA = () => {
     if (formRef.current) observer.observe(formRef.current);
     return () => observer.disconnect();
   }, []);
+
   const validateField = (name: string, value: string) => {
     if (name === 'message') {
       // Message is not required
@@ -46,6 +81,7 @@ const CTA = () => {
     }
     return '';
   };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -60,6 +96,7 @@ const CTA = () => {
       [name]: validateField(name, value)
     }));
   };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -137,7 +174,9 @@ const CTA = () => {
       setIsSubmitting(false);
     }
   };
+
   const isFormValid = formData.name.trim() !== '' && formData.email.trim() !== '' && !Object.values(errors).some(error => error);
+
   return <section id="contact" className="py-10 md:py-14 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
@@ -147,48 +186,31 @@ const CTA = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
           <div className="w-full lg:w-1/2 opacity-0" ref={contentRef}>
-            <h2 className="heading-lg mb-2">Add financial specialists to your organization today</h2>
+            <h2 className="heading-lg mb-2">{title}</h2>
             
+            {description && <p className="text-white/90 mb-6">{description}</p>}
             
             <div className="flex items-center gap-6 mb-5">
             </div>
             
             <div className="flex flex-col gap-3">
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                  01
+              {steps.map((step, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                    {step.number}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1">{step.title}</h3>
+                    <p className="text-white/80">{step.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Complete the Contact Form</h3>
-                  <p className="text-white/80">We'll reach out to find time for an exploratory call.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                  02
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Discuss Your Needs</h3>
-                  <p className="text-white/80">Tell us about your goals and how we can help.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                  03
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Custom Solution</h3>
-                  <p className="text-white/80">Receive a plan that solves your problems and fits your budget.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           
           <div className="w-full lg:w-1/2 opacity-0" ref={formRef}>
             <div className="bg-white text-foreground rounded-2xl p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-center mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-center mb-6">{formTitle}</h3>
               
               {isSubmitted ? <div className="text-center py-8">
                   <div className="text-green-600 mb-2">✓</div>
@@ -235,4 +257,5 @@ const CTA = () => {
       </div>
     </section>;
 };
+
 export default CTA;
