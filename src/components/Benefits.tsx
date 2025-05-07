@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, ChevronDown } from 'lucide-react';
 const Benefits = () => {
@@ -72,7 +73,7 @@ const Benefits = () => {
         </div>
 
         {/* === CTA Arrow === */}
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-4 mb-2">
           <div className="text-book-600 font-medium flex items-center gap-2">
             Find Your Solution
             <ChevronDown className="w-4 h-4 animate-bounce" />

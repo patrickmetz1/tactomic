@@ -50,7 +50,7 @@ const Pricing = () => {
     return () => observer.disconnect();
   }, []);
 
-  return <section id="pricing" className="section-padding py-20 bg-gradient-to-b from-book-50/20 to-white relative" ref={sectionRef}>
+  return <section id="pricing" className="section-padding py-10 md:py-16 bg-gradient-to-b from-book-50/20 to-white relative" ref={sectionRef}>
       {/* Top wave pattern */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -59,7 +59,7 @@ const Pricing = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12 opacity-0" ref={titleRef}>
+        <div className="text-center max-w-3xl mx-auto mb-8 opacity-0" ref={titleRef}>
           <h2 className="heading-lg mb-3">Pricing</h2>
           <p className="text-foreground/80 font-medium">Flat monthly service fee with no long term commitment</p>
         </div>
