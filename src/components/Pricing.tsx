@@ -80,16 +80,16 @@ const Pricing = () => {
                   </TableHeader>
                   <TableBody>
                     <TableRow>
-                      <TableCell className="font-medium">Less than $20,000</TableCell>
-                      <TableCell>$500</TableCell>
+                      <TableCell className="font-medium">Less than $25k/month</TableCell>
+                      <TableCell>$500/month</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">$20,000 - $40,000</TableCell>
-                      <TableCell>$800</TableCell>
+                      <TableCell className="font-medium">$25k - $50k/month</TableCell>
+                      <TableCell>$800/month</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Above $40,000</TableCell>
-                      <TableCell>$1,000</TableCell>
+                      <TableCell className="font-medium">Greater than $50k/month</TableCell>
+                      <TableCell>$1,000/month</TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
