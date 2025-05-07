@@ -1,15 +1,12 @@
-
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, PlusCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
-
 const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const foundationRef = useRef<HTMLDivElement>(null);
   const addonsRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
-
   const addons = [{
     name: 'Bill Pay',
     icon: <CheckCircle className="w-4 h-4" />
@@ -29,7 +26,6 @@ const Pricing = () => {
     name: 'Process Engineering',
     icon: <CheckCircle className="w-4 h-4" />
   }];
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -41,15 +37,12 @@ const Pricing = () => {
     }, {
       threshold: 0.1
     });
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (foundationRef.current) observer.observe(foundationRef.current);
     if (addonsRef.current) observer.observe(addonsRef.current);
     if (titleRef.current) observer.observe(titleRef.current);
-
     return () => observer.disconnect();
   }, []);
-
   return <section id="pricing" className="section-padding py-10 md:py-16 bg-gradient-to-b from-book-50/20 to-white relative" ref={sectionRef}>
       {/* Top wave pattern */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden">
@@ -78,9 +71,9 @@ const Pricing = () => {
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div>
-                  <span className="text-2xl font-bold">$300</span>
+                  <span className="text-2xl font-bold">$400</span>
                   <span className="text-foreground/70 ml-1 text-sm">/month for Puzzle users</span>
-                  <div className="text-foreground/60 text-xs mt-0.5">$325/month for QBO, other ledger systems</div>
+                  <div className="text-foreground/60 text-xs mt-0.5">$450/month for QBO, other ledger systems</div>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-3">
@@ -122,12 +115,10 @@ const Pricing = () => {
               </CardHeader>
               <CardContent className="pb-2 px-5">
                 <div className="grid grid-cols-2 gap-x-3 gap-y-2 mt-3">
-                  {addons.map((addon, index) => (
-                    <div key={index} className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
+                  {addons.map((addon, index) => <div key={index} className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
                       {addon.icon}
                       <span className="text-xs font-medium">{addon.name}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </CardContent>
               <CardFooter className="px-5 pb-5">
@@ -149,5 +140,4 @@ const Pricing = () => {
       </div>
     </section>;
 };
-
 export default Pricing;
