@@ -57,19 +57,7 @@ const Careers = () => {
       <CTA 
         title="Contact Us" 
         description="Submit the form below letting us know why you might be a good fit in our dynamic organization." 
-        steps={[{
-          number: "01",
-          title: "Submit Your Information",
-          description: "Fill out the form with your contact details and experience."
-        }, {
-          number: "02",
-          title: "Initial Screening",
-          description: "We'll review your application and schedule an initial call if there's a good fit."
-        }, {
-          number: "03",
-          title: "Interview Process",
-          description: "Meet our team and explore how your skills align with our needs."
-        }]} 
+        steps={[]} 
         formTitle="Apply Now" 
         messageLabel="Why are you a good fit for our organization?"
         messagePlaceholder="Tell us about yourself"

@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Textarea } from './ui/textarea';
@@ -196,21 +197,23 @@ const CTA: React.FC<CTAProps> = ({
             <div className="flex items-center gap-6 mb-5">
             </div>
             
-            <div className="flex flex-col gap-3">
-              {steps.map((step, index) => (
-                <div key={index} className="bg-white/10 rounded-lg p-4">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white/20 text-white h-8 w-8 rounded-full flex items-center justify-center text-sm">
-                      {step.number}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-1">{step.title}</h3>
-                      <p className="text-white/80 text-sm">{step.description}</p>
+            {steps.length > 0 && (
+              <div className="flex flex-col gap-3">
+                {steps.map((step, index) => (
+                  <div key={index} className="bg-white/10 rounded-lg p-4">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-white/20 text-white h-8 w-8 rounded-full flex items-center justify-center text-sm">
+                        {step.number}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-1">{step.title}</h3>
+                        <p className="text-white/80 text-sm">{step.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
           
           <div className="w-full lg:w-1/2 opacity-0" ref={formRef}>
