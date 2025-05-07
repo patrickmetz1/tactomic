@@ -1,7 +1,10 @@
+
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, PlusCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
+
 const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const foundationRef = useRef<HTMLDivElement>(null);
@@ -43,7 +46,7 @@ const Pricing = () => {
     if (titleRef.current) observer.observe(titleRef.current);
     return () => observer.disconnect();
   }, []);
-  return <section id="pricing" className="section-padding py-10 md:py-16 bg-gradient-to-b from-book-50/20 to-white relative" ref={sectionRef}>
+  return <section id="pricing" className="section-padding py-8 md:py-14 bg-gradient-to-b from-book-50/20 to-white relative" ref={sectionRef}>
       {/* Top wave pattern */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -58,7 +61,7 @@ const Pricing = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Foundation plan - Reduced size */}
+          {/* Foundation plan with tiered pricing */}
           <div className="opacity-0" ref={foundationRef}>
             <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all">
               <CardHeader className="pb-2 pt-5 px-5">
@@ -70,11 +73,30 @@ const Pricing = () => {
                 <CardDescription className="text-foreground/80 text-sm">Foundational bookkeeping services - does not include software subscription costs</CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
-                <div>
-                  <span className="text-2xl font-bold">$500</span>
-                  <span className="text-foreground/70 ml-1 text-sm">/month for Puzzle users</span>
-                  <div className="text-foreground/60 text-xs mt-0.5">$550/month for QBO, other ledger systems</div>
-                </div>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Monthly Expenses</TableHead>
+                      <TableHead>Monthly Fee</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Less than $20,000</TableCell>
+                      <TableCell>$500</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">$20,000 - $40,000</TableCell>
+                      <TableCell>$800</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">Above $40,000</TableCell>
+                      <TableCell>$1,000</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+                
+                <div className="text-foreground/60 text-xs mt-0.5">$550/month for QBO, other ledger systems</div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-3">
                   <div className="flex items-start gap-2">
