@@ -5,40 +5,22 @@ import Logo from '@/assets/Asset5.svg';
 import PuzzleCertified from '@/assets/PuzzleCertifiedAdvisorGrey.png';
 import IntuitBookkeeper from '@/assets/IntuitTrainedBookkeeper.png';
 import XeroCertified from '@/assets/XeroCertified.svg';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-50 py-16">
+  return <footer className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Badge section - comes first on mobile, centered */}
           <div className="order-1 md:order-2 flex justify-center">
             <div className="flex flex-row items-center justify-center gap-4 flex-wrap md:min-w-[400px] lg:min-w-[480px]">
-              <img
-                src={PuzzleCertified}
-                alt="Puzzle Certified Advisor"
-                className="h-16 object-contain"
-              />
-              <img
-                src={IntuitBookkeeper}
-                alt="Intuit Trained Bookkeeper"
-                className="h-28 w-auto object-contain"
-              />
-              <img
-                src={XeroCertified}
-                alt="Xero Certified"
-                className="h-36 w-auto object-contain"
-              />
+              <img src={PuzzleCertified} alt="Puzzle Certified Advisor" className="h-16 object-contain" />
+              <img src={IntuitBookkeeper} alt="Intuit Trained Bookkeeper" className="h-24 w-auto object-contain" />
+              <img src={XeroCertified} alt="Xero Certified" className="h-36 w-auto object-contain" />
             </div>
           </div>
           {/* Contact info (Logo & phone/email) */}
           <div className="order-2 md:order-1 text-left">
             <div className="flex items-center gap-2 mb-6">
-              <img 
-                src={Logo} 
-                alt="Tactomic Logo" 
-                className="h-16 w-48 object-contain" 
-              />
+              <img src={Logo} alt="Tactomic Logo" className="h-16 w-48 object-contain" />
             </div>
             <ul className="space-y-4 mb-6">
               <li className="flex items-center gap-3">
@@ -89,8 +71,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
