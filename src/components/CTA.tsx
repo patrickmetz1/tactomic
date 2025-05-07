@@ -182,17 +182,7 @@ const CTA: React.FC<CTAProps> = ({
             </div>
             
             <div className="flex flex-col gap-3">
-              {steps.map((step, index) => (
-                <div key={index} className="flex gap-4">
-                  <div>
-                    <span className="block text-xl font-semibold mb-1 text-white/80">{step.number}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">{step.title}</h3>
-                    <p className="text-white/80">{step.description}</p>
-                  </div>
-                </div>
-              ))}
+              {steps.map((step, index) => {})}
             </div>
           </div>
           
