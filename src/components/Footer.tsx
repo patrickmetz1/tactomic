@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Badge section - comes first on mobile, centered */}
           <div className="order-1 md:order-2 flex justify-center">
             <div className="flex flex-row items-center justify-center gap-4 flex-wrap md:min-w-[400px] lg:min-w-[480px]">
-              <img src={PuzzleCertified} alt="Puzzle Certified Advisor" className="h-16 object-contain" />
+              <img src={PuzzleCertified} alt="Puzzle Certified Advisor" className="h-20 object-contain" />
               <img src={IntuitBookkeeper} alt="Intuit Trained Bookkeeper" className="h-24 w-auto object-contain" />
               <img src={XeroCertified} alt="Xero Certified" className="h-36 w-auto object-contain" />
             </div>
