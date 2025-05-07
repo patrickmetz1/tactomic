@@ -1,7 +1,9 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+
 const Careers = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -52,20 +54,28 @@ const Careers = () => {
         </div>
       </main>
       
-      <CTA title="Contact Us" description="Submit the form below letting us know why you might be a good fit in our dynamic organization." steps={[{
-      number: "01",
-      title: "Submit Your Information",
-      description: "Fill out the form with your contact details and experience."
-    }, {
-      number: "02",
-      title: "Initial Screening",
-      description: "We'll review your application and schedule an initial call if there's a good fit."
-    }, {
-      number: "03",
-      title: "Interview Process",
-      description: "Meet our team and explore how your skills align with our needs."
-    }]} formTitle="Apply Now" />
+      <CTA 
+        title="Contact Us" 
+        description="Submit the form below letting us know why you might be a good fit in our dynamic organization." 
+        steps={[{
+          number: "01",
+          title: "Submit Your Information",
+          description: "Fill out the form with your contact details and experience."
+        }, {
+          number: "02",
+          title: "Initial Screening",
+          description: "We'll review your application and schedule an initial call if there's a good fit."
+        }, {
+          number: "03",
+          title: "Interview Process",
+          description: "Meet our team and explore how your skills align with our needs."
+        }]} 
+        formTitle="Apply Now" 
+        messageLabel="Why are you a good fit for our organization?"
+        messagePlaceholder="Tell us about yourself"
+      />
       <Footer />
     </div>;
 };
+
 export default Careers;
