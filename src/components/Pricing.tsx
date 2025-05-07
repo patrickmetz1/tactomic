@@ -94,7 +94,7 @@ const Pricing = () => {
                   </TableBody>
                 </Table>
                 
-                <div className="text-foreground/60 text-xs mt-0.5">$550/month for QBO, other ledger systems</div>
+                
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-3">
                   <div className="flex items-start gap-2">
