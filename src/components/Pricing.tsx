@@ -1,10 +1,8 @@
-
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, PlusCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
-
 const Pricing = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const foundationRef = useRef<HTMLDivElement>(null);
@@ -76,7 +74,7 @@ const Pricing = () => {
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead>Monthly Expenses</TableHead>
+                      <TableHead>Monthly Spend</TableHead>
                       <TableHead>Monthly Fee</TableHead>
                     </TableRow>
                   </TableHeader>
