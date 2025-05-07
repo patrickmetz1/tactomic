@@ -68,7 +68,7 @@ const Pricing = () => {
                     <span className="gradient-text">Core Bookkeeping</span>
                   </CardTitle>
                 </div>
-                <CardDescription className="text-foreground/80 text-sm">Foundational bookkeeping services - does not include software subscription costs</CardDescription>
+                <CardDescription className="text-foreground/80 text-sm">Foundational bookkeeping services and reporting packages to ensure you have the information needed to run your business.</CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <Table>
