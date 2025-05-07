@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Textarea } from './ui/textarea';
-
 interface CTAProps {
   title?: string;
   description?: string;
@@ -14,7 +13,6 @@ interface CTAProps {
   messageLabel?: string;
   messagePlaceholder?: string;
 }
-
 const CTA: React.FC<CTAProps> = ({
   title = "Add financial specialists to your organization today",
   description = "",
@@ -50,7 +48,6 @@ const CTA: React.FC<CTAProps> = ({
     email: '',
     message: ''
   });
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -67,7 +64,6 @@ const CTA: React.FC<CTAProps> = ({
     if (formRef.current) observer.observe(formRef.current);
     return () => observer.disconnect();
   }, []);
-
   const validateField = (name: string, value: string) => {
     if (name === 'message') {
       // Message is not required
@@ -81,7 +77,6 @@ const CTA: React.FC<CTAProps> = ({
     }
     return '';
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -96,7 +91,6 @@ const CTA: React.FC<CTAProps> = ({
       [name]: validateField(name, value)
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -112,7 +106,6 @@ const CTA: React.FC<CTAProps> = ({
     if (Object.values(newErrors).some(error => error)) {
       return;
     }
-
     setIsSubmitting(true);
     try {
       // Create the form data in the format Netlify expects
@@ -122,7 +115,6 @@ const CTA: React.FC<CTAProps> = ({
       formDataToSubmit.append('email', formData.email);
       formDataToSubmit.append('message', formData.message);
       console.log('Submitting form data:', Object.fromEntries(formDataToSubmit));
-
       const response = await fetch('/', {
         method: 'POST',
         headers: {
@@ -149,7 +141,6 @@ const CTA: React.FC<CTAProps> = ({
         message: ''
       });
       e.currentTarget.reset();
-
       if (!response.ok) {
         const errorText = await response.text();
         console.error('Form submission failed:', {
@@ -177,9 +168,7 @@ const CTA: React.FC<CTAProps> = ({
       setIsSubmitting(false);
     }
   };
-
   const isFormValid = formData.name.trim() !== '' && formData.email.trim() !== '' && !Object.values(errors).some(error => error);
-
   return <section id="contact" className="py-10 md:py-14 bg-book-600 text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 opacity-10">
@@ -197,19 +186,7 @@ const CTA: React.FC<CTAProps> = ({
             </div>
             
             <div className="flex flex-col gap-3">
-              {steps.map((step, index) => (
-                <div key={index} className="bg-white/10 rounded-lg p-4">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white/20 text-white h-8 w-8 rounded-full flex items-center justify-center text-sm">
-                      {step.number}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-1">{step.title}</h3>
-                      <p className="text-white/80 text-sm">{step.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              {steps.map((step, index) => {})}
             </div>
           </div>
           
@@ -262,5 +239,4 @@ const CTA: React.FC<CTAProps> = ({
       </div>
     </section>;
 };
-
 export default CTA;
