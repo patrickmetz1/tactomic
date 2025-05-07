@@ -85,11 +85,11 @@ const Pricing = () => {
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">$25k - $50k/month</TableCell>
-                      <TableCell>$800/month</TableCell>
+                      <TableCell>$750/month</TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell className="font-medium">Greater than $50k/month</TableCell>
-                      <TableCell>$1,000/month</TableCell>
+                      <TableCell>$950/month</TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
