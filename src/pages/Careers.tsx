@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
-
 const Careers = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -13,7 +11,7 @@ const Careers = () => {
           <div className="max-w-3xl mx-auto mb-16">
             <h1 className="text-4xl font-bold mb-8">Careers at Tactomic</h1>
             
-            <p className="text-lg text-gray-700 mb-8">If you are enjoy learning, like serving others, and are technologically savvy or financially minded, we would love to hear from you. Please fill out the form below letting us know why you might be a good fit in our dynamic organization.</p>
+            <p className="text-lg text-gray-700 mb-8">If you are enjoy learning, like serving others, and are technologically savvy or financially minded, we would love to hear from you. Please fill out the form below letting us know why you are interested.</p>
             
             <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 mb-10">
               <h2 className="text-2xl font-semibold mb-4">Why Work With Us</h2>
@@ -54,28 +52,20 @@ const Careers = () => {
         </div>
       </main>
       
-      <CTA 
-        title="Contact Us" 
-        description="Submit the form below letting us know why you might be a good fit in our dynamic organization." 
-        steps={[{
-          number: "01",
-          title: "Submit Your Information",
-          description: "Fill out the form with your contact details and experience."
-        }, {
-          number: "02",
-          title: "Initial Screening",
-          description: "We'll review your application and schedule an initial call if there's a good fit."
-        }, {
-          number: "03",
-          title: "Interview Process",
-          description: "Meet our team and explore how your skills align with our needs."
-        }]} 
-        formTitle="Apply Now" 
-        messageLabel="Why are you a good fit for our organization?"
-        messagePlaceholder="Tell us about yourself"
-      />
+      <CTA title="Contact Us" description="Submit the form below letting us know why you might be a good fit in our dynamic organization." steps={[{
+      number: "01",
+      title: "Submit Your Information",
+      description: "Fill out the form with your contact details and experience."
+    }, {
+      number: "02",
+      title: "Initial Screening",
+      description: "We'll review your application and schedule an initial call if there's a good fit."
+    }, {
+      number: "03",
+      title: "Interview Process",
+      description: "Meet our team and explore how your skills align with our needs."
+    }]} formTitle="Apply Now" messageLabel="Why are you a good fit for our organization?" messagePlaceholder="Tell us about yourself" />
       <Footer />
     </div>;
 };
-
 export default Careers;
