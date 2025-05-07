@@ -75,7 +75,7 @@ const Pricing = () => {
                   <TableHeader>
                     <TableRow>
                       <TableHead>Monthly Spend</TableHead>
-                      <TableHead>Monthly Fee</TableHead>
+                      <TableHead>Flat Fee</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
