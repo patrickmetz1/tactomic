@@ -71,9 +71,9 @@ const Pricing = () => {
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div>
-                  <span className="text-2xl font-bold">$400</span>
+                  <span className="text-2xl font-bold">$500</span>
                   <span className="text-foreground/70 ml-1 text-sm">/month for Puzzle users</span>
-                  <div className="text-foreground/60 text-xs mt-0.5">$450/month for QBO, other ledger systems</div>
+                  <div className="text-foreground/60 text-xs mt-0.5">$550/month for QBO, other ledger systems</div>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-3">
