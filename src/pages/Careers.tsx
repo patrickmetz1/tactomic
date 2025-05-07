@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
-
 const Careers = () => {
   return <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -25,7 +23,7 @@ const Careers = () => {
                   </div>
                   <div>
                     <h3 className="font-medium">Professional Growth</h3>
-                    <p className="text-gray-600">Develop skills necessary to thrive in the modern accounting and finance landscape</p>
+                    <p className="text-gray-600">We develop and train our people to master the skills necessary to thrive in the modern accounting and finance landscape</p>
                   </div>
                 </li>
                 
@@ -35,7 +33,7 @@ const Careers = () => {
                   </div>
                   <div>
                     <h3 className="font-medium">Flexibility</h3>
-                    <p className="text-gray-600">With efficiency at the core of our offerings, we offer flexible and remote work opportunities.</p>
+                    <p className="text-gray-600">We offer flexible and remote work opportunities in order to accomplish the highest quality work as efficiently as possible</p>
                   </div>
                 </li>
                 
@@ -44,8 +42,8 @@ const Careers = () => {
                     ✓
                   </div>
                   <div>
-                    <h3 className="font-medium">Culture</h3>
-                    <p className="text-gray-600">We take pride in our work and pull together to deliver top-notch results</p>
+                    <h3 className="font-medium">Day-to-Day Work</h3>
+                    <p className="text-gray-600">We constantly work to take the mindless drudgery out of accounting tasks through the use of technology and process engineering</p>
                   </div>
                 </li>
               </ul>
@@ -54,16 +52,8 @@ const Careers = () => {
         </div>
       </main>
       
-      <CTA 
-        title="Contact Us" 
-        description="Submit the form below letting us know why you might be a good fit in our dynamic organization." 
-        steps={[]} 
-        formTitle="Apply Now" 
-        messageLabel="Why are you a good fit for our organization?"
-        messagePlaceholder="Tell us about yourself"
-      />
+      <CTA title="Contact Us" description="Submit the form below letting us know why you might be a good fit in our dynamic organization." steps={[]} formTitle="Apply Now" messageLabel="Why are you a good fit for our organization?" messagePlaceholder="Tell us about yourself" />
       <Footer />
     </div>;
 };
-
 export default Careers;
