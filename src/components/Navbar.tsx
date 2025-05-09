@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Menu, X } from 'lucide-react';
 import Logo from '@/assets/Asset7.svg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,9 +54,8 @@ const Navbar = () => {
           {/* Add your desktop navigation links here if needed */}
         </nav>
         
-        {/* Right-aligned buttons */}
-        <div className="flex items-center gap-4">
-          {/* Using standard anchor with data-calendly attribute as recommended in docs */}
+        {/* Schedule Call button - shown on both mobile and desktop */}
+        <div className="flex items-center">
           <a 
             href="#"
             onClick={handleCalendlyOpen}
@@ -66,33 +63,7 @@ const Navbar = () => {
           >
             Schedule a Call
           </a>
-          
-          <button 
-            className="md:hidden text-foreground" 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-      </div>
-      
-      {/* Mobile menu */}
-      <div className={cn("fixed inset-0 bg-white/95 backdrop-blur-md z-40 pt-24 px-6 transition-all duration-300 ease-in-out",
-        isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none")}>
-        <nav className="flex flex-col gap-6 items-center">
-          {/* Add your mobile navigation links here if needed */}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsMobileMenuOpen(false);
-              handleCalendlyOpen(e);
-            }}
-            className="px-6 py-2 rounded-full bg-book-600 text-white font-medium"
-          >
-            Schedule a Call
-          </a>
-        </nav>
       </div>
     </header>
   );
