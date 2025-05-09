@@ -96,7 +96,7 @@ const About = () => {
           {/* Headshot Placeholder */}
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-book-100 shadow-md">
             <img
-              src="src/assets/headshot1.jpg"
+              src="@/assets/headshot1.jpg"
               alt="Team Member"
               className="object-cover w-full h-full"
             />
