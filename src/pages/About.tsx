@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { cn } from '@/lib/utils';
+import Headshot from '@/assets/Headshot1.png';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
@@ -96,7 +97,7 @@ const About = () => {
           {/* Headshot Placeholder */}
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-book-100 shadow-md">
             <img
-              src="@/assets/headshot1.jpg"
+              src={Headshot}
               alt="Team Member"
               className="object-cover w-full h-full"
             />
