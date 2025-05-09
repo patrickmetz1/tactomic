@@ -79,6 +79,44 @@ const About = () => {
         </div>
       </section>
 
+    {/* Our People Section */}
+<section className="section-padding pt-24 pb-24">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="heading-lg md:heading-xl bg-gradient-to-r from-book-600 to-book-800 bg-clip-text text-transparent animate-fade-in">
+          Our People
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-book-400 to-book-600 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <Card className="p-2 bg-gradient-to-br from-white to-slate-50 shadow-xl border-book-100 overflow-hidden animate-fade-in animate-delay-200">
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-book-400 to-book-600"></div>
+        <CardContent className="p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
+          {/* Headshot Placeholder */}
+          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-book-100 shadow-md">
+            <img
+              src="/images/headshot-placeholder.jpg"
+              alt="Team Member"
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="prose prose-lg max-w-none text-foreground/80 text-balance">
+            <p>
+              At the heart of Tactomic is a team of experienced professionals who bring clarity,
+              precision, and a forward-thinking mindset to everything they do. We believe great
+              work starts with great people, and our culture of collaboration ensures that every
+              client receives the full benefit of our collective expertise.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+
       <Footer />
     </div>;
 };
