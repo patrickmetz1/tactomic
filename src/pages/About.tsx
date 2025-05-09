@@ -105,10 +105,11 @@ const About = () => {
           {/* Text */}
           <div className="prose prose-lg max-w-none text-foreground/80 text-balance">
             <p>
-              At the heart of Tactomic is a team of experienced professionals who bring clarity,
-              precision, and a forward-thinking mindset to everything they do. We believe great
-              work starts with great people, and our culture of collaboration ensures that every
-              client receives the full benefit of our collective expertise.
+              Patrick is a Big 4 CPA and finance professional with over a decade of experience in audit, 
+              accounting, and FP&A. He has held roles with PwC, The Coca-Cola Company, Aflac, Inc., and 
+              family-owned SMBs. He has worked in a variety of capacities including: process improvement 
+              design and implementation, establishing new financial and administrative functions, 
+              digitizing and automating day-to-day back office operations, and strategic analysis.
             </p>
           </div>
         </CardContent>
