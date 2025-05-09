@@ -20,12 +20,22 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleCalendlyOpen = () => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({ url: 'https://calendly.com/patrick-metz-tactomic' });
-      return false;
+  // Using the globally defined function to open Calendly
+  const handleCalendlyOpen = (e) => {
+    e.preventDefault();
+    if (window.openCalendlyPopup) {
+      window.openCalendlyPopup();
     } else {
-      console.error("Calendly script not loaded");
+      // Direct implementation as fallback
+      if (typeof Calendly !== 'undefined') {
+        Calendly.initPopupWidget({
+          url: 'https://calendly.com/patrick-metz-tactomic'
+        });
+      } else {
+        console.error("Calendly widget not loaded");
+        // Create a direct link as ultimate fallback
+        window.open('https://calendly.com/patrick-metz-tactomic', '_blank');
+      }
     }
   };
 
@@ -48,12 +58,14 @@ const Navbar = () => {
         
         {/* Right-aligned buttons */}
         <div className="flex items-center gap-4">
-          <button
+          {/* Using standard anchor with data-calendly attribute as recommended in docs */}
+          <a 
+            href="#"
             onClick={handleCalendlyOpen}
             className="px-6 py-2 rounded-full bg-book-600 text-white font-medium hover:shadow-lg hover:shadow-book-500/20 transition-fast"
           >
             Schedule a Call
-          </button>
+          </a>
           
           <button 
             className="md:hidden text-foreground" 
@@ -69,15 +81,17 @@ const Navbar = () => {
         isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none")}>
         <nav className="flex flex-col gap-6 items-center">
           {/* Add your mobile navigation links here if needed */}
-          <button
-            onClick={() => {
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
               setIsMobileMenuOpen(false);
-              handleCalendlyOpen();
+              handleCalendlyOpen(e);
             }}
             className="px-6 py-2 rounded-full bg-book-600 text-white font-medium"
           >
             Schedule a Call
-          </button>
+          </a>
         </nav>
       </div>
     </header>
