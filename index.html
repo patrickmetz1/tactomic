@@ -6,8 +6,8 @@
     <title>Tactomic - Financial Solutions</title>
     <meta name="description" content="Tactomic - Financial services to streamline your back office operations" />
     <meta name="author" content="Tactomic" />
+    <!-- Calendly widget script properly positioned in head with async attribute -->
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
     
     <!-- Favicon update -->
     <link rel="icon" type="image/png" href="/src/assets/TactomicFavicon.png" />
@@ -39,5 +39,15 @@
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Add Calendly initialization to ensure the object is available globally -->
+    <script type="text/javascript">
+      window.onload = function() {
+        // Ensure Calendly is loaded
+        if (typeof Calendly !== 'undefined') {
+          window.Calendly = Calendly;
+        }
+      };
+    </script>
   </body>
 </html>
