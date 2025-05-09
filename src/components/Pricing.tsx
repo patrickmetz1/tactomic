@@ -18,6 +18,12 @@ const Pricing = () => {
     name: 'Payroll Processing',
     icon: <CheckCircle className="w-4 h-4" />
   }, {
+    name: 'Compliance',
+    icon: <CheckCircle className="w-4 h-4" />
+  }, {
+    name: 'Software Selection',
+    icon: <CheckCircle className="w-4 h-4" />
+  }, {
     name: 'Planning & Budgeting',
     icon: <CheckCircle className="w-4 h-4" />
   }, {
