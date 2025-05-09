@@ -95,7 +95,8 @@ const About = () => {
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-book-400 to-book-600"></div>
         <CardContent className="p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
           {/* Headshot Placeholder */}
-          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-book-100 shadow-md">
+          <div className="w-full max-w-xs aspect-[3/4] rounded-xl overflow-hidden border-4 border-book-100 shadow-md">
+
             <img
               src={Headshot}
               alt="Team Member"
