@@ -6,8 +6,10 @@
     <title>Tactomic - Financial Solutions</title>
     <meta name="description" content="Tactomic - Financial services to streamline your back office operations" />
     <meta name="author" content="Tactomic" />
-    <!-- Calendly widget script properly positioned in head with async attribute -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    
+    <!-- Calendly widget script - moved to end of head with proper configuration -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     
     <!-- Favicon update -->
     <link rel="icon" type="image/png" href="/src/assets/TactomicFavicon.png" />
@@ -40,14 +42,22 @@
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Add Calendly initialization to ensure the object is available globally -->
+    <!-- Explicit Calendly inline popup button handling -->
     <script type="text/javascript">
-      window.onload = function() {
-        // Ensure Calendly is loaded
-        if (typeof Calendly !== 'undefined') {
-          window.Calendly = Calendly;
-        }
-      };
+      // Global initialization for Calendly
+      window.addEventListener('DOMContentLoaded', function() {
+        // Add a global function that components can access
+        window.openCalendlyPopup = function() {
+          if (typeof Calendly !== 'undefined') {
+            Calendly.initPopupWidget({
+              url: 'https://calendly.com/patrick-metz-tactomic'
+            });
+            return false;
+          } else {
+            console.error("Calendly is not loaded yet");
+          }
+        };
+      });
     </script>
   </body>
 </html>
