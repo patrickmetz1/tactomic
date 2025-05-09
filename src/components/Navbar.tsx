@@ -34,12 +34,14 @@ const Navbar = () => {
         
         {/* Right-aligned About link */}
         <div className="flex items-center gap-4">
-          <Link 
-            to="/about"
+          <a 
+            href="https://calendly.com/patrick-metz-tactomic"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:block px-6 py-2 rounded-full bg-book-600 text-white font-medium hover:shadow-lg hover:shadow-book-500/20 transition-fast"
           >
-            About
-          </Link>
+            Schedule a Call
+          </a>
           
           <button 
             className="md:hidden text-foreground" 
@@ -54,13 +56,15 @@ const Navbar = () => {
       <div className={cn("fixed inset-0 bg-white/95 backdrop-blur-md z-40 pt-24 px-6 transition-all duration-300 ease-in-out",
         isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none")}>
         <nav className="flex flex-col gap-6 items-center">
-          <Link
-            to="/about"
+          <a
+            href="https://calendly.com/patrick-metz-tactomic"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 w-full px-6 py-3 rounded-full bg-book-600 text-white font-medium text-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            About
-          </Link>
+            Schedule a Call
+          </a>
         </nav>
       </div>
     </header>
