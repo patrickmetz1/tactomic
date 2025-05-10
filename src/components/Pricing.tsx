@@ -132,7 +132,7 @@ const Pricing = () => {
             <Card className="h-full border border-book-100 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="pb-2 pt-5 px-5">
                 <div className="flex justify-between items-center mb-1">
-                  <CardTitle className="text-lg font-bold">Finance Add-on</CardTitle>
+                  <CardTitle className="text-lg font-bold">Finance Upgrade</CardTitle>
                   <div className="bg-book-50/50 p-2 rounded-full">
                     <PlusCircle className="h-4 w-4 text-book-500" />
                   </div>
