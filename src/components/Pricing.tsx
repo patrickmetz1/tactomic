@@ -148,7 +148,7 @@ const Pricing = () => {
                 </div>
               </CardContent>
               <CardFooter className="px-5 pb-5">
-                <Button variant="outline" size="sm" className="w-full border-book-200 hover:bg-book-50 text-sm">Contact for Custom Pricing Details</Button>
+                
               </CardFooter>
             </Card>
           </div>
