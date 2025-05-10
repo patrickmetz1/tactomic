@@ -14,36 +14,29 @@ const Pricing = () => {
   const baseFeatures = [
     'Month-end close',
     'Transaction categorization',
-    'Income Statement & Balance Sheet',
+    'ASC 606 adherent revenue recognition',
+    'P&L and Balance Sheet',
+    'Cash, net burn, runway, and ARR dashboard updated daily',
+    'Annual tax package for external preparer',
     'Asyncronous support'
   ];
 
   // Additional features for tier 2 and 3
   const tier2Features = [
-    'Bill Pay',
-    'Customer Invoicing',
-    'Payroll Processing',
-    'Compliance',
-    'Software Selection',
-    'Planning & Budgeting',
-    'Ad Hoc Financial Analysis',
-    'Process Engineering'
+    'Monthly review meetings',
+    'Custom financial reports with Runway',
+    'Cap table management with Carta,
+    'Cash flow forecast',
   ];
 
   // Premium features for tier 3 only
   const tier3Features = [
-    'Bill Pay',
-    'Customer Invoicing',
-    'Payroll Processing',
-    'Compliance',
-    'Software Selection',
-    'Planning & Budgeting',
-    'Ad Hoc Financial Analysis',
-    'Process Engineering',
-    'Strategic CFO Services',
-    'Monthly Financial Review',
-    'Tax Planning',
-    'Investor Reporting'
+    'Expense management and bill pay',
+    'Payroll processing',
+    'Annual business plan',
+    'Monthly budget vs actual review',
+    'IRC compliance support with Carta',
+    'Tailored investor reporting materials'
   ];
 
   useEffect(() => {
