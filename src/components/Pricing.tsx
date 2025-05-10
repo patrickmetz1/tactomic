@@ -89,8 +89,8 @@ const Pricing = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Tier 1: Core Bookkeeping */}
           <div className="opacity-0" ref={tier1Ref}>
-            <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all">
-              <CardHeader className="pb-2 pt-5 px-5">
+            <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all overflow-hidden">
+              <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <div className="flex justify-between items-center mb-1">
                   <CardTitle className="text-xl font-bold">
                     <span className="gradient-text">Core Bookkeeping</span>
@@ -118,7 +118,7 @@ const Pricing = () => {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="px-5 pb-5">
+              <CardFooter className="px-5 pb-5 pt-2">
                 {/* Footer content can be added here if needed */}
               </CardFooter>
             </Card>
@@ -126,8 +126,8 @@ const Pricing = () => {
 
           {/* Tier 2: Finance Upgrade */}
           <div className="opacity-0" ref={tier2Ref}>
-            <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all">
-              <CardHeader className="pb-2 pt-5 px-5">
+            <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all overflow-hidden">
+              <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <div className="flex justify-between items-center mb-1">
                   <CardTitle className="text-xl font-bold">
                     <span className="gradient-text">Finance Upgrade</span>
@@ -163,8 +163,8 @@ const Pricing = () => {
 
           {/* Tier 3: Premium Finance */}
           <div className="opacity-0" ref={tier3Ref}>
-            <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all">
-              <CardHeader className="pb-2 pt-5 px-5">
+            <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all overflow-hidden">
+              <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <div className="flex justify-between items-center mb-1">
                   <CardTitle className="text-xl font-bold">
                     <span className="gradient-text">Premium Finance</span>
