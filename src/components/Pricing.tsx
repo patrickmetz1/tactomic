@@ -18,14 +18,14 @@ const Pricing = () => {
     'P&L and Balance Sheet',
     'Cash, net burn, runway, and ARR dashboard updated daily',
     'Annual tax package for external preparer',
-    'Asyncronous support'
+    'Asyncronous support',
   ];
 
   // Additional features for tier 2 and 3
   const tier2Features = [
     'Monthly review meetings',
     'Custom financial reports with Runway',
-    'Cap table management with Carta,
+    'Cap table management with Carta',
     'Cash flow forecast',
   ];
 
@@ -36,7 +36,7 @@ const Pricing = () => {
     'Annual business plan',
     'Monthly budget vs actual review',
     'IRC compliance support with Carta',
-    'Tailored investor reporting materials'
+    'Tailored investor reporting materials',
   ];
 
   useEffect(() => {
