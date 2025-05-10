@@ -101,11 +101,12 @@ const Pricing = () => {
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
                   <p className="text-center font-medium">$1,100/month</p>
-                  <p className="text-center text-xs text-foreground/70">Everything in Core Bookkeeping plus</p>
+                  <p className="text-center text-xs text-foreground/70">
+                </p>
                 </div>
                 
                 <div className="space-y-3">
-                  <p className="text-sm font-medium">Services Included:</p>
+                  <p className="text-sm font-medium">Everything in Core Bookkeeping plus:</p>
                   <div className="grid grid-cols-2 gap-x-3 gap-y-2">
                     {[...baseFeatures, ...tier2Features].map((feature, index) => <div key={index} className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
                         <CheckCircle className="w-4 h-4" />
