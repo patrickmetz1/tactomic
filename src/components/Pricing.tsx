@@ -101,36 +101,21 @@ const Pricing = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Monthly Spend</TableHead>
-                      <TableHead>Flat Fee</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell className="font-medium">Less than $25k/month</TableCell>
-                      <TableCell>$500/month</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">$25k - $50k/month</TableCell>
-                      <TableCell>$750/month</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Greater than $50k/month</TableCell>
-                      <TableCell>$950/month</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
+                <div className="bg-book-50/50 p-3 rounded-lg mb-3">
+                  <p className="text-center font-medium">$500/month</p>
+                  <p className="text-center text-xs text-foreground/70">Foundational accounting services</p>
+                </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-1 gap-x-4 gap-y-2 mt-3">
-                  {baseFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
+                <div className="space-y-3">
+                  <p className="text-sm font-medium">Services Included:</p>
+                  <div className="grid grid-cols-1 gap-x-3 gap-y-2">
+                    {baseFeatures.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
+                        <CheckCircle className="w-4 h-4" />
+                        <span className="text-xs font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </CardContent>
               <CardFooter className="px-5 pb-5">
@@ -155,23 +140,13 @@ const Pricing = () => {
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
                   <p className="text-center font-medium">$1,100/month</p>
-                  <p className="text-center text-xs text-foreground/70">Includes Core Bookkeeping plus additional services</p>
+                  <p className="text-center text-xs text-foreground/70">Enhanced financial services</p>
                 </div>
                 
                 <div className="space-y-3">
-                  <p className="text-sm font-medium">Core Features:</p>
-                  <div className="grid grid-cols-1 gap-1">
-                    {baseFeatures.map((feature, index) => (
-                      <div key={index} className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <p className="text-sm font-medium mt-4">Additional Services:</p>
+                  <p className="text-sm font-medium">Services Included:</p>
                   <div className="grid grid-cols-2 gap-x-3 gap-y-2">
-                    {tier2Features.map((feature, index) => (
+                    {[...baseFeatures, ...tier2Features].map((feature, index) => (
                       <div key={index} className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
                         <CheckCircle className="w-4 h-4" />
                         <span className="text-xs font-medium">{feature}</span>
@@ -201,22 +176,12 @@ const Pricing = () => {
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
-                  <p className="text-center font-medium">$2,500/month</p>
-                  <p className="text-center text-xs text-foreground/70">All-inclusive financial services</p>
+                  <p className="text-center font-medium">$2,400/month</p>
+                  <p className="text-center text-xs text-foreground/70">Comprehensive financial management</p>
                 </div>
                 
                 <div className="space-y-3">
-                  <p className="text-sm font-medium">Core Features:</p>
-                  <div className="grid grid-cols-1 gap-1">
-                    {baseFeatures.map((feature, index) => (
-                      <div key={index} className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <p className="text-sm font-medium mt-4">Premium Services:</p>
+                  <p className="text-sm font-medium">Services Included:</p>
                   <div className="grid grid-cols-2 gap-x-3 gap-y-2">
                     {tier3Features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
