@@ -74,7 +74,7 @@ const Pricing = () => {
                     <span className="gradient-text">Core Bookkeeping</span>
                   </CardTitle>
                 </div>
-                <CardDescription className="text-foreground/80 text-sm">Foundational bookkeeping services and reporting packages to ensure you have the information needed to run your business.</CardDescription>
+                <CardDescription className="text-foreground/80 text-sm">Foundational accounting services for accurate financial records.</CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <Table>
@@ -113,11 +113,11 @@ const Pricing = () => {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Financial reporting</span>
+                    <span className="text-sm">Month-end close</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Unlimited async support</span>
+                    <span className="text-sm">Asyncronous support</span>
                   </div>
                 </div>
               </CardContent>
