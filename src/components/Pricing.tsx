@@ -105,7 +105,7 @@ const Pricing = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-3">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Cash and bank reconciliations</span>
+                    <span className="text-sm">Month-end close</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
@@ -113,7 +113,7 @@ const Pricing = () => {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Month-end close</span>
+                    <span className="text-sm">Income Statement & Balance Sheet</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-book-600 flex-shrink-0 mt-0.5" />
