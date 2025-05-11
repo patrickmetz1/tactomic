@@ -10,10 +10,10 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 lg:gap-10">
           {/* Badge section - comes second on mobile, centered on all devices */}
           <div className="order-1 md:order-2 flex justify-center">
-            <div className="flex flex-row items-center justify-center gap-4 flex-wrap md:min-w-[400px] lg:min-w-[480px]">
+            <div className="flex flex-row items-center justify-center md:justify-start lg:justify-center gap-4 flex-wrap md:pl-4 lg:pl-0">
               <img src={PuzzleCertified} alt="Puzzle Certified Advisor" className="h-20 object-contain" />
               <img src={IntuitBookkeeper} alt="Intuit Trained Bookkeeper" className="h-24 w-auto object-contain" />
               <img src={XeroCertified} alt="Xero Certified" className="h-36 w-auto object-contain" />
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
           
           {/* Quick Links */}
-          <div className="order-3 md:order-3">
+          <div className="order-3 md:order-3 md:ml-auto md:pr-4 lg:pr-0">
             <h3 className="text-lg font-semibold mb-6 text-center md:text-left">Quick Links</h3>
             <ul className="space-y-3 flex flex-col items-center md:items-start">
               <li>
