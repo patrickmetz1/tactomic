@@ -46,7 +46,7 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 opacity-0" ref={titleRef}>
           <h2 className="heading-lg mb-3">Pricing</h2>
-          <p className="text-foreground/80 font-medium">Flat monthly service fee with no long term commitment</p>
+          <p className="text-foreground/80 font-medium">Service packages with flat monthly fees and no long term commitment</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -92,7 +92,7 @@ const Pricing = () => {
                     <span className="gradient-text">Insights+</span>
                   </CardTitle>
                 </div>
-                <CardDescription className="text-foreground/80 text-sm">Enhanced financial support for founders</CardDescription>
+                <CardDescription className="text-foreground/80 text-sm">Enhanced financial support to help founders make informed decisions</CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
@@ -126,7 +126,7 @@ const Pricing = () => {
                     <span className="gradient-text">Controller-as-a-Service</span>
                   </CardTitle>
                 </div>
-                <CardDescription className="text-foreground/80 text-sm">Comprehensive accounting operations to streamline your back office</CardDescription>
+                <CardDescription className="text-foreground/80 text-sm">Comprehensive accounting operations to optimize your back office</CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
