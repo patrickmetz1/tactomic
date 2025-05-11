@@ -59,7 +59,7 @@ const Pricing = () => {
                     <span className="gradient-text">Core Bookkeeping</span>
                   </CardTitle>
                 </div>
-                <CardDescription className="text-foreground/80 text-sm">Foundational accounting services for accurate financial records power by Puzzle's AI-native ledger</CardDescription>
+                <CardDescription className="text-foreground/80 text-sm">Foundational accounting services for accurate financial records powered by Puzzle</CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
@@ -89,7 +89,7 @@ const Pricing = () => {
               <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <div className="flex justify-between items-center mb-1">
                   <CardTitle className="text-xl font-bold">
-                    <span className="gradient-text">Insights</span>
+                    <span className="gradient-text">Insights+</span>
                   </CardTitle>
                 </div>
                 <CardDescription className="text-foreground/80 text-sm">Enhanced financial support for founders</CardDescription>
@@ -135,7 +135,7 @@ const Pricing = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <p className="text-sm font-medium">Everything in Financial Upgrade plus:</p>
+                  <p className="text-sm font-medium">Everything in Insights+ plus:</p>
                   <div className="grid grid-cols-1 gap-x-3 gap-y-2">
                     {tier3Features.map((feature, index) => <div key={index} className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors">
                         <CheckCircle className="w-4 h-4" />
