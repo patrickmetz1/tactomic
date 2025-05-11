@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import Logo from '@/assets/Asset7.svg';
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -19,7 +17,7 @@ const Navbar = () => {
   }, []);
 
   // Using the globally defined function to open Calendly
-  const handleCalendlyOpen = (e) => {
+  const handleCalendlyOpen = e => {
     e.preventDefault();
     if (window.openCalendlyPopup) {
       window.openCalendlyPopup();
@@ -36,17 +34,10 @@ const Navbar = () => {
       }
     }
   };
-
-  return (
-    <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', 
-      isScrolled ? 'py-3 bg-white/90 backdrop-blur-sm shadow-sm' : 'py-5 bg-transparent')}>
+  return <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', isScrolled ? 'py-3 bg-white/90 backdrop-blur-sm shadow-sm' : 'py-5 bg-transparent')}>
       <div className="container mx-auto px-6 sm:px-8 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img 
-            src={Logo} 
-            alt="Tactomic Logo" 
-            className="h-6 w-auto" 
-          />
+          <img src={Logo} alt="Tactomic Logo" className="h-6 w-auto" />
         </Link>
         
         {/* Desktop navigation */}
@@ -56,17 +47,11 @@ const Navbar = () => {
         
         {/* Schedule Call button - shown on both mobile and desktop */}
         <div className="flex items-center">
-          <a 
-            href="#"
-            onClick={handleCalendlyOpen}
-            className="px-6 py-2 rounded-full bg-book-600 text-white font-medium hover:shadow-lg hover:shadow-book-500/20 transition-fast"
-          >
+          <a href="#" onClick={handleCalendlyOpen} className="rounded-full bg-book-600 text-white font-medium hover:shadow-lg hover:shadow-book-500/20 transition-fast px-[10px] py-[6px]">
             Schedule a Call
           </a>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Navbar;
