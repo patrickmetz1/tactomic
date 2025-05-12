@@ -26,7 +26,7 @@ const Benefits = () => {
     });
     return () => observer.disconnect();
   }, []);
-  const benefits = ['Increase exit value', 'Build administrative durability', 'Reduce financial and personnel risk', 'Stay tax ready'];
+  const benefits = ['Bookkeeping', 'Financial Planning & Analysis', 'Accounting Operations', 'Advisory'];
   return <section id="benefits" className="section-padding relative overflow-hidden bg-white" ref={sectionRef}>
       {/* Decorative top wave divider */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden">
