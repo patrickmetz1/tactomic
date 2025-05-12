@@ -4,13 +4,13 @@ import { Card, CardContent } from './ui/card';
 
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
-  title: "Accounting",
-  description: "Experience frictionless bookkeeping with access to real time information any time of month.",
+  title: "Frictionless Accounting",
+  description: "Get access to real time financial informatoin any time of month, maintained in both cash and accrual basis so you are always up to speed and ready for tax season.",
   color: "bg-purple-50 text-purple-600"
 }, {
   icon: <Calculator className="w-6 h-6" />,
   title: "Financial Insights",
-  description: "Know your organization's financial health and take action based on data, not guesswork.",
+  description: "Know your organization's financial health so you can take action quickly based on data, not guesswork.",
   color: "bg-amber-50 text-amber-600"
 }, {
   icon: <BarChart3 className="w-6 h-6" />,
