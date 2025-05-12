@@ -36,7 +36,7 @@ const Empathy = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 opacity-0" ref={headerRef}>
           <h2 className="heading-lg mb-2">Don't Just Get a Bookkeeper, Gain an Advantage</h2>
-          <p className="text-lg text-muted-foreground">Don't just get a bookkeeper, gain a strategic advantage</p>
+          <p className="text-lg text-muted-foreground">Focus on high-leverage activities that only you can execute</p>
         </div>
         <div className="max-w-4xl mx-auto">
           {/* Grid layout for pain points */}
