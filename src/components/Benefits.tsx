@@ -72,7 +72,7 @@ const Benefits = () => {
         {/* === CTA Arrow === */}
         <div className="flex justify-center mt-4 mb-2">
           <div className="text-book-600 font-medium flex items-center gap-2">
-            The Tactomic Difference
+            Learn More
             <ChevronDown className="w-4 h-4 animate-bounce" />
           </div>
         </div>
