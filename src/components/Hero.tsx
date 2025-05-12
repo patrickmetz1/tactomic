@@ -110,7 +110,7 @@ const Hero = () => {
         
         <div className="w-full flex justify-center mt-2">
           <div className={`${isMobile ? 'mb-1' : 'mb-2'} flex flex-col items-center`}>
-            <p className="text-sm text-foreground/70 mb-1 py-[2px]">Learn More</p>
+            <p className="text-sm text-foreground/70 mb-1 py-[2px]">How it helps you</p>
             <a href="#empathy" className="w-8 h-8 rounded-full border border-book-200 flex items-center justify-center animate-bounce">
               <ChevronDown size={20} className="text-book-600" />
             </a>
