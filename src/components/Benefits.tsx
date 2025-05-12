@@ -63,9 +63,7 @@ const Benefits = () => {
                 Tactomic partners with{' '}
                 <span className="text-[#50FAAB] font-semibold">Puzzle</span>,
                 the AI-native ledger, to provide clients with tech-driven
-                accounting services. Harmonize your tech-stack through
-                Puzzle's seamless integrations with expense management,
-                invoicing, payroll, and FP&A software.
+                accounting services.
               </p>
             </div>
           </div>
