@@ -13,7 +13,7 @@ const Pricing = () => {
   const baseFeatures = ['Month-end close', 'Transaction categorization', 'ASC 606 adherent revenue recognition', 'P&L and Balance Sheet', 'Cash, net burn, runway, and ARR dashboard updated daily', 'Annual tax package for external preparer', 'Asyncronous support'];
 
   // Additional features for tier 2 and 3
-  const tier2Features = ['Monthly review meetings', 'Custom financial reports with Fathom', 'Cap table management with Carta', 'Cash flow forecast'];
+  const tier2Features = ['Monthly review meetings', 'Customized financial reports with Causal', 'Cap table management with Carta', 'Cash flow forecast'];
 
   // Premium features for tier 3 only
   const tier3Features = ['Expense management and bill pay', 'Payroll processing', 'Annual business plan', 'Monthly budget vs actual review', 'IRC compliance support', 'Tailored investor reporting materials'];
@@ -96,7 +96,7 @@ const Pricing = () => {
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
-                  <p className="text-center font-medium text-xl">$1,100/month</p>
+                  <p className="text-center font-medium text-xl">$1,200/month</p>
                   <p className="text-center text-xs text-foreground/70">
                 </p>
                 </div>
