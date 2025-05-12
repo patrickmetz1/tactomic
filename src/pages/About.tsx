@@ -107,8 +107,8 @@ const About = () => {
           {/* Text */}
           <div className="prose prose-lg max-w-none text-foreground/80 text-balance">
             <p>
-              Patrick is a Big 4 CPA and finance professional with over a decade of experience in audit, 
-              accounting, and FP&A. He has held roles with PwC, The Coca-Cola Company, Aflac, Inc., and 
+              Patrick is a Big 4 CPA and finance professional with experience in audit, corporate venture capital, 
+              accounting, and FP&A. He has held roles with PwC, The Coca-Cola Company, Aflac Inc, and 
               family-owned SMBs. He has worked in a variety of capacities including: process improvement 
               design and implementation, establishing new financial and administrative functions, 
               digitizing and automating day-to-day back office operations, and strategic analysis.
