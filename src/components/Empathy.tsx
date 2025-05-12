@@ -23,10 +23,10 @@ const Empathy = () => {
     icon: <Clock className="h-6 w-6 text-book-600" />,
     title: "Quit wrestling with bookkeeping software and manual spreadsheets"
   }, {
-    icon: <FileQuestion className="h-6 w-6 text-book-600" />,
+    icon: <DollarSign className="h-6 w-6 text-book-600" />,
     title: "Keep your team lean and agile"
   }, {
-    icon: <DollarSign className="h-6 w-6 text-book-600" />,
+    icon: <FileQuestion className="h-6 w-6 text-book-600" />,
     title: "Stop struggling to understand and predict cash needs"
   }, {
     icon: <Lightbulb className="h-6 w-6 text-book-600" />,
