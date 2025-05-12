@@ -23,16 +23,16 @@ const Empathy = () => {
   }, []);
   const painPoints = [{
     icon: <Clock className="h-6 w-6 text-book-600" />,
-    title: "Wrestling with administrative tasks and bookkeeping software?"
+    title: "Quit wrestling with bookkeeping software and manual spreadsheets"
   }, {
     icon: <FileQuestion className="h-6 w-6 text-book-600" />,
-    title: "Trouble finding quality accounting resources?"
+    title: "Keep your team lean and agile"
   }, {
     icon: <DollarSign className="h-6 w-6 text-book-600" />,
-    title: "Struggling to understand and predict cash demands?"
+    title: "Stop struggling to understand and predict cash needs"
   }, {
     icon: <Lightbulb className="h-6 w-6 text-book-600" />,
-    title: "Wondering which digital tool to incorporate into your operations?"
+    title: "Be free to grow your business"
   }];
   return <section className="py-10 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
