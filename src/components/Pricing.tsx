@@ -149,7 +149,7 @@ const Pricing = () => {
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
-                  <p className="text-center font-medium text-xl">$2,600/month</p>
+                  <p className="text-center font-medium text-xl">$2,600+/month</p>
                 </div>
                 
                 <div className="space-y-3">
