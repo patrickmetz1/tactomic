@@ -38,7 +38,7 @@ const Benefits = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* === Header === */}
         <div className="text-center mb-6">
-          <h2 className="heading-lg mb-2">Why Choose Tactomic?</h2>
+          <h2 className="heading-lg mb-2">Why Work With Us?</h2>
           <p className="text-foreground/80 font-medium max-w-3xl mx-auto mb-6 text-base">We actively seek digital innovations to deliver meaningful value to our clients</p>
         </div>
 
