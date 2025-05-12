@@ -77,7 +77,7 @@ const Empathy = () => {
         }}>
             <div className="relative inline-block">
               <div className="bg-primary text-white px-6 py-3 rounded-xl shadow-md">
-                <p className="font-semibold text-lg">Pivotal support has never been more accessible</p>
+                <p className="font-semibold text-lg">Get In Touch</p>
               </div>
               {/* Simple bubble pointer/tail */}
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rotate-45"></div>
