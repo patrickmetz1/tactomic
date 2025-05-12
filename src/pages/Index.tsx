@@ -2,10 +2,10 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Empathy from '@/components/Empathy';
-import Services from '@/components/Services';
 import Benefits from '@/components/Benefits';
+import Services from '@/components/Services';
 import Pricing from '@/components/Pricing';
+import Empathy from '@/components/Empathy';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
