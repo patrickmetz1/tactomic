@@ -4,7 +4,7 @@ import { Card, CardContent } from './ui/card';
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
   title: "Frictionless Accounting",
-  description: "Get access to real time financial informatoin any time of month, maintained in both cash and accrual basis so you are always up to speed.",
+  description: "Get access to real time financial information any time of month, maintained in cash and accrual basis so you are always up to speed.",
   color: "bg-purple-50 text-purple-600"
 }, {
   icon: <Calculator className="w-6 h-6" />,
