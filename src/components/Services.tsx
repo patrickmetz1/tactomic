@@ -3,23 +3,18 @@ import { Calculator, Database, BarChart3, Wallet } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
-  title: "Bookkeeping",
-  description: "Get reliable record keeping and real-time financial reporting that you can rely on. Experience frictionless accounting with best-in-class accounting platforms.",
+  title: "Accounting",
+  description: "Experience frictionless bookkeeping with access to real time information any time of month.",
   color: "bg-purple-50 text-purple-600"
 }, {
-  icon: <Wallet className="w-6 h-6" />,
-  title: "Accounting Operations",
-  description: "Offload transactional busywork like invoicing customers, paying bills, and running payroll to dependable operational experts.",
-  color: "bg-indigo-50 text-indigo-600"
-}, {
   icon: <Calculator className="w-6 h-6" />,
-  title: "Fractional Finance",
-  description: "Receive guidance through annual business planning process, establishing KPIs and monitoring processes. Clearly understand your financial position to make better decisions.",
+  title: "Financial Insights",
+  description: "Know your organization's financial health and take action based on data, not guesswork.",
   color: "bg-amber-50 text-amber-600"
 }, {
   icon: <BarChart3 className="w-6 h-6" />,
-  title: "Advisory",
-  description: "Synchronize your tech-stack and align it with your growth strategies. Reduce financial risks and increase organizational durability through process engineering.",
+  title: "Tech-enabled",
+  description: "Harmonize your tech-stack through seamless integrations and best-in-class digital solutions that align with your strategic goals.",
   color: "bg-emerald-50 text-emerald-600"
 }];
 const Services = () => {
