@@ -39,7 +39,7 @@ const Benefits = () => {
         {/* === Header === */}
         <div className="text-center mb-6">
           <h2 className="heading-lg mb-2">Our Capabilities</h2>
-          <p className="text-foreground/80 font-medium max-w-3xl mx-auto mb-6 text-base">Save time and energy through outsourced financial operations</p>
+          <p className="text-foreground/80 font-medium max-w-3xl mx-auto mb-6 text-base">Save time and energy with outsourced financial support</p>
         </div>
 
         {/* === Benefits Items === */}
