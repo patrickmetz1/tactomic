@@ -3,6 +3,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { cn } from '@/lib/utils';
 import Headshot from '@/assets/headshot1.jpg';
+import PuzzleCertified from '@/assets/PuzzleCertifiedAdvisorGrey.png';
+import IntuitBookkeeper from '@/assets/IntuitTrainedBookkeeper.png';
+import XeroCertified from '@/assets/XeroCertified.svg';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
@@ -81,46 +84,69 @@ const About = () => {
       </section>
 
     {/* Our People Section */}
-<section className="section-padding pt-24 pb-24">
-  <div className="container mx-auto px-4">
-    <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="heading-lg md:heading-xl bg-gradient-to-r from-book-600 to-book-800 bg-clip-text text-transparent animate-fade-in">
-          Our People
-        </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-book-400 to-book-600 mx-auto mt-4 rounded-full"></div>
+    <section className="section-padding pt-24 pb-24">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="heading-lg md:heading-xl bg-gradient-to-r from-book-600 to-book-800 bg-clip-text text-transparent animate-fade-in">
+              Our People
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-book-400 to-book-600 mx-auto mt-4 rounded-full"></div>
+          </div>
+
+          <Card className="p-2 bg-gradient-to-br from-white to-slate-50 shadow-xl border-book-100 overflow-hidden animate-fade-in animate-delay-200">
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-book-400 to-book-600"></div>
+            <CardContent className="p-8 md:p-10">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Headshot Placeholder */}
+                <div className="w-full max-w-xs aspect-[3/4] rounded-xl overflow-hidden border-4 border-book-100 shadow-md">
+                  <img
+                    src={Headshot}
+                    alt="Team Member"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+
+                {/* Text Content with Certifications */}
+                <div className="flex-1">
+                  <div className="prose prose-lg max-w-none text-foreground/80 text-balance mb-6">
+                    <p>
+                      Patrick is a Big 4 CPA and finance professional with experience in audit, corporate venture capital, 
+                      accounting, and FP&A. He has held roles with PwC, The Coca-Cola Company, Aflac Inc, and 
+                      family-owned SMBs. He has worked in a variety of capacities including: process improvement 
+                      design and implementation, establishing new financial and administrative functions, 
+                      digitizing and automating day-to-day back office operations, and strategic analysis.
+                    </p>
+                  </div>
+
+                  {/* Certification Badges */}
+                  <div className="flex flex-row items-center justify-start gap-4 flex-wrap mt-6">
+                    <img 
+                      src={PuzzleCertified} 
+                      alt="Puzzle Certified Advisor" 
+                      className="h-16 object-contain" 
+                    />
+                    <img 
+                      src={IntuitBookkeeper} 
+                      alt="Intuit Trained Bookkeeper" 
+                      className="h-20 w-auto object-contain" 
+                    />
+                    <img 
+                      src={XeroCertified} 
+                      alt="Xero Certified" 
+                      className="h-28 w-auto object-contain" 
+                    />
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
+    </section>
 
-      <Card className="p-2 bg-gradient-to-br from-white to-slate-50 shadow-xl border-book-100 overflow-hidden animate-fade-in animate-delay-200">
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-book-400 to-book-600"></div>
-        <CardContent className="p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
-          {/* Headshot Placeholder */}
-          <div className="w-full max-w-xs aspect-[3/4] rounded-xl overflow-hidden border-4 border-book-100 shadow-md">
-
-            <img
-              src={Headshot}
-              alt="Team Member"
-              className="object-cover w-full h-full"
-            />
-          </div>
-
-          {/* Text */}
-          <div className="prose prose-lg max-w-none text-foreground/80 text-balance">
-            <p>
-              Patrick is a Big 4 CPA and finance professional with experience in audit, corporate venture capital, 
-              accounting, and FP&A. He has held roles with PwC, The Coca-Cola Company, Aflac Inc, and 
-              family-owned SMBs. He has worked in a variety of capacities including: process improvement 
-              design and implementation, establishing new financial and administrative functions, 
-              digitizing and automating day-to-day back office operations, and strategic analysis.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  </div>
-</section>
-
-      <Footer />
-    </div>;
+    <Footer />
+  </div>;
 };
+
 export default About;
