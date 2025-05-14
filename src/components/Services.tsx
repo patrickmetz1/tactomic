@@ -22,6 +22,7 @@ const serviceItems = [{
 const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const imageRef = useRef<HTMLDivElement>(null);
   const puzzleBubbleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -36,13 +37,9 @@ const Services = () => {
       threshold: 0.1
     });
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-    
-    if (puzzleBubbleRef.current) {
-      observer.observe(puzzleBubbleRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    if (imageRef.current) observer.observe(imageRef.current);
+    if (puzzleBubbleRef.current) observer.observe(puzzleBubbleRef.current);
     
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
@@ -77,7 +74,7 @@ const Services = () => {
         </div>
         
         {/* === Puzzle Graphic === */}
-        <div className="w-full flex justify-center mt-10 mb-6 opacity-0">
+        <div className="w-full flex justify-center mt-10 mb-6 opacity-0" ref={imageRef}>
           <div ref={puzzleBubbleRef} className="bg-[#171629] text-white font-medium shadow-lg py-6 px-8 rounded-xl tech-hover max-w-5xl w-full mx-[10px]">
             <div className="flex items-center gap-4">
               <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-12 h-12 flex-shrink-0" />
