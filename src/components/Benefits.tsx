@@ -1,11 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 import { CheckCircle, ChevronDown } from 'lucide-react';
+
 const Benefits = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const puzzleBubbleRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -17,16 +18,20 @@ const Benefits = () => {
     }, {
       threshold: 0.1
     });
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
-    if (puzzleBubbleRef.current) observer.observe(puzzleBubbleRef.current);
+    
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
+
     return () => observer.disconnect();
   }, []);
+
   const benefits = ['Bookkeeping', 'Financial Planning & Analysis', 'Accounting Operations', 'Advisory'];
+
   return <section id="benefits" className="section-padding relative overflow-hidden bg-white" ref={sectionRef}>
       {/* Decorative top wave divider */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden">
@@ -54,21 +59,6 @@ const Benefits = () => {
           </div>
         </div>
 
-        {/* === Puzzle Graphic === */}
-        <div className="w-full flex justify-center mb-6 opacity-0" ref={imageRef}>
-          <div ref={puzzleBubbleRef} className="bg-[#171629] text-white font-medium shadow-lg py-6 px-8 rounded-xl tech-hover max-w-5xl w-full mx-[10px]">
-            <div className="flex items-center gap-4">
-              <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-12 h-12 flex-shrink-0" />
-              <p className="sm:text-md break-words text-sm">
-                Tactomic partners with{' '}
-                <span className="text-[#50FAAB] font-semibold">Puzzle</span>,
-                the AI-native ledger, to provide clients with tech-driven
-                accounting services.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* === CTA Arrow === */}
         <div className="flex justify-center mt-4 mb-2">
           <div className="text-book-600 font-medium flex items-center gap-2">
@@ -82,4 +72,5 @@ const Benefits = () => {
       <div className="absolute bottom-0 left-0 -z-10 w-full h-8 bg-gradient-to-b from-white to-book-50/20" />
     </section>;
 };
+
 export default Benefits;
