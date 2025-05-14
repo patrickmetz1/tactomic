@@ -15,10 +15,10 @@ const Pricing = () => {
   const baseFeatures = ['Month-end close', 'Transaction categorization', 'ASC 606 adherent revenue recognition', 'P&L and Balance Sheet', 'Cash, net burn, runway, and ARR dashboard updated daily', 'Annual tax package for external preparer', 'Asyncronous support'];
 
   // Additional features for tier 2 and 3
-  const tier2Features = ['Monthly review meetings', 'Customized financial reports with Causal', 'Cap table management with Carta', 'Cash flow forecast'];
+  const tier2Features = ['Monthly review meetings', 'Customized financial reports with Causal', 'Cap table management with Carta', 'Cash flow forecast', 'Tailored investor reporting materials'];
 
   // Premium features for tier 3 only
-  const tier3Features = ['Expense management and bill pay', 'Payroll processing', 'Annual business plan', 'Monthly budget vs actual review', 'IRC compliance support', 'Tailored investor reporting materials'];
+  const tier3Features = ['Expense management and bill pay', 'Payroll processing', 'Annual business plan', 'Monthly budget vs actual review', 'IRC compliance support'];
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
