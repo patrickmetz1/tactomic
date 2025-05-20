@@ -58,7 +58,7 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 opacity-0" ref={titleRef}>
           <h2 className="heading-lg mb-3">Pricing</h2>
-          <p className="text-foreground/80 font-medium">Service packages with flat monthly fees and no long term commitment</p>
+          <p className="text-foreground/80 font-medium">Recurring service packages: flat monthly fees and no long term commitment</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
