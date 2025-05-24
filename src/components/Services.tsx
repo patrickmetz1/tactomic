@@ -9,7 +9,7 @@ const serviceItems = [{
   color: "bg-purple-50 text-purple-600"
 }, {
   icon: <Calculator className="w-6 h-6" />,
-  title: "Financial Insights",
+  title: "Financial Awareness",
   description: "Know your organization's financial health so you can take action quickly based on data, not guesswork.",
   color: "bg-amber-50 text-amber-600"
 }, {
