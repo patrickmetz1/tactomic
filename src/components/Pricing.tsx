@@ -68,10 +68,10 @@ const Pricing = () => {
               <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <div className="flex justify-between items-center mb-1">
                   <CardTitle className="text-xl font-bold">
-                    <span className="gradient-text">Core Bookkeeping</span>
+                    <span className="gradient-text">Bookkeeping</span>
                   </CardTitle>
                 </div>
-                <CardDescription className="text-foreground/80 text-sm">Foundational accounting services for accurate financial records powered by Puzzle</CardDescription>
+                <CardDescription className="text-foreground/80 text-sm">Foundational accounting services for accurate financial records</CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
@@ -105,7 +105,7 @@ const Pricing = () => {
               <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <div className="flex justify-between items-center mb-1">
                   <CardTitle className="text-xl font-bold">
-                    <span className="gradient-text">Insights+</span>
+                    <span className="gradient-text">Insights+Bookkeeping</span>
                   </CardTitle>
                 </div>
                 <CardDescription className="text-foreground/80 text-sm">Enhanced financial support to help founders make informed decisions</CardDescription>
@@ -116,7 +116,7 @@ const Pricing = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <p className="text-sm font-medium">Everything in Core Bookkeeping plus:</p>
+                  <p className="text-sm font-medium">Everything in Bookkeeping plus:</p>
                   <div className="grid grid-cols-1 gap-x-3 gap-y-2">
                     {tier2Features.map((feature, index) => (
                       <div 
@@ -153,7 +153,7 @@ const Pricing = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <p className="text-sm font-medium">Everything in Insights+ plus:</p>
+                  <p className="text-sm font-medium">Everything in Insights+Bookkeeping plus:</p>
                   <div className="grid grid-cols-1 gap-x-3 gap-y-2">
                     {tier3Features.map((feature, index) => (
                       <div 
