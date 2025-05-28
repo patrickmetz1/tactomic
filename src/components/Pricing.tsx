@@ -29,10 +29,10 @@ const Pricing = () => {
   const baseFeatures = [
     'Month-end close',
     'Transaction categorization',
-    'ASC 606 adherent revenue recognition',
     'P&L and Balance Sheet',
     'Cash, net burn, runway, and ARR dashboard updated daily',
     'Annual tax package for external preparer',
+    'ASC 606 adherent revenue recognition',
     'Asyncronous support',
   ];
   const tier2Features = [
@@ -52,9 +52,9 @@ const Pricing = () => {
   const addonFeatures = [
     'Clean-up financial records',
     'Compliance filings',
-    'Software selection',
     'Internal control design',
     'Process engineering',
+    'Software selection',
     'Ad hoc financial reviews and analysis',
   ];
 
@@ -138,25 +138,25 @@ const Pricing = () => {
             </Card>
           </div>
 
-          {/* Controller */}
+          {/* Insights */}
           <div className="opacity-0" ref={tier2Ref}>
             <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all overflow-hidden">
               <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <CardTitle className="text-xl font-bold">
-                  <span className="gradient-text">Controller</span>
+                  <span className="gradient-text">Insights+Bookkeeping</span>
                 </CardTitle>
                 <CardDescription className="text-foreground/80 text-sm">
-                  Strategic financial management layered on top of bookkeeping
+                  Enhanced financial support to help founders make decisions
                 </CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
                   <p className="text-center font-medium text-xl">
-                    $1,500/month
+                    $1,200/month
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <p className="text-sm font-medium">Everything in Bookkeeping +</p>
+                  <p className="text-sm font-medium">Everything in Bookkeeping plus:</p>
                   <div className="grid grid-cols-1 gap-x-3 gap-y-2">
                     {tier2Features.map((feature, index) => (
                       <div
@@ -174,26 +174,26 @@ const Pricing = () => {
             </Card>
           </div>
 
-          {/* Finance */}
+          {/* Controller */}
           <div className="opacity-0" ref={tier3Ref}>
             <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all overflow-hidden">
               <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <CardTitle className="text-xl font-bold">
-                  <span className="gradient-text">Finance</span>
+                  <span className="gradient-text">Controller-as-a-Service</span>
                 </CardTitle>
                 <CardDescription className="text-foreground/80 text-sm">
-                  Full-stack finance team support and advanced planning
+                  Comprehensive accounting operations to optimize your back office
                 </CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
                   <p className="text-center font-medium text-xl">
-                    $3,000/month
+                    $2,600/month
                   </p>
                 </div>
                 <div className="space-y-3">
                   <p className="text-sm font-medium">
-                    Everything in Controller +
+                    Everything in Insights+ plus:
                   </p>
                   <div className="grid grid-cols-1 gap-x-3 gap-y-2">
                     {tier3Features.map((feature, index) => (
@@ -226,7 +226,7 @@ const Pricing = () => {
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="space-y-3">
-                  <p className="text-sm font-medium">Examples of Add-ons:</p>
+                  <p className="text-sm font-medium">Service offerings:</p>
                   <div className="grid grid-cols-1 gap-x-3 gap-y-2">
                     {addonFeatures.map((feature, index) => (
                       <div
