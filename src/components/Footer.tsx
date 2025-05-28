@@ -7,6 +7,21 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 sm:px-8">
+        {/* Puzzle Integration Section - Centrally positioned */}
+        <div className="w-full flex justify-center mb-12">
+          <div className="bg-[#171629] text-white font-medium shadow-lg py-6 px-8 rounded-xl hover:shadow-xl transition-shadow duration-300 max-w-5xl w-full mx-[10px]">
+            <div className="flex items-center gap-4">
+              <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-12 h-12 flex-shrink-0" />
+              <p className="sm:text-md break-words text-sm">
+                Tactomic partners with{' '}
+                <span className="text-[#50FAAB] font-semibold">Puzzle</span>,
+                the AI-native ledger, to provide clients with tech-driven
+                accounting services.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-6 lg:gap-10">
           {/* Contact info (Logo & phone/email) */}
           <div>
