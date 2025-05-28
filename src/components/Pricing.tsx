@@ -188,7 +188,7 @@ const Pricing = () => {
               <CardContent className="pb-2 px-5 space-y-3">
                 <div className="bg-book-50/50 p-3 rounded-lg mb-3">
                   <p className="text-center font-medium text-xl">
-                    $2,600/month
+                    $2,600+/month
                   </p>
                 </div>
                 <div className="space-y-3">
@@ -221,7 +221,7 @@ const Pricing = () => {
                   <span className="gradient-text">Add-ons</span>
                 </CardTitle>
                 <CardDescription className="text-foreground/80 text-sm">
-                  On-demand, custom scoped services for specialized needs
+                  Custom scoped services for specialized needs
                 </CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
