@@ -66,7 +66,7 @@ const Pricing = () => {
           <p className="text-foreground/80 font-medium">Recurring service packages: flat monthly fees and no long term commitment</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-8xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Tier 1: Core Bookkeeping */}
           <div className="opacity-0" ref={tier1Ref}>
             <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all overflow-hidden">
@@ -180,20 +180,20 @@ const Pricing = () => {
 
           {/* New Tier 4: Add-ons */}
           <div className="opacity-0" ref={addonsRef}>
-            <Card className="h-full border-2 border-amber-200 shadow-md hover:shadow-lg transition-all overflow-hidden bg-gradient-to-b from-amber-50/30 to-white">
-              <CardHeader className="pb-2 pt-5 px-5 border-b border-amber-100/50">
+            <Card className="h-full border-2 border-book-200 shadow-md hover:shadow-lg transition-all overflow-hidden">
+              <CardHeader className="pb-2 pt-5 px-5 border-b border-book-100/50">
                 <div className="flex justify-between items-center mb-1">
                   <CardTitle className="text-xl font-bold flex items-center gap-2">
-                    <Plus className="w-5 h-5 text-amber-600" />
+                    <Plus className="w-5 h-5 text-book-600" />
                     <span className="gradient-text">Add-ons</span>
                   </CardTitle>
                 </div>
                 <CardDescription className="text-foreground/80 text-sm">Specialized services tailored to your unique business needs</CardDescription>
               </CardHeader>
               <CardContent className="pb-2 px-5 space-y-3">
-                <div className="bg-amber-50/50 p-3 rounded-lg mb-3 border border-amber-200/50">
-                  <p className="text-center font-medium text-xl text-amber-800">Custom Pricing</p>
-                  <p className="text-center text-sm text-amber-600 mt-1">Based on selected services</p>
+                <div className="bg-book-50/50 p-3 rounded-lg mb-3">
+                  <p className="text-center font-medium text-xl">Custom Pricing</p>
+                  <p className="text-center text-sm text-foreground/60 mt-1">Based on selected services</p>
                 </div>
                 
                 <div className="space-y-3">
@@ -202,9 +202,9 @@ const Pricing = () => {
                     {addonFeatures.map((feature, index) => (
                       <div 
                         key={index} 
-                        className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-amber-50/30 hover:bg-amber-50/60 transition-colors border border-amber-100/50"
+                        className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg bg-book-50/30 hover:bg-book-50/60 transition-colors"
                       >
-                        <Plus className="w-4 h-4 text-amber-600" />
+                        <Plus className="w-4 h-4" />
                         <span className="font-medium text-sm">{feature}</span>
                       </div>
                     ))}
@@ -213,7 +213,7 @@ const Pricing = () => {
               </CardContent>
               <CardFooter className="px-5 pb-5">
                 <div className="w-full text-center">
-                  <p className="text-xs text-amber-700 bg-amber-50 px-3 py-2 rounded-lg border border-amber-200">
+                  <p className="text-xs text-foreground/70 bg-book-50/30 px-3 py-2 rounded-lg">
                     Contact us for personalized pricing based on your specific requirements
                   </p>
                 </div>
