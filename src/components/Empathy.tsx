@@ -35,8 +35,8 @@ const Empathy = () => {
   return <section className="py-10 bg-gradient-to-b from-white to-book-50/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 opacity-0" ref={headerRef}>
-          <h2 className="heading-lg mb-2">Don't Just Get a Bookkeeper, Gain an Advantage</h2>
-          <p className="text-lg text-muted-foreground">Focus on high-leverage activities that only you can execute</p>
+          <h2 className="heading-lg mb-2">Streamline your Back Office</h2>
+          <p className="text-lg text-muted-foreground">Focus on high-leverage activities</p>
         </div>
         <div className="max-w-4xl mx-auto">
           {/* Grid layout for pain points */}
