@@ -50,14 +50,12 @@ const Pricing = () => {
     'IRC compliance support',
   ];
   const addonFeatures = [
-    'HR consulting and compliance',
-    'Legal entity formation and maintenance',
-    'Tax planning and preparation',
-    'Fundraising support and due diligence',
-    'International accounting and compliance',
-    'Custom integrations and automation',
-    'Board meeting preparation',
-    'Financial audit support',
+    'Clean-up financial records',
+    'Compliance filings',
+    'Software selection',
+    'Internal control design',
+    'Process engineering',
+    'Ad hoc financial reviews and analysis',
   ];
 
   useEffect(() => {
