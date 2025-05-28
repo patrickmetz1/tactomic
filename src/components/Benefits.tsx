@@ -22,7 +22,6 @@ const Benefits = () => {
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
-    
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
@@ -32,7 +31,8 @@ const Benefits = () => {
 
   const benefits = ['Bookkeeping & Reporting', 'Financial Planning & Analysis', 'Payroll, Payables, and Invoicing', 'Policy & Process Advisory'];
 
-  return <section id="benefits" className="section-padding relative overflow-hidden bg-white" ref={sectionRef}>
+  return (
+    <section id="benefits" className="section-padding relative overflow-hidden bg-white" ref={sectionRef}>
       {/* Decorative top wave divider */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -49,13 +49,24 @@ const Benefits = () => {
 
         {/* === Benefits Items === */}
         <div className="flex justify-center opacity-0 mb-8" ref={contentRef}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
-            {benefits.map((benefit, index) => <div key={index} className="flex flex-col items-center text-center gap-2 opacity-0 bg-white shadow-sm p-3 rounded-lg border border-gray-100" ref={el => itemsRef.current[index] = el} style={{
-            animationDelay: `${(index + 1) * 100}ms`
-          }}>
-                <CheckCircle className="text-book-600 h-5 w-5" />
-                <p className="text-foreground/90 text-sm">{benefit}</p>
-              </div>)}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl">
+            {benefits.map((benefit, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col items-center text-center gap-3 opacity-0 bg-white shadow-lg hover:shadow-xl p-6 rounded-xl border-2 border-gray-200/60 hover:border-book-300 transition-all duration-300 transform hover:-translate-y-1 backdrop-blur-sm" 
+                ref={el => itemsRef.current[index] = el} 
+                style={{
+                  animationDelay: `${(index + 1) * 100}ms`,
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%)',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)'
+                }}
+              >
+                <div className="bg-book-100/80 p-3 rounded-full">
+                  <CheckCircle className="text-book-600 h-6 w-6" />
+                </div>
+                <p className="text-gray-800 text-sm font-medium leading-snug">{benefit}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -67,10 +78,11 @@ const Benefits = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Bottom gradient for transition to next section */}
       <div className="absolute bottom-0 left-0 -z-10 w-full h-8 bg-gradient-to-b from-white to-book-50/20" />
-    </section>;
+    </section>
+  );
 };
 
 export default Benefits;
