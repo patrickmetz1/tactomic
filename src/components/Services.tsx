@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Calculator, Database, BarChart3 } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
-
 const serviceItems = [{
   icon: <Database className="w-6 h-6" />,
   title: "Frictionless Accounting",
@@ -18,13 +17,11 @@ const serviceItems = [{
   description: "Harmonize your tech-stack through seamless integrations and best-in-class digital solutions that align with your strategic goals.",
   color: "bg-emerald-50 text-emerald-600"
 }];
-
 const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
   const imageRef = useRef<HTMLDivElement>(null);
   const puzzleBubbleRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -36,18 +33,14 @@ const Services = () => {
     }, {
       threshold: 0.1
     });
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (puzzleBubbleRef.current) observer.observe(puzzleBubbleRef.current);
-    
     itemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
-    
     return () => observer.disconnect();
   }, []);
-  
   return <section id="services" className="section-padding pt-4 md:pt-8 pb-16 md:pb-24 relative overflow-hidden" ref={sectionRef}>
       <div className="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-b from-white to-book-50/20"></div>
       
@@ -75,20 +68,9 @@ const Services = () => {
         
         {/* === Puzzle Graphic === */}
         <div className="w-full flex justify-center mt-10 mb-6 opacity-0" ref={imageRef}>
-          <div ref={puzzleBubbleRef} className="bg-[#171629] text-white font-medium shadow-lg py-6 px-8 rounded-xl tech-hover max-w-5xl w-full mx-[10px]">
-            <div className="flex items-center gap-4">
-              <img src="/lovable-uploads/1695440a-edf0-4c0b-b5e7-b4e914eb809f.png" alt="Puzzle Logo" className="w-12 h-12 flex-shrink-0" />
-              <p className="sm:text-md break-words text-sm">
-                Tactomic partners with{' '}
-                <span className="text-[#50FAAB] font-semibold">Puzzle</span>,
-                the AI-native ledger, to provide clients with tech-driven
-                accounting services.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>;
 };
-
 export default Services;
