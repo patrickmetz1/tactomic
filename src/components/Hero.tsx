@@ -50,7 +50,7 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 max-w-2xl pl-2 md:pl-4 pt-16 md:pt-20">
             
             <h1 className="heading-xl mb-8 text-balance" ref={headingRef}>
-              <span className="text-book-600">Smarter</span> Bookkeeping. Better Outcomes.</h1>
+              <span className="text-book-600">Modern</span> Accounting. Better Outcomes.</h1>
             <p ref={paragraphRef} className="text-foreground/80 mb-8 max-w-lg text-xl">Outsourced accounting and financial services for start-ups and SMBs.</p>
             <div className="flex flex-col sm:flex-row gap-4" ref={ctaRef}>
               <a href="#contact" className="px-8 py-3 rounded-full bg-book-600 text-white font-medium transition-fast hover:shadow-lg hover:shadow-book-500/20 tech-hover text-center">
