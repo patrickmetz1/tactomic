@@ -27,18 +27,17 @@ const Pricing = () => {
   const bubbleRef = useRef(null);
 
   const baseFeatures = [
-    'Month-end close',
-    'Transaction categorization',
-    'P&L and Balance Sheet',
+    'Month-end close & transaction categorization',
+    'Financial statements - P&L and Balance Sheet',
     'Cash, net burn, runway, and ARR dashboard updated daily',
     'Annual tax package for external preparer',
     'ASC 606 adherent revenue recognition',
-    'Asyncronous support',
+    'Dedicated, asyncronous U.S. based support',
   ];
   const tier2Features = [
-    'Monthly review meetings',
-    'Customized financial reports with Causal',
-    'Cap table management with Carta',
+    'Monthly financial review meetings',
+    'Customized KPI and financial reports with Causal',
+    'Causal subscription ($250 value)',
     'Cash flow forecast',
     'Tailored investor reporting materials',
   ];
@@ -54,6 +53,7 @@ const Pricing = () => {
     'Compliance filings',
     'Internal control design',
     'Process engineering',
+    'Cap table management with Carta',
     'Software selection',
     'Ad hoc financial reviews and analysis',
   ];
