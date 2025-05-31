@@ -51,6 +51,7 @@ const Pricing = () => {
   const addonFeatures = [
     'Clean-up financial records',
     'Compliance filings',
+    'Multi-entity Consolidation',
     'Internal control design',
     'Process engineering',
     'Cap table management with Carta',
